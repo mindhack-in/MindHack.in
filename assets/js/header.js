@@ -7,3 +7,8 @@
     document.head.appendChild(link);
     document.getElementById("header").innerHTML = data;
   });
+
+    function toggleNav() {
+        const navMenu = document.getElementById('nav-menu');
+        navMenu.classList.toggle('active');
+    }
