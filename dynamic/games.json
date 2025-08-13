@@ -2,7 +2,7 @@
   {
     "name": "Rubik's Cube",
     "description": "Randomize the cube with a sequence of twists to start a fresh solving challenge.",
-    "gameLink": "/games/timer3X3.html"
+    "gameLink": "./games/timer3X3.html"
   },
   {
     "name": "Tic Tac Toe",

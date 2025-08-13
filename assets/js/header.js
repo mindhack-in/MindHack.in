@@ -1,4 +1,4 @@
-fetch("../header.html")
+ fetch("../header.html")
   .then((res) => res.text())
   .then((data) => {
     const link = document.createElement("link");
