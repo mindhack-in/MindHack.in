@@ -2,6 +2,7 @@
   --card-bg: #1e1e1e;
   --text: #f0f0f0;
   --accent: #00bcd4;
+  --bg: #f5f5f5;
 }
 
 /* Header */
@@ -12,30 +13,37 @@ header {
   background-color: var(--card-bg);
   padding: 20px;
   border-bottom: 1px solid #333;
+  flex-wrap: wrap;
 }
-
 
 .sudoku-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
   min-height: 80vh;
   background-color: var(--bg);
+  text-align: center;
 }
 
 #sudoku {
   display: grid;
-  grid-template-columns: repeat(9, 40px);
-  grid-template-rows: repeat(9, 40px);
+  grid-template-columns: repeat(9, 1fr);
+  gap: 2px;
   border: 4px solid black;
-  width: fit-content;
+  max-width: 100%;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 20px;
 }
 
 input[type="text"] {
-  width: 38px;
-  height: 38px;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.2em;
   border: 1px solid #999;
   box-sizing: border-box;
 }
@@ -48,5 +56,46 @@ input[readonly] {
 button {
   padding: 10px 20px;
   font-size: 16px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0097a7;
+}
+
+#result {
   margin-top: 15px;
+  font-size: 1rem;
+  color: var(--card-bg);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .sudoku-wrapper {
+    padding: 10px;
+  }
+
+  #sudoku {
+    max-width: 90vw;
+    gap: 1px;
+  }
+
+  input[type="text"] {
+    font-size: 1em;
+  }
+
+  button {
+    width: 100%;
+    max-width: 300px;
+  }
 }
