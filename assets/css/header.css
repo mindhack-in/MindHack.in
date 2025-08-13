@@ -1,0 +1,49 @@
+:root {
+    --bg: #ece6e6;
+    --card-bg: #1e1e1e;
+    --text: #3fe1e1;
+    --text-muted: #f93737;
+    --accent: #006666;
+    --accent-hover: #006666;
+    --btn-bg: #006666;
+    --btn-hover: #006666;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ece6e6;
+    padding: 20px;
+    border-bottom: 1px solid #333;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+
+.logoimg {
+    height: 10vh;
+}

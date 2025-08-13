@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Rubik's Cube",
+    "description": "Randomize the cube with a sequence of twists to start a fresh solving challenge.",
+    "gameLink": "/games/timer3X3.html"
+  },
+  {
+    "name": "Tic Tac Toe",
+    "description": "A classic 3x3 grid game where players aim to align three Xs or Os in a row.",
+    "gameLink": "/games/tic-tac-toe.html"
+  },
+  {
+    "name": "Sudoku",
+    "description": "A number puzzle where you fill a 9x9 grid so each row, column, and box contains 1–9.",
+    "gameLink": "/games/sudoku.html"
+  },
+  {
+    "name": "2048",
+    "description": "Slide and combine numbered tiles to reach the elusive 2048 tile.",
+    "gameLink": "/games/2048.html"
+  },
+  {
+    "name": "Sliding Puzzel",
+    "description": "Rearrange shuffled tiles by sliding them into the correct order.",
+    "gameLink": "/games/slidingPuzzel.html"
+  },
+  {
+    "name": "Match the card",
+    "description": "Flip and match pairs of cards using memory and logic.",
+    "gameLink": "/games/MatchTheCard.html"
+  },
+  {
+    "name": "Snake",
+    "description": "Control a growing snake to eat food while avoiding walls and itself.",
+    "gameLink": "/games/snake.html"
+  }
+]

@@ -1,0 +1,118 @@
+ /* * {
+   box-sizing: border-box;
+ } */
+
+ body {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   /* align-items: center; */
+   background: #f4f4f4;
+   min-height: 100vh;
+   /* padding: 1rem; */
+ }
+
+ h1 {
+   text-align: center;
+   margin-bottom: 1rem;
+ }
+
+ #puzzle {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 5px;
+   width: 90vmin;
+   height: 90vmin;
+   max-width: 400px;
+   max-height: 400px;
+   margin-bottom: 1rem;
+ }
+
+ .tile {
+   background: #3498db;
+   color: white;
+   font-weight: bold;
+   font-size: 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 8px;
+   cursor: pointer;
+   user-select: none;
+   transition: background 0.2s;
+ }
+
+ .tile:active {
+   background: #2980b9;
+ }
+
+ .empty {
+   background: transparent;
+   cursor: default;
+ }
+
+ #controls {
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+   flex-wrap: wrap;
+   /* justify-content: center; */
+ }
+
+ .gameboard{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ button {
+   padding: 0.5rem 1rem;
+   background: #2ecc71;
+   border: none;
+   border-radius: 5px;
+   color: white;
+   font-size: 1rem;
+   cursor: pointer;
+   transition: background 0.2s;
+ }
+
+ button:hover {
+   background: #27ae60;
+ }
+
+ #message {
+   font-weight: bold;
+   color: #27ae60;
+ }
+
+ .history {
+   margin-top: 20px;
+   background: white;
+   padding: 10px;
+   border-radius: 5px;
+   max-width: 400px;
+   width: 100%;
+   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+ }
+
+ .history h3{
+  color: black;
+ }
+
+ table {
+   width: 100%;
+   border-collapse: collapse;
+   font-size: 14px;
+   color: black;
+ }
+
+ th,
+ td {
+   border: 1px solid #ddd;
+   padding: 6px;
+   text-align: center;
+ }
+
+ th {
+   background: #eee;
+ }

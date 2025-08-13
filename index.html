@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindHack.in</title>
+  <link rel="stylesheet" href="assets/css/home.css" />
+</head>
+
+<body>
+  <div id="header"></div>
+
+
+  <section class="games" id="games">
+    <h2>Featured Games</h2>
+    <div class="game-grid" id='game-grid'> </div>
+  </section>
+
+  <section class="competitions" id="competitions">
+    <h2>Competitions</h2>
+    <p>Challenge your friends or join live competitions to win badges and climb the leaderboard!</p>
+    <div class="competition-info">
+      <div class="competition-card">
+        <h3>🏁 Weekly Challenge</h3>
+        <p>Compete in a new puzzle every week!</p>
+        <button onclick="joinCompetition('weekly')">Join</button>
+      </div>
+      <div class="competition-card">
+        <h3>👥 Friend Battle</h3>
+        <p>Create or join private matches with friends.</p>
+        <button onclick="joinCompetition('friends')">Create Match</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/js/header.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
