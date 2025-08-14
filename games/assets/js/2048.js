@@ -3,8 +3,54 @@ var score = 0;
 var rows = 4;
 var columns = 4;
 
+let touchStartX = 0;
+let touchStartY = 0;
+let touchEndX = 0;
+let touchEndY = 0;
+
+document.addEventListener("touchstart", function(e) {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+}, false);
+
+document.addEventListener("touchend", function(e) {
+    touchEndX = e.changedTouches[0].clientX;
+    touchEndY = e.changedTouches[0].clientY;
+    handleSwipe();
+}, false);
+
+function handleSwipe() {
+    let dx = touchEndX - touchStartX;
+    let dy = touchEndY - touchStartY;
+
+    if (Math.abs(dx) > Math.abs(dy)) {
+        // Horizontal swipe
+        if (dx > 50) {
+            slideRight();
+            setTwo();
+        } else if (dx < -50) {
+            slideLeft();
+            setTwo();
+        }
+    } else {
+        // Vertical swipe
+        if (dy > 50) {
+            slideDown();
+            setTwo();
+        } else if (dy < -50) {
+            slideUp();
+            setTwo();
+        }
+    }
+    document.getElementById("score").innerText = score;
+}
+
+
 window.onload = function() {
     setGame();
+}
+function updateScore() {
+    document.getElementById("score").innerText = score;
 }
 
 function setGame() {

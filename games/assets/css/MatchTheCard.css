@@ -21,12 +21,13 @@ h1 {
 
 #game-board {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Responsive column sizing */
   gap: 10px;
   justify-content: center;
   align-content: center;
-  max-width: calc(10 * 70px + 9 * 10px); /* Max 10 cards per row */
   padding: 0 10px;
+  width: 100%;
+  max-width: 600px; /* Limit max size for desktop */
 }
 
 .card {
@@ -35,7 +36,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: clamp(16px, 4vw, 32px); /* Responsive font size */
+  font-size: clamp(14px, 4vw, 28px); /* Responsive font size */
   cursor: pointer;
   border-radius: 8px;
   user-select: none;
@@ -80,4 +81,14 @@ h1 {
 #status {
   margin-top: 20px;
   font-size: 20px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 500px) {
+  #game-board {
+    gap: 6px; /* Reduce spacing */
+  }
+  .card {
+    font-size: clamp(12px, 5vw, 24px); /* Slightly bigger on very small screens */
+  }
 }
