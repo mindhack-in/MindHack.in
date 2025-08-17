@@ -4,64 +4,27 @@
     --accent: #2563eb;
 }
 
-
-body.light {
-    --bg: #f3f4f6;
-    --text: #1f2937;
-    --primary: #d97706;
+body{
+  background-color:  #ece6e6;
+      margin: 0;
+    --bg:  #ece6e6;
+    --text: #ece6e6;
+    --primary: # #ece6e6;;
     --accent: #1d4ed8;
 }
 
-body {
+/* body.light  {
     font-family: 'Segoe UI', sans-serif;
     background-color: var(--bg);
     color: var(--text);
-    margin: 0;
-    /* padding: 20px; */
+  
     transition: all 0.3s ease;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
-}
-
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-
-}
-
-.logo img {
-   /* height: 35vh; */
-  width: 5vh;
-  margin-left: 10vw;
-  margin-right: 5vw;
-  /* margin-top: 5vh; */
-}
-
-.logo span {
-    color: var(--primary);
-}
-
-nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: var(--text);
-}
-
-nav a.active {
-    color: var(--primary);
-}
+} */
 
 #modeToggle {
     padding: 6px 12px;
     background: var(--accent);
-    color: white;
+    color:  #ece6e6;;
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -89,7 +52,7 @@ nav a.active {
 
 .start {
     background-color: #22c55e;
-    color: white;
+    color:  #ece6e6;;
 }
 
 .stop {
@@ -145,13 +108,15 @@ nav a.active {
 }
 
 table {
-    width: 100%;
+  margin-left: 10%;
+    width: 80%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
 table th,
 table td {
+  
     padding: 10px;
     border: 1px solid #333;
     text-align: center;

@@ -2,9 +2,12 @@
   --card-bg: #1e1e1e;
   --text: #f0f0f0;
   --accent: #00bcd4;
-  --bg: #f5f5f5;
+  --bg:  #ece6e6;;
 }
 
+body{
+  margin: 0;
+}
 /* Header */
 header {
   display: flex;

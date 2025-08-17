@@ -1,3 +1,8 @@
+body{
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
 .container {
   text-align: center;
    margin: 0;
@@ -7,9 +12,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
+  height: 85vh;
+  height: inherit1;
   flex-direction: column;
 }
+
 
 h1 {
   margin-bottom: 1rem;

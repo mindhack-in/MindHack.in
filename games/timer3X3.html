@@ -4,28 +4,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MindHack.in</title>
+  <title>Rubik Cube World Timer</title>
   <link rel="stylesheet" href="./assets/css/timer3X3.css">
 </head>
 
 <body>
-  <div id="header"></div>
+  <!-- <header>
+    <div class="logo">
+      <img src="images/rubic_cube_world.jpg"/>
+      Rubik Cube <span>World</span></div>
+    <nav>
+       <a href="index.html" >Home</a>
+      <a  href="soth.html">Scramble Of the Day</a>
+      <a class="active">Timer</a>
+    </nav>
+  </header> -->
+    <div id="header"></div>
+
+    <!-- <button id="modeToggle">☀️ Light Mode</button> -->
 
   <main>
     <div id="timer" class="timer-display">00.00</div>
-    <div class="timer-buttons">
-      <button onclick="startTimer()" class="start">Start</button>
-      <button onclick="stopTimer()" class="stop">Stop</button>
-      <button onclick="resetTimer()" class="reset">Reset</button>
-    </div>
-    <div class="penalty-buttons">
-      <button onclick="addPenalty('+2')">+2</button>
-      <button onclick="addPenalty('DNF')">DNF</button>
-    </div>
+   
     <div class="options">
       <label>Inspection
         <select id="inspection">
-          <option value="15">15 s</option>
+          <!-- <option value="15">15 s</option> -->
           <option value="0">0 s</option>
         </select>
       </label>
@@ -39,76 +43,16 @@
         <p id="scramble" class="scramble"></p>
         <button onclick="generateScramble()" class="generate">Generate New Scramble</button>
       </div>
-      <div class="scene">
-        <button class="cube-btn">
-          <div class="cube-face front">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="cube-face back">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="cube-face left">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="cube-face right">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="cube-face top">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="cube-face bottom">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </button>
-      </div>
+        <div class="scene">
+               <button class="cube-btn">
+                    <div class="cube-face front"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    <div class="cube-face back"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    <div class="cube-face left"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    <div class="cube-face right"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    <div class="cube-face top"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    <div class="cube-face bottom"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                </button>
+              </div>
     </div>
 
     <div class="averages">
@@ -133,6 +77,9 @@
   </main>
 
 </body>
+<!-- <script src="script.js"></script> -->
+
+<!-- </html> -->
 <script src="./assets/js/timer3X3.js"></script>
 <script src="../assets/js/header.js"></script>
 
