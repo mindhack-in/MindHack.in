@@ -2,6 +2,8 @@ fetch("dynamic/games.json")
   .then((response) => response.json())
   .then((data) => gamePopulate(data));
 
+  document.getElementById("year").innerText = new Date().getFullYear();
+
 function gamePopulate(data) {
   const container = document.getElementById("game-grid");
 
