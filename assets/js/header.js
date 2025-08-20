@@ -13,15 +13,15 @@ function toggleNav() {
   navMenu.classList.toggle("active");
 }
 
-// document.getElementById("year").innerText = new Date().getFullYear();
+// // document.getElementById("year").innerText = new Date().getFullYear();
 
 
-fetch("../footer.html")
-  .then((res) => res.text())
-  .then((data) => {
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = "../assets/css/footer.css";
-    document.head.appendChild(link);
-    document.getElementById("footer").innerHTML = data;
-  });
+// fetch("../footer.html")
+//   .then((res) => res.text())
+//   .then((data) => {
+//     const link = document.createElement("link");
+//     link.rel = "stylesheet";
+//     link.href = "../assets/css/footer.css";
+//     document.head.appendChild(link);
+//     document.getElementById("footer").innerHTML = data;
+//   });

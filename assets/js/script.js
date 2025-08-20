@@ -2,14 +2,12 @@ fetch("dynamic/games.json")
   .then((response) => response.json())
   .then((data) => gamePopulate(data));
 
-  document.getElementById("year").innerText = new Date().getFullYear();
+  // document.getElementById("year").innerText = new Date().getFullYear();
 
 function gamePopulate(data) {
   const container = document.getElementById("game-grid");
 
   data.forEach((key) => {
-    console.log("sdfdsfdsf");
-    console.log(key);
 
     const gameCard = document.createElement("div");
     gameCard.classList = "game-card";
