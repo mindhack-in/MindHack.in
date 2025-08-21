@@ -20,9 +20,9 @@
     "gameLink": "./games/2048.html"
   },
   {
-    "name": "Sliding Puzzel",
+    "name": "Sliding Puzzle",
     "description": "Rearrange shuffled tiles by sliding them into the correct order.",
-    "gameLink": "./games/slidingPuzzel.html"
+    "gameLink": "./games/slidingPuzzle.html"
   },
   {
     "name": "Match the card",
