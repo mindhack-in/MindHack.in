@@ -84,7 +84,7 @@ function isSolvable(array) {
       if (array[j] !== "" && array[i] > array[j]) invCount++;
     }
   }
-  return (invCount + emptyRow) % 2 === 0;
+  return (invCount +3-emptyRow) % 2 === 0;
 }
 
 function isSolved() {
