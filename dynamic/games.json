@@ -2,36 +2,49 @@
   {
     "name": "Rubik's Cube",
     "description": "Randomize the cube with a sequence of twists to start a fresh solving challenge.",
-    "gameLink": "./games/timer3X3.html"
+    "gameLink": "./games/timer3X3.html",
+    "image":"https://mindhack-in.github.io/MindHack.in/dynamic/cubetimer.jpg"
   },
   {
     "name": "Tic Tac Toe",
     "description": "A classic 3x3 grid game where players aim to align three Xs or Os in a row.",
-    "gameLink": "./games/tic-tac-toe.html"
+    "gameLink": "./games/tic-tac-toe.html",
+        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/TicTacToe.jpg"
+
   },
   {
     "name": "Sudoku",
     "description": "A number puzzle where you fill a 9x9 grid so each row, column, and box contains 1–9.",
-    "gameLink": "./games/sudoku.html"
+    "gameLink": "./games/sudoku.html",
+        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/Sudoku.jpg"
+
   },
   {
     "name": "2048",
     "description": "Slide and combine numbered tiles to reach the elusive 2048 tile.",
-    "gameLink": "./games/2048.html"
+    "gameLink": "./games/2048.html",
+        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/2048.jpg"
+
   },
   {
     "name": "Sliding Puzzle",
     "description": "Rearrange shuffled tiles by sliding them into the correct order.",
-    "gameLink": "./games/slidingPuzzle.html"
+    "gameLink": "./games/slidingPuzzle.html",
+        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/SlidingPuzzle.jpg"
+
   },
   {
     "name": "Match the card",
     "description": "Flip and match pairs of cards using memory and logic.",
-    "gameLink": "./games/MatchTheCard.html"
+    "gameLink": "./games/MatchTheCard.html",
+        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/MatchTheCard.jpg"
+
   },
   {
     "name": "Snake",
     "description": "Control a growing snake to eat food while avoiding walls and itself.",
-    "gameLink": "./games/snake.html"
+    "gameLink": "./games/snake.html",
+        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/Snake.png"
+
   }
 ]
