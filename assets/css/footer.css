@@ -1,7 +1,8 @@
 
     footer {
+      /* background: #154D71; */
       background: #ece6e6;
-      color: black;
+      color: #154D71;
       padding: 40px 20px 20px;
       text-align: center;
     }
@@ -31,6 +32,10 @@
 
     .footer-col a:hover {
       color: #00ff99;
+    }
+    
+    .footer-col p{
+          text-align: left;
     }
 
     .social-icons {

@@ -8,24 +8,15 @@
 body{
   margin: 0;
 }
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--card-bg);
-  padding: 20px;
-  border-bottom: 1px solid #333;
-  flex-wrap: wrap;
-}
+
 
 .sudoku-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  min-height: 80vh;
+  /* padding: 20px; */
+  min-height: 100vh;
   background-color: var(--bg);
   text-align: center;
 }

@@ -12,32 +12,36 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-9RC3CF2CZ3');
 </script>
+
 <body>
-   <div id="header"></div>
+  <div id="header"></div>
 
-  <h1>2048</h1>
-  <hr>
-  <h2>Score: <span id="score">0</span></h2>
-  <div id="board">
-    <div id="controls" style="margin-top:20px;">
-   
-</div>
+  <div class="container">
 
+    <h1>2048</h1>
+    <hr>
+    <h2>Score: <span id="score">0</span></h2>
+    <div id="board">
+      <div id="controls" style="margin-top:20px;"> </div>
+    </div>
+    <div>
+      <button onclick="slideUp(); setTwo(); updateScore()" class="button">⬆</button>
+      <button onclick="slideLeft(); setTwo(); updateScore()" class="button">⬅</button>
+      <button onclick="slideDown(); setTwo(); updateScore()" class="button">⬇</button>
+      <button onclick="slideRight(); setTwo(); updateScore()" class="button">➡</button>
+    </div>
   </div>
-   <button onclick="slideUp(); setTwo(); updateScore()">⬆</button>
-    <button onclick="slideLeft(); setTwo(); updateScore()">⬅</button>
-    <button onclick="slideDown(); setTwo(); updateScore()">⬇</button>
-    <button onclick="slideRight(); setTwo(); updateScore()">➡</button>
+
 
 </body>
-  <script src="./assets/js/2048.js"></script>
+<script src="./assets/js/2048.js"></script>
 
-  <script src="../assets/js/header.js"></script>
+<script src="../assets/js/header.js"></script>
 
 
 </html>

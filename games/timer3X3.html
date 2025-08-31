@@ -4,90 +4,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rubik Cube World Timer</title>
+  <title>MindHack.in</title>
   <link rel="stylesheet" href="./assets/css/timer3X3.css">
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-9RC3CF2CZ3');
 </script>
+
 <body>
-  <!-- <header>
-    <div class="logo">
-      <img src="images/rubic_cube_world.jpg"/>
-      Rubik Cube <span>World</span></div>
-    <nav>
-       <a href="index.html" >Home</a>
-      <a  href="soth.html">Scramble Of the Day</a>
-      <a class="active">Timer</a>
-    </nav>
-  </header> -->
-    <div id="header"></div>
-
-    <!-- <button id="modeToggle">☀️ Light Mode</button> -->
-
+  <div id="header"></div>
+  <!-- <div class="container"> -->
   <main>
-    <div id="timer" class="timer-display">00.00</div>
-    <div class="timer-buttons">
-      <button onclick="startTimer()" class="start">Start</button>
-            <button onclick="stopTimer()" class="stop">Stop</button>
+    <div height="auto" class="container_auto">
 
-    </div>
-    <div class="options">
-      <label>Inspection
-        <select id="inspection">
-          <!-- <option value="15">15 s</option> -->
-          <option value="0">0 s</option>
-        </select>
-      </label>
-      <label><input type="checkbox" id="showScramble" checked> Show scramble</label>
-      <label><input type="checkbox" id="hideTime"> Hide time</label>
-    </div>
+      <div class="timer-click" onclick="startStopTimer()">
+        <div id="timer" class="timer-display">00.00</div>
+        <div class="timer-buttons">
+          <button onclick="startTimer()" class="start">Start</button>
+          <button onclick="stopTimer()" class="stop">Stop</button>
 
-    <div id="scrambleSection" class="scramble-section">
-      <div class="scramble-header">
-        <p><strong>Scramble (3x3):</strong></p>
-        <p id="scramble" class="scramble"></p>
-        <button onclick="generateScramble()" class="generate">Generate New Scramble</button>
-      </div>
-        <div class="scene">
-               <button class="cube-btn">
-                    <div class="cube-face front"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-                    <div class="cube-face back"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-                    <div class="cube-face left"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-                    <div class="cube-face right"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-                    <div class="cube-face top"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-                    <div class="cube-face bottom"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-                </button>
+        </div>
+        <div class="options">
+          <label>Inspection
+            <select id="inspection">
+              <!-- <option value="15">15 s</option> -->
+              <option value="0">0 s</option>
+            </select>
+          </label>
+          <label><input type="checkbox" id="showScramble" checked> Show scramble</label>
+          <label><input type="checkbox" id="hideTime"> Hide time</label>
+        </div>
+
+        <div id="scrambleSection" class="scramble-section">
+          <div class="scramble-header">
+            <p><strong>Scramble (3x3):</strong></p>
+            <p id="scramble" class="scramble"></p>
+            <button onclick="generateScramble()" class="generate">Generate New Scramble</button>
+          </div>
+          <div class="scene">
+            <button class="cube-btn">
+              <div class="cube-face front">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
               </div>
-    </div>
+              <div class="cube-face back">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="cube-face left">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="cube-face right">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="cube-face top">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="cube-face bottom">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </button>
+          </div>
+        </div>
 
-    <div class="averages">
-      <p><strong>Avg of 5:</strong> <span id="avg5">-</span></p>
-      <p><strong>Avg of 12:</strong> <span id="avg12">-</span></p>
-    </div>
+        <div class="averages">
+          <p><strong>Avg of 5:</strong> <span id="avg5">-</span></p>
+          <p><strong>Avg of 12:</strong> <span id="avg12">-</span></p>
+        </div>
+</div>
+        <div class="export-btn">
+          <button onclick="exportToCSV()">⬇️ Export CSV</button>
+        </div>
 
-    <div class="export-btn">
-      <button onclick="exportToCSV()">⬇️ Export CSV</button>
-    </div>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Time</th>
-          <th>Scramble</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <tbody id="historyTable"></tbody>
-    </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Scramble</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="historyTable"></tbody>
+        </table>
+      </div>
   </main>
 
+  <!-- <div id="footer"></div> -->
 </body>
 <!-- <script src="script.js"></script> -->
 

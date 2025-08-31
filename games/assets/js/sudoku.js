@@ -18,7 +18,6 @@ async function createSudokuGrid(difficulty = "easy") {
   const apiResponse = await response.json();
 
 
-  console.log(apiResponse);
   
   solution = apiResponse.newboard.grids[0].solution;
   puzzle = apiResponse.newboard.grids[0].value;
@@ -55,6 +54,8 @@ async function createSudokuGrid(difficulty = "easy") {
   }
 }
 
+      // Add thick borders for 3x3 grid boxes
+
 function checkSudoku() {
   let allCorrect = true;
   const inputs = sudokuContainer.querySelectorAll("input");
@@ -65,7 +66,7 @@ function checkSudoku() {
     const expected = solution[row][col];
     const actual = parseInt(input.value);
 
-    if (puzzle[row][col] === null) {
+    if (puzzle[row][col] === 0) {
       if (actual !== expected) {
         input.style.backgroundColor = "#ffcccc"; // incorrect
         allCorrect = false;

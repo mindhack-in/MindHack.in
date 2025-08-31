@@ -1,63 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MindHack.in</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link rel="stylesheet" href="assets/css/home.css" />
-    <link rel="stylesheet" href="assets/css/header.css" />
-        <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
 
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3"></script>
 <script>
+
+
+  function toggleNav() {
+    const navMenu = document.getElementById("nav-menu");
+    navMenu.classList.toggle("active");
+  }
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-9RC3CF2CZ3');
 </script>
+
 <body>
-<header>
+  <header>
     <img class="logoimg" src="https://mindhack-in.github.io/MindHack.in/dynamic/logo.png" />
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
     <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#modes">Modes</a></li>
-            <li><a href="#games">Games</a></li>
-            <li><a href="#competitions">Competitions</a></li>
-        </ul>
+      <ul id="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#competitions">Competitions</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
+
+    <div id="image-holder">  <img id="banner-image" src="dynamic/bn.png" />
+</div>
 
   <section class="games" id="games">
+    <!-- <div id="banner"> -->
+    <div class="banner-content">
+    </div>
+    </div>
+
     <h2>Featured Games</h2>
     <div class="game-grid" id='game-grid'> </div>
   </section>
 
-  <section class="competitions" id="competitions">
-    <h2>Competitions</h2>
-    <!-- <p>Challenge your friends or join live competitions to win badges and climb the leaderboard!</p> -->
-    <!-- <div class="competition-info">
-      <div class="competition-card">
-        <h3>🏁 Weekly Challenge</h3>
-        <p>Compete in a new puzzle every week!</p>
-        <button onclick="joinCompetition('weekly')">Join</button>
+
+
+  <footer id="footer">
+    <div class="footer-bottom">
+    </div>
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <h3>MindHack.in</h3>
+        <p>Unlock your brain’s potential with fun, challenging, and mind-bending games.</p>
       </div>
-      <div class="competition-card">
-        <h3>👥 Friend Battle</h3>
-        <p>Create or join private matches with friends.</p>
-        <button onclick="joinCompetition('friends')">Create Match</button>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <a href="#">Home</a>
+        <a href="#games">Games</a>
+        <a href="#">About Us</a>
       </div>
-    </div> -->
-   <P>We’re working hard to bring you new mind-bending challenges.<br>
-    Stay tuned for updates! </P>
-  </section>
+
+      <!-- <div class="footer-col">
+        <h3>Support</h3>
+        <a href="#">FAQs</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Help Center</a>
+      </div> -->
+
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/mindhack.in/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> MindHack.in | All Rights Reserved
+    </div>
+  </footer>
+
 
   <script src="assets/js/script.js"></script>
 
 
-  
+
 </body>
 
 </html>

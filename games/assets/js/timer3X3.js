@@ -179,3 +179,10 @@ window.onload = () => {
     }
   };
 };
+
+function startStopTimer(){
+  if(isRunning)
+    stopTimer();
+  else 
+    startTimer();
+}
