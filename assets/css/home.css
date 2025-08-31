@@ -149,10 +149,10 @@ body {
   height: 100%; /* or a fixed height like 300px */
 }
 #banner-image {
-    /* width: 99vw;  */
+    width: 99vw; 
   /* height: 80vh;   */
   margin-top: 10vh;
-  /* object-fit: contain; */
+  object-fit: contain;
   /* width: 1820px;
   height: 1080px; */
 }
