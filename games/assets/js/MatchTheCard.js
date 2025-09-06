@@ -62,16 +62,16 @@ function createBoard() {
     card.addEventListener("click", () => handleFlip(card));
   });
 
-let allCards = document.getElementsByClassName('card');
-console.log(allCards);
-Array.from(allCards).forEach(card => {
-  card.classList.add('flip');
-});
+  let allCards = document.getElementsByClassName("card");
+  Array.from(allCards).forEach((card) => {
+    card.classList.add("flip");
+  });
 
-setTimeout(() => {
-Array.from(allCards).forEach(card => {
-  card.classList.remove('flip');
-});}, 2000);
+  setTimeout(() => {
+    Array.from(allCards).forEach((card) => {
+      card.classList.remove("flip");
+    });
+  }, 2000);
 }
 
 function handleFlip(card) {
@@ -103,7 +103,6 @@ function checkMatch() {
 
     if (matchedCount === cards.length) {
       status.textContent = "🎉 You matched all cards!";
- 
     }
   } else {
     setTimeout(() => {
@@ -115,3 +114,16 @@ function checkMatch() {
 }
 
 createBoard();
+
+let module;
+window.onload = async function () {
+  module = await import("../../../config.js");
+  fetch(module.blogJson)
+    .then((response) => response.json())
+    .then((data) => showSideBar(data));
+};
+
+
+async function showSideBar(data) {
+  module.renderBlog("blogContainer", data["MatchTheCard"]);
+}
