@@ -92,7 +92,6 @@ let pathArrayMap = {
     ...homePathEntrys.blue,
   ],
   yellow: [
-    ,
     ...yellow,
     ...blue,
     ...red,
@@ -317,186 +316,19 @@ if (numPvP === 2) {
   playerTurn = ["blue", "red", "green", "yellow"];
 }
 
-let diceTimeout;
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 let autoPlayMode;
+let timePlay = 100000;
 
-const setPlayerTurn = async (playerTurnIndex) => {
-  await sleep(1000);
-
-  let currentTeamTurn = playerTurn[playerTurnIndex];
-  let boardDetailsObject = boardDetails.filter(
-    (obj) => obj.boardColor === currentTeamTurn
-  );
-  boardDetailsObject[0].board.classList.toggle("active");
-
-  const elements = document.querySelectorAll(".side");
-  elements.forEach((el) => {
-    el.style.background = currentTeamTurn;
-  });
-};
-
-autoPlayMode = setTimeout(() => {
-  rollDiceButton.click();
-}, 1000);
-setPlayerTurn(0);
-
-const nextTeamTurn = async (increment) => {
-  await sleep(1000);
-
-  if (increment === true) {
-    if (currentPlayerTurnIndex == playerTurn.length - 1) {
-      currentPlayerTurnIndex = 0;
-    } else {
-      currentPlayerTurnIndex += 1;
-    }
-  }
-  await setPlayerTurn(currentPlayerTurnIndex);
-  rollDiceButton.disabled = false;
-
-  autoPlayMode = setTimeout(() => {
-    rollDiceButton.click();
-  }, 1000);
-};
-
-let playerPlayed = false;
-
-async function playDice() {
-  console.log("currentPlayerTurnIndex  " + currentPlayerTurnIndex);
-  rollDiceButton.disabled = true;
-  clearTimeout(autoPlayMode);
-  await rollDiceAnimation();
-
-  await sleep(1000);
-  let currentTeamTurn = playerTurn[currentPlayerTurnIndex];
-  if (!currentPlayerTurnStatus) return;
-
-  // rollDiceButton.disabled = true;
-  setPlayerTurn(currentPlayerTurnIndex);
-  await glowMyPices(currentTeamTurn, diceResult);
-  autoPlayMode = setTimeout(() => {
-    playAnyPiece(currentTeamTurn, diceResult);
-  }, 1000);
-}
-
-rollDiceButton.addEventListener("click", playDice);
-
-async function glowMyPices(player, diceResult) {
-  let localPieces = playerPieces.filter((obj) => obj.team === player);
-  let playerAllowed = false;
-
-  for (let i = 0; i < localPieces.length; i++) {
-    let shouldGlow = false;
-
-    let totalUnlockedPiece1s = localPieces[i];
-    if (totalUnlockedPiece1s.status === 1) {
-      shouldGlow = true;
-    }
-    if (diceResult === 6) {
-      shouldGlow = true;
-    }
-    const span = document.getElementById(localPieces[i].playerId);
-
-    if (shouldGlow == true) {
-      span.classList.toggle("active");
-      playerAllowed = true;
-      span.onclick = async function () {
-        await unactivePieces(localPieces, diceResult);
-        let totalUnlockedPiece1s = localPieces[i];
-        await totalUnlockedPiece1s.movePiece(diceResult);
-        if (diceResult === 6) {
-          rollDiceButton.disabled = false;
-          console.log("player resturn");
-          setPlayerTurn(currentPlayerTurnIndex);
-          autoPlayMode = setTimeout(() => {
-            rollDiceButton.click();
-          }, 1000);
-          console.log(autoPlayMode);
-        } else {
-          await nextTeamTurn(true);
-        }
-      };
-    } else {
-      span.onclick = function () {};
-    }
-  }
-
-  if (playerAllowed == false) {
-    nextTeamTurn(true);
-  }
-}
-
-async function unactivePieces(localPieces, diceResult) {
-  clearTimeout(autoPlayMode);
-  for (let j = 0; j < localPieces.length; j++) {
-    let totalUnlockedPiece1s = localPieces[j];
-    if (diceResult === 6 || totalUnlockedPiece1s.status === 1) {
-      const s1 = document.getElementById(localPieces[j].playerId);
-      s1.classList.toggle("active");
-      console.log("un active");
-
-      s1.onclick = function () {};
-    }
-  }
-
-  // if (diceResult === 6) {
-  //   rollDiceButton.disabled = false;
-  //   console.log("player resturn");
-  //   setPlayerTurn(currentPlayerTurnIndex);
-  //   autoPlayMode = setTimeout(() => {
-  //     rollDiceButton.click();
-  //   }, 1000);
-  //   console.log(autoPlayMode);
-  // } else {
-  //   await nextTeamTurn(true);
-  // }
-}
-
-async function playAnyPiece(player, diceResult, localPieces) {
-  console.log("Hi");
-  localPieces = playerPieces.filter((obj) => obj.team === player);
-  let allPieces;
-  if (diceResult === 6) {
-    allPieces = playerPieces.filter((obj) => obj.team === player);
-  } else {
-    allPieces = playerPieces.filter(
-      (obj) => obj.team === player && obj.status === 1
-    );
-  }
-
-  if (allPieces.length !== 0) {
-    console.log(allPieces);
-    let i = Math.floor(Math.random() * allPieces.length);
-    console.log(i);
-
-    totalUnlockedPiece1s = allPieces[i];
-    await totalUnlockedPiece1s.movePiece(diceResult);
-  }
-
-  playerPlayed = true;
-  await unactivePieces(localPieces, diceResult);
-   if (diceResult === 6) {
-          rollDiceButton.disabled = false;
-          console.log("player resturn");
-          setPlayerTurn(currentPlayerTurnIndex);
-          autoPlayMode = setTimeout(() => {
-            rollDiceButton.click();
-          }, 1000);
-          console.log(autoPlayMode);
-        } else {
-          await nextTeamTurn(true);
-        }
-}
 
 async function rollDiceAnimation() {
   const dice = document.getElementById("dice");
   const resultText = document.getElementById("result");
   diceResult = Math.floor(Math.random() * 6) + 1;
-  // diceResult = 3;
-  // Random rotation for effect
+
   let x = 0,
     y = 0;
   if (diceResult === 1) {
@@ -524,10 +356,153 @@ async function rollDiceAnimation() {
     y = 0;
   }
 
-  // Add random spins before landing
   x += (Math.floor(Math.random() * 4) + 1) * 360;
   y += (Math.floor(Math.random() * 4) + 1) * 360;
 
   dice.style.transform = `rotateX(${x}deg) rotateY(${y}deg)`;
   resultText.textContent = "Result: " + diceResult;
+}
+
+// let autoPlayMode ;
+
+async function playDice() {
+  console.log("Dice is working");
+  rollDiceButton.disabled = true;
+  clearTimeout(autoPlayMode);
+  await rollDiceAnimation();
+
+  await sleep(1000);
+  let currentTeamTurn = playerTurn[currentPlayerTurnIndex];
+
+  if (!currentPlayerTurnStatus) return;
+
+  await unsetPlayerTurn(currentPlayerTurnIndex);
+  await glowMyPices(currentTeamTurn, diceResult);
+
+  // await  nextTeamTurn();
+  // autoPlayMode = setTimeout(() => {
+  //   playAnyPiece(currentTeamTurn, diceResult);
+  // }, timePlay);
+}
+
+rollDiceButton.addEventListener("click", playDice);
+
+const setPlayerTurn = async (playerTurnIndex) => {
+  await sleep(1000);
+
+  let currentTeamTurn = playerTurn[playerTurnIndex];
+  let boardDetailsObject = boardDetails.filter(
+    (obj) => obj.boardColor === currentTeamTurn
+  );
+  boardDetailsObject[0].board.classList.add("active");
+
+  const elements = document.querySelectorAll(".side");
+  elements.forEach((el) => {
+    el.style.background = currentTeamTurn;
+  });
+
+  autoPlayMode = setTimeout(() => {
+    rollDiceButton.click();
+  }, timePlay);
+};
+
+const unsetPlayerTurn = async (playerTurnIndex) => {
+  await sleep(1000);
+  let currentTeamTurn = playerTurn[playerTurnIndex];
+  let boardDetailsObject = boardDetails.filter(
+    (obj) => obj.boardColor === currentTeamTurn
+  );
+  boardDetailsObject[0].board.classList.remove("active");
+};
+
+setPlayerTurn(0);
+
+const nextTeamTurn = async () => {
+  await sleep(1000);
+
+  if (currentPlayerTurnIndex == playerTurn.length - 1) {
+    currentPlayerTurnIndex = 0;
+  } else {
+    currentPlayerTurnIndex += 1;
+  }
+
+  await setPlayerTurn(currentPlayerTurnIndex);
+  rollDiceButton.disabled = false;
+
+  // autoPlayMode = setTimeout(() => {
+  //   rollDiceButton.click();
+  // }, timePlay);
+};
+
+async function glowMyPices(player, diceResult) {
+  let localPieces = playerPieces.filter((obj) => obj.team === player);
+  let playerAllowed = false;
+
+  let allowedPieces = [];
+  for (let i = 0; i < localPieces.length; i++) {
+    let shouldGlow = false;
+
+    let totalUnlockedPiece1s = localPieces[i];
+    if (totalUnlockedPiece1s.status === 1) {
+      shouldGlow = true;
+    }
+    if (diceResult === 6) {
+      shouldGlow = true;
+    }
+    const span = document.getElementById(localPieces[i].playerId);
+
+    if (shouldGlow == true) {
+      allowedPieces.push(span);
+      span.classList.toggle("active");
+      playerAllowed = true;
+      span.onclick = async function () {
+        await unactivePieces(localPieces, diceResult);
+        let totalUnlockedPiece1s = localPieces[i];
+        await totalUnlockedPiece1s.movePiece(diceResult);
+        if (diceResult === 6) {
+          rollDiceButton.disabled = false;
+          console.log("player resturn");
+          setPlayerTurn(currentPlayerTurnIndex);
+        } else {
+          await nextTeamTurn();
+        }
+      };
+    } else {
+      span.onclick = function () {};
+    }
+  }
+
+  if (playerAllowed == false) {
+    nextTeamTurn();
+  } else {
+    autoPlayMode = setTimeout(() => {
+     playAnyPiece(allowedPieces);
+    }, timePlay);
+  }
+}
+
+async function playAnyPiece(allPieces) {
+  if (allPieces.length !== 0) {
+    console.log(allPieces);
+    let i = Math.floor(Math.random() * allPieces.length);
+    console.log(i);
+
+    totalUnlockedPiece1s = allPieces[i];
+    totalUnlockedPiece1s.click();
+    // await totalUnlockedPiece1s.movePiece(diceResult);
+  }
+}
+
+async function unactivePieces(localPieces, diceResult) {
+  clearTimeout(autoPlayMode);
+  for (let j = 0; j < localPieces.length; j++) {
+    let totalUnlockedPiece1s = localPieces[j];
+    if (diceResult === 6 || totalUnlockedPiece1s.status === 1) {
+      const s1 = document.getElementById(localPieces[j].playerId);
+      s1.classList.toggle("active");
+      console.log("un active");
+
+      s1.onclick = function () {};
+    }
+  }
 }
