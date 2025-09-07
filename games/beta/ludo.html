@@ -8,7 +8,15 @@
     <link rel="stylesheet" href="ludo.css">
     <link rel="stylesheet" href="../../assets/css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'G-9RC3CF2CZ3');
+    </script>
 </head>
 
 <body>
@@ -60,7 +68,9 @@
                 <div class="ludoBox" id="b7"></div>
                 <div class="ludoBox" id="b6"></div>
             </div>
-                        <div >            <div id="winZone"></div></div>
+            <div>
+                <div id="winZone"></div>
+            </div>
 
             <div id="yellowPath" class="horizontalPath">
                 <div class="ludoBox" id="g6"></div>
@@ -107,21 +117,21 @@
             <div id="yellowBoard" class="board">
             </div>
         </div>
-<div class="rollingDice">
-        <div class="dice" id="dice">
-            <div class="side one">1</div>
-            <div class="side two">2</div>
-            <div class="side three">3</div>
-            <div class="side four">4</div>
-            <div class="side five">5</div>
-            <div class="side six">6</div>
-        </div>
+        <div class="rollingDice">
+            <div class="dice" id="dice">
+                <div class="side one">1</div>
+                <div class="side two">2</div>
+                <div class="side three">3</div>
+                <div class="side four">4</div>
+                <div class="side five">5</div>
+                <div class="side six">6</div>
+            </div>
 
-        <button id="rollDiceButton">Roll Dice</button>
-        <h2 id="result">Result: -</h2>
+            <button id="rollDiceButton">Roll Dice</button>
+            <h2 id="result">Result: -</h2>
+        </div>
     </div>
-    </div>
-    
+
 
     </div>
 
