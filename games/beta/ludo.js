@@ -202,7 +202,8 @@ class PlayerPiece {
     if (
       otherPiece != null &&
       otherPiece.team != this.team &&
-      otherPiece.won == 0
+      otherPiece.won == 0 &&
+      otherPiece.position === position
     ) {
       otherPiece.sentMeToBoard();
     }
@@ -259,29 +260,29 @@ for (let i = 0; i < numPvP; i++) {
     span.setAttribute("id", position);
     icon.setAttribute("piceId", pieceId);
 
-    if (pieceId === "blue1") {
-      player.status = 1;
-      console.log(player);
-      player.position = "bh3";
-    }
+    // if (pieceId === "blue1") {
+    //   player.status = 1;
+    //   console.log(player);
+    //   player.position = "bh3";
+    // }
 
-    if (pieceId === "red1") {
-      player.status = 1;
-      console.log(player);
-      player.position = "rh3";
-    }
+    // if (pieceId === "red1") {
+    //   player.status = 1;
+    //   console.log(player);
+    //   player.position = "rh3";
+    // }
 
-    if (pieceId === "green1") {
-      player.status = 1;
-      console.log(player);
-      player.position = "gh3";
-    }
+    // if (pieceId === "green1") {
+    //   player.status = 1;
+    //   console.log(player);
+    //   player.position = "gh3";
+    // }
 
-    if (pieceId === "yellow1") {
-      player.status = 1;
-      console.log(player);
-      player.position = "yh3";
-    }
+    // if (pieceId === "yellow1") {
+    //   player.status = 1;
+    //   console.log(player);
+    //   player.position = "yh3";
+    // }
 
     playerPieces.push(player);
     span.append(icon);
@@ -292,21 +293,21 @@ for (let i = 0; i < numPvP; i++) {
   boardDetails[i].board.append(parentDiv);
 }
 
-let element = document.querySelector(`[piceid="yellow1"]`);
-let gameStart = document.getElementById("yh3");
-gameStart.appendChild(element);
+// let element = document.querySelector(`[piceid="yellow1"]`);
+// let gameStart = document.getElementById("yh3");
+// gameStart.appendChild(element);
 
-element = document.querySelector(`[piceid="green1"]`);
-gameStart = document.getElementById("gh3");
-gameStart.appendChild(element);
+// element = document.querySelector(`[piceid="green1"]`);
+// gameStart = document.getElementById("gh3");
+// gameStart.appendChild(element);
 
-element = document.querySelector(`[piceid="red1"]`);
-gameStart = document.getElementById("rh3");
-gameStart.appendChild(element);
+// element = document.querySelector(`[piceid="red1"]`);
+// gameStart = document.getElementById("rh3");
+// gameStart.appendChild(element);
 
-element = document.querySelector(`[piceid="blue1"]`);
-gameStart = document.getElementById("bh3");
-gameStart.appendChild(element);
+// element = document.querySelector(`[piceid="blue1"]`);
+// gameStart = document.getElementById("bh3");
+// gameStart.appendChild(element);
 
 if (numPvP === 2) {
   playerTurn = ["blue", "green"];
@@ -336,16 +337,15 @@ const setPlayerTurn = async (playerTurnIndex) => {
   elements.forEach((el) => {
     el.style.background = currentTeamTurn;
   });
-
-  // autoPlayMode = setTimeout(() => {
-  //   rollDiceButton.click();
-  // }, 1000);
 };
 
+autoPlayMode = setTimeout(() => {
+  rollDiceButton.click();
+}, 1000);
 setPlayerTurn(0);
 
 const nextTeamTurn = async (increment) => {
-    await sleep(1000);
+  await sleep(1000);
 
   if (increment === true) {
     if (currentPlayerTurnIndex == playerTurn.length - 1) {
@@ -354,15 +354,20 @@ const nextTeamTurn = async (increment) => {
       currentPlayerTurnIndex += 1;
     }
   }
+  await setPlayerTurn(currentPlayerTurnIndex);
   rollDiceButton.disabled = false;
-  setPlayerTurn(currentPlayerTurnIndex);
+
+  autoPlayMode = setTimeout(() => {
+    rollDiceButton.click();
+  }, 1000);
 };
 
 let playerPlayed = false;
 
 async function playDice() {
+  console.log("currentPlayerTurnIndex  " + currentPlayerTurnIndex);
   rollDiceButton.disabled = true;
-
+  clearTimeout(autoPlayMode);
   await rollDiceAnimation();
 
   await sleep(1000);
@@ -372,9 +377,9 @@ async function playDice() {
   // rollDiceButton.disabled = true;
   setPlayerTurn(currentPlayerTurnIndex);
   await glowMyPices(currentTeamTurn, diceResult);
-  // autoPlayMode = setTimeout(() => {
-  //   playAnyPiece(currentTeamTurn, diceResult);
-  // }, 1000);
+  autoPlayMode = setTimeout(() => {
+    playAnyPiece(currentTeamTurn, diceResult);
+  }, 1000);
 }
 
 rollDiceButton.addEventListener("click", playDice);
@@ -396,15 +401,23 @@ async function glowMyPices(player, diceResult) {
     const span = document.getElementById(localPieces[i].playerId);
 
     if (shouldGlow == true) {
-      console.log("active")
-
       span.classList.toggle("active");
       playerAllowed = true;
       span.onclick = async function () {
+        await unactivePieces(localPieces, diceResult);
         let totalUnlockedPiece1s = localPieces[i];
         await totalUnlockedPiece1s.movePiece(diceResult);
-        unactivePieces(localPieces, diceResult);
-
+        if (diceResult === 6) {
+          rollDiceButton.disabled = false;
+          console.log("player resturn");
+          setPlayerTurn(currentPlayerTurnIndex);
+          autoPlayMode = setTimeout(() => {
+            rollDiceButton.click();
+          }, 1000);
+          console.log(autoPlayMode);
+        } else {
+          await nextTeamTurn(true);
+        }
       };
     } else {
       span.onclick = function () {};
@@ -416,27 +429,34 @@ async function glowMyPices(player, diceResult) {
   }
 }
 
-function unactivePieces(localPieces, diceResult) {
+async function unactivePieces(localPieces, diceResult) {
+  clearTimeout(autoPlayMode);
   for (let j = 0; j < localPieces.length; j++) {
     let totalUnlockedPiece1s = localPieces[j];
     if (diceResult === 6 || totalUnlockedPiece1s.status === 1) {
       const s1 = document.getElementById(localPieces[j].playerId);
       s1.classList.toggle("active");
-            console.log("un active")
+      console.log("un active");
 
       s1.onclick = function () {};
     }
   }
-  if (diceResult === 6) {
-    rollDiceButton.disabled = false;
-    setPlayerTurn(currentPlayerTurnIndex);
-  } else {
-    rollDiceButton.disabled = false;
-    nextTeamTurn(true);
-  }
+
+  // if (diceResult === 6) {
+  //   rollDiceButton.disabled = false;
+  //   console.log("player resturn");
+  //   setPlayerTurn(currentPlayerTurnIndex);
+  //   autoPlayMode = setTimeout(() => {
+  //     rollDiceButton.click();
+  //   }, 1000);
+  //   console.log(autoPlayMode);
+  // } else {
+  //   await nextTeamTurn(true);
+  // }
 }
 
 async function playAnyPiece(player, diceResult, localPieces) {
+  console.log("Hi");
   localPieces = playerPieces.filter((obj) => obj.team === player);
   let allPieces;
   if (diceResult === 6) {
@@ -449,7 +469,7 @@ async function playAnyPiece(player, diceResult, localPieces) {
 
   if (allPieces.length !== 0) {
     console.log(allPieces);
-    let i = Math.floor(Math.random() * allPieces.length) + 1;
+    let i = Math.floor(Math.random() * allPieces.length);
     console.log(i);
 
     totalUnlockedPiece1s = allPieces[i];
@@ -457,7 +477,18 @@ async function playAnyPiece(player, diceResult, localPieces) {
   }
 
   playerPlayed = true;
-  unactivePieces(localPieces, diceResult);
+  await unactivePieces(localPieces, diceResult);
+   if (diceResult === 6) {
+          rollDiceButton.disabled = false;
+          console.log("player resturn");
+          setPlayerTurn(currentPlayerTurnIndex);
+          autoPlayMode = setTimeout(() => {
+            rollDiceButton.click();
+          }, 1000);
+          console.log(autoPlayMode);
+        } else {
+          await nextTeamTurn(true);
+        }
 }
 
 async function rollDiceAnimation() {
