@@ -138,7 +138,7 @@ let homePathArray = [
 ];
 
 class PlayerPiece {
-  constructor(team, position, score, homePathEntry, playerId, gameEntry) {
+  constructor(team, position, score, homePathEntry, playerId, gameEntry,spanId) {
     this.team = team;
     this.position = position;
     this.score = score;
@@ -148,6 +148,7 @@ class PlayerPiece {
     this.status = 0;
     this.initialPosition = position;
     this.won = 0;
+    this.spanId=spanId;
   }
 
   unlockPiece() {
@@ -179,13 +180,10 @@ class PlayerPiece {
 
         if (this.position === "winZone") {
           
+          // const span=document.getElementById(this.spanId);
+          //   // span.innerHTML = `<p></p>`
+          //               // span.innerHTML = `<p>&#9989</p>`
 
-            span.innerHTML = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-         viewBox="0 0 24 24" fill="none" stroke="white" 
-         stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M5 13l4 4L19 7"/>
-    </svg>`
           this.won = 1;
           this.status = 0;
           break;
@@ -265,7 +263,7 @@ for (let i = 0; i < numPvP; i++) {
       0,
       homeEntry,
       pieceId,
-      gameEntry
+      gameEntry,position
     );
     span.setAttribute("id", position);
     icon.setAttribute("piceId", pieceId);
@@ -310,6 +308,7 @@ for (let i = 0; i < numPvP; i++) {
     // }
 
     playerPieces.push(player);
+    // span.innerHTML='&#x2705';
     span.append(icon);
     parentDiv.append(span);
     localPieces.push(player);
@@ -376,7 +375,7 @@ async function rollDiceAnimation() {
   const dice = document.getElementById("dice");
   const resultText = document.getElementById("result");
   diceResult = Math.floor(Math.random() * 6) + 1;
-// diceResult=1;
+diceResult=3;
   let x = 0,
     y = 0;
   if (diceResult === 1) {
@@ -436,7 +435,7 @@ rollDiceButton.addEventListener("click", playDice);
 
 
 const setPlayerTurn = async (playerTurnIndex) => {
-  await sleep(1000);
+  await sleep(100);
 
   let currentTeamTurn = playerTurn[playerTurnIndex];
   let boardDetailsObject = boardDetails.filter(
@@ -458,7 +457,7 @@ const setPlayerTurn = async (playerTurnIndex) => {
 };
 
 const unsetPlayerTurn = async (playerTurnIndex) => {
-  await sleep(1000);
+  await sleep(100);
   let currentTeamTurn = playerTurn[playerTurnIndex];
   let boardDetailsObject = boardDetails.filter(
     (obj) => obj.boardColor === currentTeamTurn
