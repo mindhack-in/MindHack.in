@@ -93,3 +93,31 @@ button:hover {
     max-width: 300px;
   }
 }
+
+
+
+.tracker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tracker div {
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-weight: bold;
+  min-width: 40px;
+}
+
+.disabled {
+  background: #ccc;
+  color: #666;
+}
+
+.highlight {
+  background-color: #fff3b0 !important; /* soft yellow */
+}

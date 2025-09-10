@@ -1,4 +1,5 @@
 const sudokuContainer = document.getElementById("sudoku");
+const tracker = document.getElementById("numberTracker");
 
 var solution;
 var puzzle;
@@ -46,12 +47,19 @@ async function createSudokuGrid(difficulty = "easy") {
           if (!/^[1-9]?$/.test(val)) {
             e.target.value = "";
           }
+           updateTracker();
+        });
+        input.addEventListener("focus", () => {
+          selectedInput = input;
+          console.log("hig");
+          highlightRowCol(input); // 🔥 highlight row + column
         });
       }
 
       sudokuContainer.appendChild(input);
     }
   }
+    updateTracker();
 }
 
       // Add thick borders for 3x3 grid boxes
@@ -81,5 +89,69 @@ function checkSudoku() {
     ? "🎉 Correct! Puzzle solved!"
     : "❌ Some entries are incorrect.";
 }
+
+
+function updateTracker() {
+  const counts = Array(10).fill(0);
+  const inputs = sudokuContainer.querySelectorAll("input");
+  inputs.forEach((input) => {
+    if (input.value) {
+      counts[parseInt(input.value)]++;
+    }
+  });
+
+  tracker.innerHTML = "";
+  for (let n = 1; n <= 9; n++) {
+    const div = document.createElement("div");
+    div.textContent = `${n} (${counts[n]}/9)`;
+    if (counts[n] === 9) div.classList.add("disabled");
+    div.addEventListener("click", (e) => {
+      highlightGrid(n);
+    });
+    tracker.appendChild(div);
+  }
+}
+
+
+function highlightGrid(input) {
+  // Clear old highlights
+  sudokuContainer.querySelectorAll("input").forEach((cell) => {
+    cell.classList.remove("highlight");
+  });
+       console.log(input);
+
+  sudokuContainer.querySelectorAll("input").forEach((cell) => {
+      console.log(cell.value);
+    if (parseInt(cell.value) === input ) {
+      // if (!cell.readOnly) {
+        cell.classList.add("highlight");
+      // }
+    }
+  });
+}
+
+
+function highlightRowCol(input) {
+  // Clear old highlights
+  sudokuContainer.querySelectorAll("input").forEach((cell) => {
+    cell.classList.remove("highlight");
+  });
+
+  const row = parseInt(input.dataset.row);
+  const col = parseInt(input.dataset.col);
+
+  sudokuContainer.querySelectorAll("input").forEach((cell) => {
+    if (
+      parseInt(cell.dataset.row) === row ||
+      parseInt(cell.dataset.col) === col
+    ) {
+      if (!cell.readOnly) {
+        // don't override given cells
+        cell.classList.add("highlight");
+      }
+    }
+  });
+}
+
 
 createSudokuGrid();

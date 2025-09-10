@@ -375,7 +375,7 @@ async function rollDiceAnimation() {
   const dice = document.getElementById("dice");
   const resultText = document.getElementById("result");
   diceResult = Math.floor(Math.random() * 6) + 1;
-diceResult=3;
+// diceResult=3;
   let x = 0,
     y = 0;
   if (diceResult === 1) {
