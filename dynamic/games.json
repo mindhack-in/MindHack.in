@@ -1,50 +1,57 @@
 [
+   {
+    "name": "Sliding Puzzle Beta",
+    "description": "Rearrange shuffled tiles by sliding them into the correct order.",
+    "gameLink": "./games/slidingPuzzleBeta.html",
+        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/SlidingPuzzle.jpg","new":true
+
+  },
   {
     "name": "Rubik's Cube",
     "description": "Randomize the cube with a sequence of twists to start a fresh solving challenge.",
     "gameLink": "./games/timer3X3.html",
-    "image":"https://mindhack-in.github.io/MindHack.in/dynamic/cubetimer.jpg"
+    "image":"https://mindhack-in.github.io/MindHack.in/dynamic/cubetimer.jpg","new":false
   },
   {
     "name": "Tic Tac Toe",
     "description": "A classic 3x3 grid game where players aim to align three Xs or Os in a row.",
     "gameLink": "./games/tic-tac-toe.html",
-        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/TicTacToe.jpg"
+        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/TicTacToe.jpg","new":false
 
   },
   {
     "name": "Sudoku",
     "description": "A number puzzle where you fill a 9x9 grid so each row, column, and box contains 1–9.",
     "gameLink": "./games/sudoku.html",
-        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/Sudoku.jpg"
+        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/Sudoku.jpg","new":false
 
   },
   {
     "name": "2048",
     "description": "Slide and combine numbered tiles to reach the elusive 2048 tile.",
     "gameLink": "./games/2048.html",
-        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/2048.jpg"
+        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/2048.jpg","new":false
 
   },
   {
     "name": "Sliding Puzzle",
     "description": "Rearrange shuffled tiles by sliding them into the correct order.",
     "gameLink": "./games/slidingPuzzle.html",
-        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/SlidingPuzzle.jpg"
+        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/SlidingPuzzle.jpg","new":false
 
   },
   {
     "name": "Match the card",
     "description": "Flip and match pairs of cards using memory and logic.",
     "gameLink": "./games/MatchTheCard.html",
-        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/MatchTheCard.jpg"
+        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/MatchTheCard.jpg","new":false
 
   },
   {
     "name": "Snake",
     "description": "Control a growing snake to eat food while avoiding walls and itself.",
     "gameLink": "./games/snake.html",
-        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/Snake.png"
+        "image":"https://mindhack-in.github.io/MindHack.in/dynamic/Snake.png","new":false
 
   }
 ]

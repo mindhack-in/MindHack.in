@@ -8,16 +8,15 @@ function gamePopulate(data) {
   const container = document.getElementById("game-grid");
 
   data.forEach((key) => {
-  
     const gameCard = document.createElement("div");
     gameCard.classList = "card";
 
-    const newTag = document.createElement("span");
-    newTag.classList.add("tag-new");
-    newTag.innerHTML = "New";
-
-    gameCard.appendChild(newTag);
-
+    if (key.new === true) {
+      const newTag = document.createElement("span");
+      newTag.classList.add("tag-new");
+      newTag.innerHTML = "New";
+      gameCard.appendChild(newTag);
+    }
     const img = document.createElement("img");
     img.src = key.image;
 
@@ -29,7 +28,7 @@ function gamePopulate(data) {
 
     const button = document.createElement("button");
     button.onclick = key.link;
-    button.classList.add('btn');
+    button.classList.add("btn");
     button.innerHTML = "Play Now";
     button.onclick = () => {
       console.log(key.gameLink);

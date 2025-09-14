@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindHack.in</title>
+  <link rel="stylesheet" href="./assets/css/slidingPuzzlebeta.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-9RC3CF2CZ3');
+</script>
+
+<body>
+  <div id="header"></div>
+
+  <div class="parent active" id="parent">
+    <button id="openPopupBtn" class="btn">Load history</button>
+    <div class="spacer"></div>
+    <div class="puzzle-container" id="puzzleContainer"></div>
+  </div>
+
+
+  <div class="headcontainer">
+    <div class="container1">
+
+      <div class="game" id="gamePage">
+        <h1>Sliding Puzzle</h1>
+        <div id="puzzle"></div>
+        <div class="controls">
+          <span>Moves: <span id="moveCount">0</span></span>
+          <button onclick="shuffleTiles()">Restart</button>
+          <button onclick="goBack()">Back</button>
+        </div>
+        <p id="message"></p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="history popup-overlay " id="popup">
+    <div class="popup-content">
+      <h3>Game History</h3>
+      <button class="close-btn" id="closePopupBtn">Close</button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Grid Size</th>
+            <th>Date</th>
+            <th>Moves</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="historyBody"></tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+  <script src="./assets/js/slidingPuzzlebeta.js"></script>
+  <script src="../assets/js/header.js"></script>
+
+</body>
+
+</html>
