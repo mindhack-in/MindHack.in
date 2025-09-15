@@ -1,13 +1,24 @@
 const colors = [
-        "#ff7f00", "#ffff00", "#00ff00", "#00ffff",
-        "#0000ff", "#ff00ff", "#ff0000", "#ffa500",
-        "#9400d3", "#1e90ff", "#32cd32", "#ffd700",
-        "#00ced1", "#ff1493", "#8b0000", "#20b2aa"
-    ];
+  "#ff7f00",
+  "#ffff00",
+  "#00ff00",
+  "#00ffff",
+  "#0000ff",
+  "#ff00ff",
+  "#ff0000",
+  "#ffa500",
+  "#9400d3",
+  "#1e90ff",
+  "#32cd32",
+  "#ffd700",
+  "#00ced1",
+  "#ff1493",
+  "#8b0000",
+  "#20b2aa",
+];
 
-
-    const puzzleContent = {
-        "3": `<div class="puzzle-section" id="puzzle-3x3">
+const puzzleContent = {
+  3: `<div class="puzzle-section" id="puzzle-3x3">
   <h1>3x3 Sliding Puzzle</h1>
   <p>
     The 3x3 sliding puzzle, often known as the "15 Puzzle’s little cousin," is the most basic and beginner-friendly version of sliding puzzles. 
@@ -35,7 +46,7 @@ const colors = [
   <div class="puzzle-grid" data-size="3"></div>
 </div>
 `,
-        "4": `
+  4: `
     <div class="puzzle-section" id="puzzle-4x4">
   <h1>4x4 Sliding Puzzle</h1>
   <p>
@@ -64,7 +75,7 @@ const colors = [
   <div class="puzzle-grid" data-size="4"></div>
 </div>
   `,
-        "5": `
+  5: `
   <div class="puzzle-section" id="puzzle-5x5">
   <h1>5x5 Sliding Puzzle</h1>
   <p>
@@ -92,7 +103,7 @@ const colors = [
   <div class="puzzle-grid" data-size="5"></div>
 </div>
   `,
-        "6": `
+  6: `
         <div class="puzzle-section" id="puzzle-6x6">
   <h1>6x6 Sliding Puzzle</h1>
   <p>
@@ -122,7 +133,7 @@ const colors = [
   <div class="puzzle-grid" data-size="6"></div>
 </div>
 `,
-        "7": `
+  7: `
         <div class="puzzle-section" id="puzzle-7x7">
   <h1>7x7 Sliding Puzzle</h1>
   <p>
@@ -150,7 +161,8 @@ const colors = [
   </p>
   <div class="puzzle-grid" data-size="7"></div>
 </div>
-`, "8": `
+`,
+  8: `
 <div class="puzzle-section" id="puzzle-8x8">
   <h1>8x8 Sliding Puzzle</h1>
   <p>
@@ -177,7 +189,8 @@ const colors = [
   </p>
   <div class="puzzle-grid" data-size="8"></div>
 </div>
-`, "9": `
+`,
+  9: `
 <div class="puzzle-section" id="puzzle-9x9">
   <h1>9x9 Sliding Puzzle</h1>
   <p>
@@ -203,7 +216,8 @@ const colors = [
   </p>
   <div class="puzzle-grid" data-size="9"></div>
 </div>
-`, "10": `
+`,
+  10: `
 <div class="puzzle-section" id="puzzle-10x10">
   <h1>10x10 Sliding Puzzle</h1>
   <p>
@@ -230,404 +244,418 @@ const colors = [
   <div class="puzzle-grid" data-size="10"></div>
 </div>
 `,
-    };
+};
 
-    function createPuzzle(size) {
-        const wrapper = document.createElement("div");
-        wrapper.className = "puzzle-wrapper";
+function createPuzzle(size) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "puzzle-wrapper";
 
-        const puzzle = document.createElement("div");
-        puzzle.className = "puzzle";
-        puzzle.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-        puzzle.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+  const puzzle = document.createElement("div");
+  puzzle.className = "puzzle";
+  puzzle.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  puzzle.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
-        let count = 1;
-        for (let i = 0; i < size * size; i++) {
-            const tile = document.createElement("div");
-            tile.className = "tile";
-            if (i < size * size - 1) {
-                tile.textContent = count;
-                tile.style.background = colors[i % colors.length];
-                count++;
-            } else {
-                tile.classList.add("empty");
-            }
-            puzzle.appendChild(tile);
-        }
-
-        const label = document.createElement("div");
-        label.className = "label";
-        label.textContent = `${size}X${size}`;
-
-        // wrapper.appendChild(label);
-
-        wrapper.appendChild(puzzle);
-        wrapper.appendChild(puzzle);
-
-        let div = document.createElement('div');
-        div.innerHTML = puzzleContent[size];
-        div.classList.add('content')
-
-        // let button =document.createElement('button');
-        // button.innerHTML='PlayNow';
-        const button = document.createElement('button');
-        button.classList.add('btn');
-        button.onclick = () => sendValue(size);
-        button.innerHTML = 'PLAY NOW'
-        div.appendChild(button);
-
-        wrapper.appendChild(div);
-
-
-        // <button class='btn'>Play Now</button>
-
-        return wrapper;
+  let count = 1;
+  for (let i = 0; i < size * size; i++) {
+    const tile = document.createElement("div");
+    tile.className = "tile";
+    if (i < size * size - 1) {
+      tile.textContent = count;
+      tile.style.background = colors[i % colors.length];
+      count++;
+    } else {
+      tile.classList.add("empty");
     }
+    puzzle.appendChild(tile);
+  }
 
-    const container = document.getElementById("puzzleContainer");
-    // Add alternating 3x3 and 4x4 puzzles
-    for (let i = 3; i <= 10; i++) {
-        // const size = i % 2 === 0 ? 3 : 4;
-        container.appendChild(createPuzzle(i));
+  const label = document.createElement("div");
+  label.className = "label";
+  label.textContent = `${size}X${size}`;
+  wrapper.appendChild(puzzle);
+  wrapper.appendChild(puzzle);
+  let div = document.createElement("div");
+  div.innerHTML = puzzleContent[size];
+  div.classList.add("content");
+  const button = document.createElement("button");
+  button.classList.add("btn");
+  button.onclick = () => sendValue(size);
+  button.innerHTML = "PLAY NOW";
+  div.appendChild(button);
+  wrapper.appendChild(div);
+  return wrapper;
+}
+
+const container = document.getElementById("puzzleContainer");
+for (let i = 3; i <= 10; i++) {
+  container.appendChild(createPuzzle(i));
+}
+
+const menuPage = document.getElementById("parent");
+const gamePage = document.getElementById("gamePage");
+const puzzle = document.getElementById("puzzle");
+const moveCountEl = document.getElementById("moveCount");
+const messageEl = document.getElementById("message");
+
+let gridSize = 4;
+let tiles = [];
+let moveCount = 0;
+let isShuffling = false;
+
+function sendValue(val) {
+  gridSize = val;
+  menuPage.classList.remove("active");
+  gamePage.classList.add("active");
+  init();
+}
+
+function startGame() {
+  gridSize = parseInt(document.getElementById("gridSizeSelect").value);
+  menuPage.classList.remove("active");
+  gamePage.classList.add("active");
+  init();
+}
+
+function shuffleTiles(){
+  saveHistory(moveCount, "Unsolved");
+  init();
+}
+function goBack() {
+  if (isShuffling) return; 
+  gamePage.classList.remove("active");
+  menuPage.classList.add("active");
+}
+
+function init() {
+  tiles = [];
+  for (let i = 1; i < gridSize * gridSize; i++) tiles.push(i);
+  tiles.push(""); 
+  moveCount = 0;
+  moveCountEl.textContent = moveCount;
+  messageEl.textContent = "";
+
+  renderTiles();
+  animateShuffleGuaranteed();
+}
+
+function renderTiles(highlightValue = null) {
+  puzzle.innerHTML = "";
+  puzzle.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+  puzzle.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+
+  tiles.forEach((val, idx) => {
+    const tile = document.createElement("div");
+    tile.className = "tile";
+    tile.style.background = getTileColor(val);
+    if (val === "") {
+      tile.classList.add("empty");
+    } else {
+      tile.textContent = val;
+      tile.addEventListener("click", () => {
+        if (!isShuffling) moveTile(idx);
+      });
     }
-
-
-
-    const menuPage = document.getElementById("parent");
-    const gamePage = document.getElementById("gamePage");
-    const puzzle = document.getElementById("puzzle");
-    const moveCountEl = document.getElementById("moveCount");
-    const messageEl = document.getElementById("message");
-
-    let gridSize = 4;
-    let tiles = [];
-    let moveCount = 0;
-    let isShuffling = false;
-
-    // let slidingPuzzle3X3=document.getElementById("3X3SlidingPuzzle");
-    // slidingPuzzle3X3.addEventListener('click', () => {
-    //   sendValue(4);
-    // });
-
-
-    function sendValue(val) {
-        // console.log(menuPage)
-        gridSize = val;
-        menuPage.classList.remove("active");
-        gamePage.classList.add("active");
-        init();
+    if (highlightValue !== null && val === highlightValue) {
+      tile.classList.add("recent-move");
+      setTimeout(() => tile.classList.remove("recent-move"), 220);
     }
-    function startGame() {
-        gridSize = parseInt(document.getElementById("gridSizeSelect").value);
-        menuPage.classList.remove("active");
-        gamePage.classList.add("active");
-        init();
-    }
+    puzzle.appendChild(tile);
+  });
+}
 
-    function goBack() {
-        if (isShuffling) return; // prevent leaving while shuffle
-        gamePage.classList.remove("active");
-        menuPage.classList.add("active");
-    }
+function moveTile(idx) {
+  if (isShuffling) return;
+  const emptyIdx = tiles.indexOf("");
+  const validMoves = [idx - 1, idx + 1, idx - gridSize, idx + gridSize];
 
-    function init() {
-        // build solved board
-        tiles = [];
-        for (let i = 1; i < gridSize * gridSize; i++) tiles.push(i);
-        tiles.push(""); // empty
-        moveCount = 0;
-        moveCountEl.textContent = moveCount;
-        messageEl.textContent = "";
+  if (
+    validMoves.includes(emptyIdx) &&
+    !(idx % gridSize === 0 && emptyIdx === idx - 1) &&
+    !(idx % gridSize === gridSize - 1 && emptyIdx === idx + 1)
+  ) {
+    [tiles[idx], tiles[emptyIdx]] = [tiles[emptyIdx], tiles[idx]];
+    moveCount++;
+    moveCountEl.textContent = moveCount;
+    renderTiles();
+    checkWin();
+  }
+}
 
-        renderTiles();
-        // start animated shuffle that guarantees every tile moves at least once
-        animateShuffleGuaranteed();
-    }
+async function animateShuffleGuaranteed() {
+  isShuffling = true;
+  messageEl.textContent = "Shuffling...";
+  const N = gridSize * gridSize - 1; 
+  const harmonicEstimate = Math.log(N > 0 ? N : 1) + 0.5772156649;
+  let randomSteps = Math.ceil(N * harmonicEstimate * 1.2); 
+  randomSteps = Math.max(randomSteps, 60); 
+  const stepDelay =1;
+  const movedTiles = new Set();
 
-    function renderTiles(highlightValue = null) {
-        puzzle.innerHTML = "";
-        puzzle.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
-        puzzle.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+  for (let i = 0; i < randomSteps; i++) {
+    const emptyIdx = tiles.indexOf("");
+    const neighbors = getNeighbors(emptyIdx);
+    const moveIdx = neighbors[Math.floor(Math.random() * neighbors.length)];
+    const movedValue = tiles[moveIdx];
+    [tiles[emptyIdx], tiles[moveIdx]] = [tiles[moveIdx], tiles[emptyIdx]];
+    if (movedValue !== "") movedTiles.add(movedValue);
+    renderTiles(movedValue);
+    await sleep(stepDelay);
+  }
 
-        tiles.forEach((val, idx) => {
-            const tile = document.createElement("div");
-            tile.className = "tile";
-            tile.style.background = getTileColor(val);
-            if (val === "") {
-                tile.classList.add("empty");
-            } else {
-                tile.textContent = val;
-                // clicking allowed only when not shuffling
-                tile.addEventListener("click", () => {
-                    if (!isShuffling) moveTile(idx);
-                });
-            }
-            if (highlightValue !== null && val === highlightValue) {
-                tile.classList.add("recent-move");
-                // remove highlight after short time
-                setTimeout(() => tile.classList.remove("recent-move"), 220);
-            }
-            puzzle.appendChild(tile);
-        });
-    }
+  const allValues = [];
+  for (let v = 1; v <= N; v++) allValues.push(v);
+  const remaining = allValues.filter((v) => !movedTiles.has(v));
 
-    function moveTile(idx) {
-        // ignore user attempts while shuffling
-        if (isShuffling) return;
+  for (const val of remaining) {
+    let tileIdx = tiles.indexOf(val);
+    if (tileIdx === -1) continue; // safety
 
-        const emptyIdx = tiles.indexOf("");
-        const validMoves = [idx - 1, idx + 1, idx - gridSize, idx + gridSize];
+    const neighborsOfTile = getNeighbors(tileIdx);
 
-        if (
-            validMoves.includes(emptyIdx) &&
-            !(idx % gridSize === 0 && emptyIdx === idx - 1) &&
-            !(idx % gridSize === gridSize - 1 && emptyIdx === idx + 1)
-        ) {
-            [tiles[idx], tiles[emptyIdx]] = [tiles[emptyIdx], tiles[idx]];
-            moveCount++;
-            moveCountEl.textContent = moveCount;
-            renderTiles();
-            checkWin();
-        }
-    }
-
-    async function animateShuffleGuaranteed() {
-        isShuffling = true;
-        messageEl.textContent = "Shuffling...";
-        const N = gridSize * gridSize - 1; // number of tiles (excluding empty)
-
-        // Phase 1: random valid moves (do about ~N log N moves)
-        const harmonicEstimate = Math.log(N > 0 ? N : 1) + 0.5772156649;
-        let randomSteps = Math.ceil(N * harmonicEstimate * 1.2); // multiplier for safety
-        randomSteps = Math.max(randomSteps, 60); // minimum steps
-        const stepDelay = Math.max(40, Math.floor(3000 / randomSteps)); // spread over ~3s-ish
-
-        const movedTiles = new Set();
-
-        // perform random moves and record which tile values moved
-        for (let i = 0; i < randomSteps; i++) {
-            const emptyIdx = tiles.indexOf("");
-            const neighbors = getNeighbors(emptyIdx);
-            const moveIdx = neighbors[Math.floor(Math.random() * neighbors.length)];
-            const movedValue = tiles[moveIdx];
-            // swap
-            [tiles[emptyIdx], tiles[moveIdx]] = [tiles[moveIdx], tiles[emptyIdx]];
-            if (movedValue !== "") movedTiles.add(movedValue);
-            renderTiles(movedValue);
-            await sleep(stepDelay);
-        }
-
-        // Phase 2: ensure every tile moved at least once
-        const allValues = [];
-        for (let v = 1; v <= N; v++) allValues.push(v);
-
-        const remaining = allValues.filter((v) => !movedTiles.has(v));
-
-        // For each remaining tile, move it explicitly by moving the empty to a neighbor
-        for (const val of remaining) {
-            // find the current index of this tile
-            let tileIdx = tiles.indexOf(val);
-            if (tileIdx === -1) continue; // safety
-
-            // get neighbors of the tile (positions we can move empty to so swapping will move the tile)
-            const neighborsOfTile = getNeighbors(tileIdx);
-
-            // pick the neighbor with the shortest path from current empty position
-            const emptyIdx = tiles.indexOf("");
-            let bestPath = null;
-            for (const nb of neighborsOfTile) {
-                const path = bfsPath(emptyIdx, nb, gridSize, tiles.length);
-                if (path && (bestPath === null || path.length < bestPath.length)) {
-                    bestPath = path;
-                }
-            }
-
-            // if we couldn't find a path (shouldn't happen), skip
-            if (!bestPath) continue;
-
-            // move empty along path step-by-step
-            for (let k = 1; k < bestPath.length; k++) {
-                const from = bestPath[k - 1];
-                const to = bestPath[k];
-                // swap empty and the tile at 'to'
-                [tiles[from], tiles[to]] = [tiles[to], tiles[from]];
-                // the tile that moved into 'from' is tiles[from] (except empty)
-                const movedValue = tiles[from] === "" ? null : tiles[from];
-                if (movedValue !== null) movedTiles.add(movedValue);
-                renderTiles(movedValue);
-                await sleep(120);
-            }
-
-            // now empty is adjacent to tileIdx (tile may have moved if path crossed it; recompute)
-            tileIdx = tiles.indexOf(val);
-            const emptyNow = tiles.indexOf("");
-            // ensure they are adjacent; if not, skip (shouldn't happen)
-            if (Math.abs(tileIdx - emptyNow) === 1 || Math.abs(tileIdx - emptyNow) === gridSize) {
-                // swap to move the tile
-                [tiles[emptyNow], tiles[tileIdx]] = [tiles[tileIdx], tiles[emptyNow]];
-                movedTiles.add(val);
-                renderTiles(val);
-                await sleep(160);
-            } else {
-                // fallback: perform a single random move to continue mixing
-                const empt = tiles.indexOf("");
-                const neigh = getNeighbors(empt);
-                const rnd = neigh[Math.floor(Math.random() * neigh.length)];
-                const movedValue = tiles[rnd];
-                [tiles[empt], tiles[rnd]] = [tiles[rnd], tiles[empt]];
-                if (movedValue !== "") movedTiles.add(movedValue);
-                renderTiles(movedValue);
-                await sleep(120);
-            }
-        }
-
-        // optional small extra randomization after ensuring all tiles moved
-        for (let i = 0; i < Math.min(30, Math.ceil(N * 0.5)); i++) {
-            const emptyIdx = tiles.indexOf("");
-            const neighbors = getNeighbors(emptyIdx);
-            const moveIdx = neighbors[Math.floor(Math.random() * neighbors.length)];
-            const movedValue = tiles[moveIdx];
-            [tiles[emptyIdx], tiles[moveIdx]] = [tiles[moveIdx], tiles[emptyIdx]];
-            renderTiles(movedValue);
-            await sleep(60);
-        }
-
-        isShuffling = false;
-        messageEl.textContent = "";
-    }
-
-    // helper: return neighbor indices (no wrap-around)
-    function getNeighbors(idx) {
-        const res = [];
-        // up
-        if (idx - gridSize >= 0) res.push(idx - gridSize);
-        // down
-        if (idx + gridSize < tiles.length) res.push(idx + gridSize);
-        // left
-        if (idx % gridSize !== 0) res.push(idx - 1);
-        // right
-        if (idx % gridSize !== gridSize - 1) res.push(idx + 1);
-        return res;
-    }
-
-    // BFS to find shortest path of indices from start to goal
-    function bfsPath(start, goal, gridSizeLocal = gridSize, total = tiles.length) {
-        const q = [];
-        const visited = new Array(total).fill(false);
-        const parent = new Array(total).fill(-1);
-        q.push(start);
-        visited[start] = true;
-
-        while (q.length) {
-            const node = q.shift();
-            if (node === goal) {
-                // reconstruct path
-                const path = [];
-                let cur = goal;
-                while (cur !== -1) {
-                    path.push(cur);
-                    cur = parent[cur];
-                }
-                path.reverse();
-                return path;
-            }
-            const neighbors = [];
-            if (node - gridSizeLocal >= 0) neighbors.push(node - gridSizeLocal);
-            if (node + gridSizeLocal < total) neighbors.push(node + gridSizeLocal);
-            if (node % gridSizeLocal !== 0) neighbors.push(node - 1);
-            if (node % gridSizeLocal !== gridSizeLocal - 1) neighbors.push(node + 1);
-
-            for (const nb of neighbors) {
-                if (!visited[nb]) {
-                    visited[nb] = true;
-                    parent[nb] = node;
-                    q.push(nb);
-                }
-            }
-        }
-        return null;
-    }
-
-    function isSolved() {
-        for (let i = 0; i < tiles.length - 1; i++) {
-            if (tiles[i] !== i + 1) return false;
-        }
-        return tiles[tiles.length - 1] === "";
-    }
-
-    function checkWin() {
-        if (isSolved()) {
-            messageEl.textContent = "🎉 You Win!";
-            saveHistory(moveCount,"WON!");
-        }
-    }
-
-      function saveHistory(moves, status) {
-            let history = JSON.parse(localStorage.getItem("puzzleHistory")) || [];
-            history.push({
-                grid: `${gridSize} X ${gridSize}`,
-                date: new Date().toLocaleString(),
-                moves: moves,
-                status: status
-            });
-           
-            localStorage.setItem("puzzleHistory", JSON.stringify(history));
-        }
-    // color helper (keeps your previous logic)
-    function getTileColor(val) {
-        if (val === "") return "#eee";
-        const colors = ["#ff0000", "#ff7f00", "#ffff00", "#00ff00", "#00ffff", "#0000ff", "#8b00ff"];
-        return colors[val % colors.length];
-    }
-
-    // small sleep helper
-    function sleep(ms) {
-        return new Promise((res) => setTimeout(res, ms));
-    }
-
-    // Expose a public restart for buttons if you want
-    function restart() {
-        if (isShuffling) return;
-        init();
-    }
-
-    // initialize with default (only if you want auto-run on load)
-    document.addEventListener("DOMContentLoaded", () => {
-        // Do NOT auto-start if you prefer waiting for Start button
-        // If you want auto start with default gridSize:
-        // init();
-    });
-
-
-
-      const openPopupBtn = document.getElementById("openPopupBtn");
-    const closePopupBtn = document.getElementById("closePopupBtn");
-    const popup = document.getElementById("popup");
-
-
-
-    openPopupBtn.addEventListener("click", () => {
-      popup.style.display = "flex"; // show popup
-            let history = JSON.parse(localStorage.getItem("puzzleHistory")) || [];
-        console.log(history)
-        historyBody.innerHTML = "";
-        history.forEach((h) => {
-            let row = `<tr>
-  <td>${h.grid || "4X4"}</td>
-          <td>${h.date}</td>
-          <td>${h.moves}</td>
-          <td>${h.status}</td>
-        </tr>`;
-            historyBody.innerHTML += row;
-        });
-    });
-
-   closePopupBtn.addEventListener("click", () => {
-      popup.style.display = "none"; // hide popup
-    });
-
-    window.addEventListener("click", (e) => {
-      if (e.target === popup) {
-        popup.style.display = "none";
+    const emptyIdx = tiles.indexOf("");
+    let bestPath = null;
+    for (const nb of neighborsOfTile) {
+      const path = bfsPath(emptyIdx, nb, gridSize, tiles.length);
+      if (path && (bestPath === null || path.length < bestPath.length)) {
+        bestPath = path;
       }
-    });
+    }
+
+    if (!bestPath) continue;
+
+    for (let k = 1; k < bestPath.length; k++) {
+      const from = bestPath[k - 1];
+      const to = bestPath[k];
+      [tiles[from], tiles[to]] = [tiles[to], tiles[from]];
+      const movedValue = tiles[from] === "" ? null : tiles[from];
+      if (movedValue !== null) movedTiles.add(movedValue);
+      renderTiles(movedValue);
+      await sleep(120);
+    }
+
+    tileIdx = tiles.indexOf(val);
+    const emptyNow = tiles.indexOf("");
+    if (
+      Math.abs(tileIdx - emptyNow) === 1 ||
+      Math.abs(tileIdx - emptyNow) === gridSize
+    ) {
+      [tiles[emptyNow], tiles[tileIdx]] = [tiles[tileIdx], tiles[emptyNow]];
+      movedTiles.add(val);
+      renderTiles(val);
+      await sleep(160);
+    } else {
+      const empt = tiles.indexOf("");
+      const neigh = getNeighbors(empt);
+      const rnd = neigh[Math.floor(Math.random() * neigh.length)];
+      const movedValue = tiles[rnd];
+      [tiles[empt], tiles[rnd]] = [tiles[rnd], tiles[empt]];
+      if (movedValue !== "") movedTiles.add(movedValue);
+      renderTiles(movedValue);
+      await sleep(120);
+    }
+  }
+
+  for (let i = 0; i < Math.min(30, Math.ceil(N * 0.5)); i++) {
+    const emptyIdx = tiles.indexOf("");
+    const neighbors = getNeighbors(emptyIdx);
+    const moveIdx = neighbors[Math.floor(Math.random() * neighbors.length)];
+    const movedValue = tiles[moveIdx];
+    [tiles[emptyIdx], tiles[moveIdx]] = [tiles[moveIdx], tiles[emptyIdx]];
+    renderTiles(movedValue);
+    await sleep(60);
+  }
+
+  isShuffling = false;
+  messageEl.textContent = "";
+}
+
+function getNeighbors(idx) {
+  const res = [];
+  if (idx - gridSize >= 0) res.push(idx - gridSize);
+  if (idx + gridSize < tiles.length) res.push(idx + gridSize);
+  if (idx % gridSize !== 0) res.push(idx - 1);
+  if (idx % gridSize !== gridSize - 1) res.push(idx + 1);
+  return res;
+}
+
+function bfsPath(start, goal, gridSizeLocal = gridSize, total = tiles.length) {
+  const q = [];
+  const visited = new Array(total).fill(false);
+  const parent = new Array(total).fill(-1);
+  q.push(start);
+  visited[start] = true;
+
+  while (q.length) {
+    const node = q.shift();
+    if (node === goal) {
+      const path = [];
+      let cur = goal;
+      while (cur !== -1) {
+        path.push(cur);
+        cur = parent[cur];
+      }
+      path.reverse();
+      return path;
+    }
+    const neighbors = [];
+    if (node - gridSizeLocal >= 0) neighbors.push(node - gridSizeLocal);
+    if (node + gridSizeLocal < total) neighbors.push(node + gridSizeLocal);
+    if (node % gridSizeLocal !== 0) neighbors.push(node - 1);
+    if (node % gridSizeLocal !== gridSizeLocal - 1) neighbors.push(node + 1);
+
+    for (const nb of neighbors) {
+      if (!visited[nb]) {
+        visited[nb] = true;
+        parent[nb] = node;
+        q.push(nb);
+      }
+    }
+  }
+  return null;
+}
+
+function isSolved() {
+  for (let i = 0; i < tiles.length - 1; i++) {
+    if (tiles[i] !== i + 1) return false;
+  }
+  return tiles[tiles.length - 1] === "";
+}
+
+function checkWin() {
+  if (isSolved()) {
+    messageEl.textContent = "🎉 You Win!";
+    saveHistory(moveCount, "WON!");
+  }
+}
+
+function saveHistory(moves, status) {
+  let history = JSON.parse(localStorage.getItem("puzzleHistory")) || [];
+  history.push({
+    grid: `${gridSize} X ${gridSize}`,
+    date: new Date().toLocaleString(),
+    moves: moves,
+    status: status,
+  });
+
+  localStorage.setItem("puzzleHistory", JSON.stringify(history));
+}
+
+function getTileColor(val) {
+  if (val === "") return "#eee";
+  const colors = [
+    "#ff0000",
+    "#ff7f00",
+    "#ffff00",
+    "#00ff00",
+    "#00ffff",
+    "#0000ff",
+    "#8b00ff",
+  ];
+  return colors[val % colors.length];
+}
+
+function sleep(ms) {
+  return new Promise((res) => setTimeout(res, ms));
+}
+
+function restart() {
+  if (isShuffling) return;
+  init();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+});
+
+const openPopupBtn = document.getElementById("openPopupBtn");
+const closePopupBtn = document.getElementById("closePopupBtn");
+const popup = document.getElementById("popup");
+
+
+const itemsPerPage = 5;
+let currentPage = 1;
+
+openPopupBtn.addEventListener("click", () => {
+  popup.style.display = "flex"; 
+  let history = JSON.parse(localStorage.getItem("puzzleHistory")) || [];
+
+  history = history.reverse();
+
+  renderPage(history, currentPage);
+});
+
+function renderPage(history, page) {
+  historyBody.innerHTML = "";
+
+  const start = (page - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const pageItems = history.slice(start, end);
+
+  pageItems.forEach((h) => {
+    let row = `<tr>
+      <td>${h.grid || "4X4"}</td>
+      <td>${h.date}</td>
+      <td>${h.moves}</td>
+      <td>${h.status}</td>
+    </tr>`;
+    historyBody.innerHTML += row;
+  });
+
+  renderPagination(history.length, page);
+}
+
+function renderPagination(totalItems, page) {
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  const pagination = document.getElementById("pagination");
+
+  pagination.innerHTML = "";
+
+  if (totalPages <= 1) return;
+
+  if (page > 1) {
+    const prev = document.createElement("button");
+    prev.textContent = "Prev";
+    prev.onclick = () => {
+      currentPage--;
+      let history = JSON.parse(localStorage.getItem("puzzleHistory")) || [];
+      history = history.reverse();
+      renderPage(history, currentPage);
+    };
+    pagination.appendChild(prev);
+  }
+
+  for (let i = 1; i <= totalPages; i++) {
+    const btn = document.createElement("button");
+    btn.textContent = i;
+    if (i === page) btn.disabled = true;
+    btn.onclick = () => {
+      currentPage = i;
+      let history = JSON.parse(localStorage.getItem("puzzleHistory")) || [];
+      history = history.reverse();
+      renderPage(history, currentPage);
+    };
+    pagination.appendChild(btn);
+  }
+
+  if (page < totalPages) {
+    const next = document.createElement("button");
+    next.textContent = "Next";
+    next.onclick = () => {
+      currentPage++;
+      let history = JSON.parse(localStorage.getItem("puzzleHistory")) || [];
+      history = history.reverse();
+      renderPage(history, currentPage);
+    };
+    pagination.appendChild(next);
+  }
+}
+
+
+closePopupBtn.addEventListener("click", () => {
+  popup.style.display = "none"; 
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === popup) {
+    popup.style.display = "none";
+  }
+});

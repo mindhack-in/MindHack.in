@@ -12,7 +12,7 @@ function init() {
   }
   tiles.push(""); // empty tile
   renderTiles();
-  loadHistory();
+  // loadHistory();
   shuffleTiles();
 }
 
@@ -112,18 +112,85 @@ function saveHistory(moves, status) {
   localStorage.setItem("puzzleHistory", JSON.stringify(history));
 }
 
-function loadHistory() {
+
+const itemsPerPage = 5;
+let currentPage = 1;
+
+openPopupBtn.addEventListener("click", () => {
+  popup.style.display = "flex"; 
   let history = JSON.parse(localStorage.getItem("puzzleHistory")) || [];
+
+  history = history.reverse();
+
+  renderPage(history, currentPage);
+});
+
+function renderPage(history, page) {
   historyBody.innerHTML = "";
-  history.forEach((h) => {
+
+  const start = (page - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const pageItems = history.slice(start, end);
+
+  pageItems.forEach((h) => {
     let row = `<tr>
-          <td>${h.date}</td>
-          <td>${h.moves}</td>
-          <td>${h.status}</td>
-        </tr>`;
+      <td>${h.grid || "4X4"}</td>
+      <td>${h.date}</td>
+      <td>${h.moves}</td>
+      <td>${h.status}</td>
+    </tr>`;
     historyBody.innerHTML += row;
   });
+
+  renderPagination(history.length, page);
 }
+
+function renderPagination(totalItems, page) {
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  const pagination = document.getElementById("pagination");
+
+  pagination.innerHTML = "";
+
+  if (totalPages <= 1) return;
+
+  if (page > 1) {
+    const prev = document.createElement("button");
+    prev.textContent = "Prev";
+    prev.onclick = () => {
+      currentPage--;
+      let history = JSON.parse(localStorage.getItem("puzzleHistory")) || [];
+      history = history.reverse();
+      renderPage(history, currentPage);
+    };
+    pagination.appendChild(prev);
+  }
+
+  for (let i = 1; i <= totalPages; i++) {
+    const btn = document.createElement("button");
+    btn.textContent = i;
+    if (i === page) btn.disabled = true;
+    btn.onclick = () => {
+      currentPage = i;
+      let history = JSON.parse(localStorage.getItem("puzzleHistory")) || [];
+      history = history.reverse();
+      renderPage(history, currentPage);
+    };
+    pagination.appendChild(btn);
+  }
+
+  if (page < totalPages) {
+    const next = document.createElement("button");
+    next.textContent = "Next";
+    next.onclick = () => {
+      currentPage++;
+      let history = JSON.parse(localStorage.getItem("puzzleHistory")) || [];
+      history = history.reverse();
+      renderPage(history, currentPage);
+    };
+    pagination.appendChild(next);
+  }
+}
+
 function shuffleTiles() {
   let currentIndex = tiles.length,
     randomIndex;
@@ -155,3 +222,14 @@ function shuffleTiles() {
 }
 
 init();
+
+
+closePopupBtn.addEventListener("click", () => {
+  popup.style.display = "none"; 
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === popup) {
+    popup.style.display = "none";
+  }
+});

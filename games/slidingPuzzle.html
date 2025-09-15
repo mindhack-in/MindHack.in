@@ -27,8 +27,32 @@
       <div>Moves: <span id="moveCount">0</span></div>
       <div id="message"></div>
     </div>
+        <div class="spacer"></div>
 
-    <div class="history">
+    <button id="openPopupBtn" class="btn">Load history</button>
+
+    <div class="history popup-overlay " id="popup">
+    <div class="popup-content">
+      <h3>Game History</h3>
+      <button class="close-btn" id="closePopupBtn">Close</button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Grid Size</th>
+            <th>Date</th>
+            <th>Moves</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="historyBody"></tbody>
+      </table>
+      
+          <div id="pagination" style="margin-top:10px; text-align:center;"></div>
+
+    </div>
+  </div>
+    <!-- <div class="history">
       <h3>Game History</h3>
       <table>
         <thead>
@@ -40,7 +64,10 @@
         </thead>
         <tbody id="historyBody"></tbody>
       </table>
-    </div>
+                <div id="pagination" style="margin-top:10px; text-align:center;"></div>
+
+    </div> -->
+    
   </div>
   <script src="./assets/js/slidingPuzzle.js"></script>
 <script src="../assets/js/header.js"></script>
