@@ -368,7 +368,7 @@ function sleep(ms) {
 }
 
 let autoPlayMode;
-let timePlay = 100000;
+let timePlay = 10000;
 
 
 async function rollDiceAnimation() {
@@ -498,6 +498,9 @@ async function glowMyPices(player, diceResult) {
     }
     if (diceResult === 6) {
       shouldGlow = true;
+    }
+      if(totalUnlockedPiece1s.won==1){
+      shouldGlow=false;
     }
     const span = document.getElementById(localPieces[i].playerId);
 
