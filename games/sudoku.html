@@ -3,13 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>MindHack.in</title>
+  <title>Sudoku - MindHack.in</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/games/assets/css/sudoku.css">
+  <link rel="stylesheet" href="./assets/css/sudoku.css">
 
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-9RC3CF2CZ3');
+</script>
 <body>
   <div id="header"></div>
 
@@ -20,10 +28,11 @@
 
     <p id="result"></p>
 
+    <div class="tracker" id="numberTracker"></div>
 
   </div>
 </body>
-<script src="/games/assets/js/sudoku.js"></script>
+<script src="./assets/js/sudoku.js"></script>
 <script src="../assets/js/header.js"></script>
 
 </html>

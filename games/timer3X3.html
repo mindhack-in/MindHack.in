@@ -5,135 +5,148 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MindHack.in</title>
-  <link rel="stylesheet" href="./games/assets/css/timer3X3.css">
+  <link rel="stylesheet" href="./assets/css/timer3X3.css">
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-9RC3CF2CZ3');
+</script>
 
 <body>
   <div id="header"></div>
-
+  <!-- <div class="container"> -->
   <main>
-    <div id="timer" class="timer-display">00.00</div>
-    <div class="timer-buttons">
-      <button onclick="startTimer()" class="start">Start</button>
-      <button onclick="stopTimer()" class="stop">Stop</button>
-      <button onclick="resetTimer()" class="reset">Reset</button>
-    </div>
-    <div class="penalty-buttons">
-      <button onclick="addPenalty('+2')">+2</button>
-      <button onclick="addPenalty('DNF')">DNF</button>
-    </div>
-    <div class="options">
-      <label>Inspection
-        <select id="inspection">
-          <option value="15">15 s</option>
-          <option value="0">0 s</option>
-        </select>
-      </label>
-      <label><input type="checkbox" id="showScramble" checked> Show scramble</label>
-      <label><input type="checkbox" id="hideTime"> Hide time</label>
-    </div>
+    <div height="auto" class="container_auto">
 
-    <div id="scrambleSection" class="scramble-section">
-      <div class="scramble-header">
-        <p><strong>Scramble (3x3):</strong></p>
-        <p id="scramble" class="scramble"></p>
-        <button onclick="generateScramble()" class="generate">Generate New Scramble</button>
+      <div class="timer-click" onclick="startStopTimer()">
+        <div id="timer" class="timer-display">00.00</div>
+        <div class="timer-buttons">
+          <button onclick="startTimer()" class="start">Start</button>
+          <button onclick="stopTimer()" class="stop">Stop</button>
+
+        </div>
+        <div class="options">
+          <label>Inspection
+            <select id="inspection">
+              <!-- <option value="15">15 s</option> -->
+              <option value="0">0 s</option>
+            </select>
+          </label>
+          <label><input type="checkbox" id="showScramble" checked> Show scramble</label>
+          <label><input type="checkbox" id="hideTime"> Hide time</label>
+        </div>
+
+        <div id="scrambleSection" class="scramble-section">
+          <div class="scramble-header">
+            <p><strong>Scramble (3x3):</strong></p>
+            <p id="scramble" class="scramble"></p>
+            <button onclick="generateScramble()" class="generate">Generate New Scramble</button>
+          </div>
+          <div class="scene">
+            <button class="cube-btn">
+              <div class="cube-face front">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="cube-face back">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="cube-face left">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="cube-face right">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="cube-face top">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="cube-face bottom">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="averages">
+          <p><strong>Avg of 5:</strong> <span id="avg5">-</span></p>
+          <p><strong>Avg of 12:</strong> <span id="avg12">-</span></p>
+        </div>
+</div>
+        <div class="export-btn">
+          <button onclick="exportToCSV()">⬇️ Export CSV</button>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Scramble</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="historyTable"></tbody>
+        </table>
       </div>
-      <div class="scene">
-        <button class="cube-btn">
-          <div class="cube-face front">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="cube-face back">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="cube-face left">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="cube-face right">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="cube-face top">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="cube-face bottom">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </button>
-      </div>
-    </div>
-
-    <div class="averages">
-      <p><strong>Avg of 5:</strong> <span id="avg5">-</span></p>
-      <p><strong>Avg of 12:</strong> <span id="avg12">-</span></p>
-    </div>
-
-    <div class="export-btn">
-      <button onclick="exportToCSV()">⬇️ Export CSV</button>
-    </div>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Time</th>
-          <th>Scramble</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <tbody id="historyTable"></tbody>
-    </table>
   </main>
 
+  <!-- <div id="footer"></div> -->
 </body>
-<script src="./games/assets/js/timer3X3.js"></script>
+<!-- <script src="script.js"></script> -->
+
+<!-- </html> -->
+<script src="./assets/js/timer3X3.js"></script>
 <script src="../assets/js/header.js"></script>
 
 </html>

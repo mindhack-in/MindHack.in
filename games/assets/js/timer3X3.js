@@ -73,6 +73,7 @@ function stopTimer() {
   const date = new Date().toLocaleDateString("en-IN");
   document.getElementById("timer").textContent = time;
   saveToHistory(time, scramble, date);
+  generateScramble();
 }
 
 function resetTimer() {
@@ -143,25 +144,14 @@ function exportToCSV() {
   a.click();
 }
 
-function addPenalty(type) {
-  if (!solves.length) return;
-  let last = solves[solves.length - 1];
-  if (type === "+2" && !isNaN(last.time)) {
-    last.time = (parseFloat(last.time) + 2).toFixed(2);
-  } else if (type === "DNF") {
-    last.time = "DNF";
-  }
-  localStorage.setItem("solveData", JSON.stringify(solves));
-  renderHistory();
-  updateAverages();
-}
+// document.getElementById("modeToggle").onclick = () => {
+//   document.body.classList.toggle("light");
+//   document.getElementById("modeToggle").textContent =
+//     document.body.classList.contains("light")
+//       ?  "🌙 Dark Mode":"☀️ Light Mode";
+//             // ?  "☀️ Light Mode":"🌙 Dark Mode";
 
-document.getElementById("modeToggle").onclick = () => {
-  document.body.classList.toggle("light");
-  document.getElementById("modeToggle").textContent =
-    document.body.classList.contains("light")
-      ?  "☀️ Light Mode":"🌙 Dark Mode";
-};
+// };
 
 document.addEventListener("keydown", (e) => {
   if (e.code === "Space") {
@@ -189,3 +179,10 @@ window.onload = () => {
     }
   };
 };
+
+function startStopTimer(){
+  if(isRunning)
+    stopTimer();
+  else 
+    startTimer();
+}

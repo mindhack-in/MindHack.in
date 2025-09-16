@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindHack.in</title>
+  <link rel="stylesheet" href="./assets/css/slidingPuzzle.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9RC3CF2CZ3');
+</script>
+<body>
+  <div id="header"></div>
+
+  <div class="gameboard container">
+    <h1></h1>
+    <div id="puzzle"></div>
+    <div id="controls">
+      <button onclick="shuffleTiles()">Shuffle</button>
+      <div>Moves: <span id="moveCount">0</span></div>
+      <div id="message"></div>
+    </div>
+        <div class="spacer"></div>
+
+    <button id="openPopupBtn" class="btn">Load history</button>
+
+    <div class="history popup-overlay " id="popup">
+    <div class="popup-content">
+      <h3>Game History</h3>
+      <button class="close-btn" id="closePopupBtn">Close</button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Grid Size</th>
+            <th>Date</th>
+            <th>Moves</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="historyBody"></tbody>
+      </table>
+      
+          <div id="pagination" style="margin-top:10px; text-align:center;"></div>
+
+    </div>
+  </div>
+    <!-- <div class="history">
+      <h3>Game History</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Moves</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="historyBody"></tbody>
+      </table>
+                <div id="pagination" style="margin-top:10px; text-align:center;"></div>
+
+    </div> -->
+    
+  </div>
+  <script src="./assets/js/slidingPuzzle.js"></script>
+<script src="../assets/js/header.js"></script>
+
+</body>
+
+</html>

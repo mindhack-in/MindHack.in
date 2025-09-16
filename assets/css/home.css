@@ -1,8 +1,8 @@
 :root {
-  --bg:#ece6e6;
+  --bg: #ece6e6;
   --card-bg: #1e1e1e;
   --text: #3fe1e1;
-  --text-muted: #f93737;
+  --text-muted: #white;
   --accent: #006666;
   --accent-hover: #006666;
   --btn-bg: #006666;
@@ -18,6 +18,7 @@ body {
 
 /* Games Section */
 .games {
+  /* margin-top: 2vh; */
   padding: 60px 20px;
   background-color: var(--bg);
 }
@@ -122,4 +123,99 @@ body {
 
 .competition-card button:hover {
   background-color: var(--accent-hover);
+}
+
+/* #banner {
+  background-color: #ffefc1;
+  color: #333;
+  margin-top: 30vh;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0c55c;
+} */
+
+/* .banner-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+} */
+
+#image-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* or a fixed height like 300px */
+}
+#banner-image {
+    width: 99vw; 
+  /* height: 80vh;   */
+  margin-top: 10vh;
+  object-fit: contain;
+  /* width: 1820px;
+  height: 1080px; */
+}
+
+
+
+
+/* Format 2 */
+.card {
+  box-shadow: 0 0 10px #00000040;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  position: relative;
+}
+
+.card img {
+  width: 148px;
+  height: 158px;
+  display: block;
+}
+
+.tag-new {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #27ae60;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.content {
+  padding: 15px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #154d71;
+  margin-bottom: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;   /* ✅ add this */
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #154d71;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e65c00;
 }

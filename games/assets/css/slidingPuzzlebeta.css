@@ -1,0 +1,280 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #ece6e6;
+  margin: 0;
+  padding: 0;
+}
+
+.parent {
+  padding-top: 10vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headcontainer{
+      display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container1{
+        width: 100%;
+    text-align: center;
+    max-width: 800px;   
+     padding-top: 10vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+
+}
+.puzzle-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1400px;
+}
+.puzzle-wrapper {
+  display: flex;
+  flex-direction: row;   
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  text-align: left;
+}
+
+.puzzle-content {
+  flex: 1;       
+  max-width: 400px; 
+}
+ .spacer {
+    margin: 10vh;
+  }
+.puzzle {
+  flex-shrink: 0;   
+  height: 50vh;
+  aspect-ratio: 1 / 1; 
+  display: grid;
+  gap: 2px;
+  background: #333;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+/* .puzzle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+} */
+
+/* .puzzle {
+  height: 50vh;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  gap: 2px;
+  background: #333;
+  padding: 4px;
+  border-radius: 8px;
+  flex-shrink: 0;
+} */
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #000;
+  border-radius: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.empty {
+  background: #fff !important;
+}
+
+.label {
+  margin-top: 6px;
+  font-weight: bold;
+  color: #444;
+  font-size: 14px;
+}
+
+.puzzle-text {
+  text-align: left;
+  flex: 1;
+}
+
+.puzzle-text h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.puzzle-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #154d71;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e65c00;
+}
+
+/* ---------- RESPONSIVE FIXES ---------- */
+@media (max-width: 992px) {
+  .puzzle-wrapper {
+    flex-direction: column; /* stack on medium screens */
+    align-items: flex-start;
+    text-align: left;
+  }
+  .puzzle {
+    height: 40vh; /* slightly smaller */
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .puzzle {
+    height: 35vh; /* smaller puzzle for mobiles */
+  }
+  .puzzle-text h3 {
+    font-size: 18px;
+  }
+  .puzzle-text p {
+    font-size: 13px;
+  }
+  .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+
+
+    .parent
+    ,
+    .game
+    {
+      display: none;
+    }
+
+    .menu.active,
+    .game.active,
+    .parent.active{
+      display: block;
+    }
+
+    .menu select,
+    .menu button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 10px;
+    }
+
+    #puzzle {
+      display: grid;
+      gap: 2px;
+      margin: 20px auto;
+      background: #444;
+      border: 5px solid #154d71;
+      border-radius: 10px;
+      height: 80vh;
+    }
+
+    .game {
+      height: 100vh;
+    }
+
+    .tile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #000;
+      border-radius: 5px;
+    }
+
+    .empty {
+      background: #eee;
+      cursor: default;
+    }
+
+    .controls {
+      margin-top: 15px;
+    }
+
+    .controls button {
+      padding: 8px 16px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: none; /* hidden by default */
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Popup content */
+    .popup-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .popup-content h2 {
+      margin-top: 0;
+    }
+  #popup{
+    display: none;
+  } 
+ table {
+   width: 100%;
+   border-collapse: collapse;
+   font-size: 14px;
+   color: black;
+ }
+
+ th,
+ td {
+   border: 1px solid #ddd;
+   padding: 6px;
+   text-align: center;
+ }
+
+ th {
+   background: #eee;
+ }
