@@ -1,8 +1,8 @@
 let startTime,
   interval,
   isRunning = false;
-let times = JSON.parse(localStorage.getItem("solves")) || [];
-let solves = JSON.parse(localStorage.getItem("solveData")) || [];
+let times = JSON.parse(localStorage.getItem("solves2X2")) || [];
+let solves = JSON.parse(localStorage.getItem("solveData2X2")) || [];
 
 const scrambleMoves = [
   "R",
@@ -85,7 +85,7 @@ function resetTimer() {
 function generateScramble() {
   let scramble = "",
     last = "";
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 7; i++) {
     let move;
     do {
       move = scrambleMoves[Math.floor(Math.random() * scrambleMoves.length)];
@@ -99,8 +99,8 @@ function generateScramble() {
 function saveToHistory(time, scramble, date) {
   times.push(parseFloat(time));
   solves.push({ time, scramble, date });
-  localStorage.setItem("solves", JSON.stringify(times));
-  localStorage.setItem("solveData", JSON.stringify(solves));
+  localStorage.setItem("solves2X2", JSON.stringify(times));
+  localStorage.setItem("solveData2X2", JSON.stringify(solves));
   renderHistory();
   updateAverages();
 }

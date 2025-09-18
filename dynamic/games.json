@@ -6,12 +6,19 @@
         "image":"https://mindhack-in.github.io/MindHack.in/dynamic/SlidingPuzzle.jpg","new":true
 
   },
+   {
+    "name": "Rubik's Cube Timer 2X2",
+    "description": "Randomize the cube with a sequence of twists to start a fresh solving challenge.",
+    "gameLink": "./games/timer2X2.html",
+    "image":"https://mindhack-in.github.io/MindHack.in/dynamic/cubetimer2X2.jpg","new":true
+  },
   {
-    "name": "Rubik's Cube",
+    "name": "Rubik's Cube Timer 3X3",
     "description": "Randomize the cube with a sequence of twists to start a fresh solving challenge.",
     "gameLink": "./games/timer3X3.html",
-    "image":"https://mindhack-in.github.io/MindHack.in/dynamic/cubetimer.jpg","new":false
+    "image":"https://mindhack-in.github.io/MindHack.in/dynamic/cubetimer3X3.jpg","new":false
   },
+  
   {
     "name": "Tic Tac Toe",
     "description": "A classic 3x3 grid game where players aim to align three Xs or Os in a row.",
