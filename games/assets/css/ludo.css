@@ -33,7 +33,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
+    padding-top  : 10vh;
     height: inherit1;
     flex-direction: column;
     margin-bottom: 0px;
@@ -98,9 +99,8 @@ body {
 
 #winZone {
     grid-area: winZone;
-    max-width: 2vh;
-    max-height: 2vh;
-      overflow: hidden;       /* hides extra content */
+     display: flex;
+  justify-content: center;
 
 }
 
@@ -187,17 +187,24 @@ body {
     opacity: .6;
 }
 
+.ludoBox .fa-location-pin:nth-child(1) {
+    transform: translate(10px, -20%)  
+    scale(0.5);
+}
 
 .ludoBox .fa-location-pin:nth-child(2) {
-    transform: translate(10px, -40%);
+    transform: translate(10px, -40%)  
+    scale(0.5);
 }
 
 .ludoBox .fa-location-pin:nth-child(3) {
-    transform: translate(10px, -40%);
+    transform: translate(10px, -60%) 
+     scale(0.5);
 }
 
 .ludoBox .fa-location-pin:nth-child(4) {
-    transform: translate(10px, -40%) scale(0.8);
+    transform: translate(10px, -80%)
+     scale(0.5);
 }
 /* #winZone .fa-location-pin:nth-child(2) {
     transform: translate(0px, -40%);
@@ -359,7 +366,9 @@ button {
 button:hover {
     background: #0097a7;
 }
-
+.winplace{
+    font-size: 10px;
+}
 
 /* ---------------------------
    Responsive Design
@@ -393,3 +402,23 @@ button:hover {
 }
 
 
+.bottomBody{
+     display: flex;
+  justify-content: center;
+    /* display: inline-block;   make it behave like text */
+
+}
+
+#rest{
+    /* border: 10px; */
+    /* background-color: black;
+    border-color: black; */
+   width: 100px;
+    height: 100px;
+      background-image: url("https://mindhack-in.github.io/MindHack.in/dynamic/logo.png");
+    background-color: aqua;
+    margin-right: 10vw;
+      background-size: contain;   /* fit image inside box */
+  background-repeat: no-repeat;
+  background-position: center;
+}

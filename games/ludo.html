@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ludo - mindhack.in</title>
-    <link rel="stylesheet" href="ludo.css">
+    <link rel="stylesheet" href="./assets/css/ludo.css">
     <link rel="stylesheet" href="../../assets/css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google tag (gtag.js) -->
@@ -68,8 +68,11 @@
                 <div class="ludoBox" id="b7"></div>
                 <div class="ludoBox" id="b6"></div>
             </div>
-            <div>
-                <div id="winZone"></div>
+                <div id="winZone">
+                    <!-- <div class="winplace" id="winZonered">red</div>
+                    <div class="winplace">greeb</div>
+                    <div class="winplace">yellowBoard</div>
+                    <div class="winplace">blue</div> -->
             </div>
 
             <div id="yellowPath" class="horizontalPath">
@@ -117,6 +120,10 @@
             <div id="yellowBoard" class="board">
             </div>
         </div>
+        <div class="bottomBody">
+            <div  id="rest">
+                <!-- <img src="../../dynamic/profile.png" height="100px" width="100px" class="logo"/> -->
+            </div>
         <div class="rollingDice">
             <div class="dice" id="dice">
                 <div class="side one">1</div>
@@ -130,6 +137,7 @@
             <button id="rollDiceButton">Roll Dice</button>
             <h2 id="result">Result: -</h2>
         </div>
+        </div>
     </div>
 
 
@@ -138,8 +146,8 @@
 
 
 </body>
-<script src="ludo.js"></script>
+<script src="./assets/js/ludo.js"></script>
 
-<!-- <script src="../assets/js/header.js"></script> -->
+<script src="../assets/js/header.js"></script>
 
 </html>

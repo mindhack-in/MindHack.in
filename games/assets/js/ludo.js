@@ -77,10 +77,10 @@ let yellow = [
 ];
 
 let homePathEntrys = {
-  blue: ["bh1", "bh2", "bh3", "bh4", "bh5", "winZone"],
-  yellow: ["yh1", "yh2", "yh3", "yh4", "yh5", "winZone"],
-  red: ["rh1", "rh2", "rh3", "rh4", "rh5", "winZone"],
-  green: ["gh1", "gh2", "gh3", "gh4", "gh5", "winZone"],
+  blue: ["bh1", "bh2", "bh3", "bh4", "bh5", "rest"],
+  yellow: ["yh1", "yh2", "yh3", "yh4", "yh5", "rest"],
+  red: ["rh1", "rh2", "rh3", "rh4", "rh5", "rest"],
+  green: ["gh1", "gh2", "gh3", "gh4", "gh5", "rest"],
 };
 
 let pathArrayMap = {
@@ -175,6 +175,7 @@ class PlayerPiece {
         let position = pathArray[i + currentIndex];
         this.position = position;
         let element = document.querySelector(`[piceId="${this.playerId}`);
+        console.log(`[piceId="${this.playerId}`)
         let gameStart = document.getElementById(position);
         gameStart.appendChild(element);
 
@@ -312,9 +313,18 @@ for (let i = 0; i < numPvP; i++) {
     span.append(icon);
     parentDiv.append(span);
     localPieces.push(player);
+
+//       console.log(`[piceid="`+player.playerId+`"]`)
+// let element = document.getElementById("yellow3");
+//         let gameStart = document.getElementById("rest");
+//         console.log(element)
+// gameStart.appendChild(element);
   }
   playerPiecesMap.set(boardColor, localPieces);
   boardDetails[i].board.append(parentDiv);
+
+
+
 }
 
 
@@ -339,10 +349,16 @@ for (let i = 0; i < numPvP; i++) {
 // gameStart = document.getElementById("b9");
 // gameStart.appendChild(element);
 
-// let element = document.querySelector(`[piceid="yellow1"]`);
-// let gameStart = document.getElementById("yh3");
-// gameStart.appendChild(element);
 
+// l=["yellow","green","red","blue"]
+// b=['yh3','gh3','rh3','bh3']
+// for(let i =0;i<l.length;i++){  
+//     for(let j=0;j<4;j++){
+//     let element = document.querySelector(`[piceid="`+l[i]+j+`"]`);
+//     let gameStart = document.getElementById(b[i]);
+//     gameStart.appendChild(element);
+//     }
+// }
 // element = document.querySelector(`[piceid="green1"]`);
 // gameStart = document.getElementById("gh3");
 // gameStart.appendChild(element);
@@ -502,9 +518,17 @@ async function glowMyPices(player, diceResult) {
       if(totalUnlockedPiece1s.won==1){
       shouldGlow=false;
     }
+    // console.log(totalUnlockedPiece1s);
+    if(pathArrayMap[player].indexOf(totalUnlockedPiece1s.position)!==-1){
+      let i=57-pathArrayMap[player].indexOf(totalUnlockedPiece1s.position)-1;
+      console.log(diceResult+"      "+i)
+      if(diceResult>i)
+        shouldGlow=false;
+    }
+  
     const span = document.getElementById(localPieces[i].playerId);
 
-    if (shouldGlow == true) {
+    if (shouldGlow === true) {
       allowedPieces.push(span);
       span.classList.toggle("active");
       playerAllowed = true;
@@ -549,7 +573,7 @@ async function unactivePieces(localPieces, diceResult) {
     let totalUnlockedPiece1s = localPieces[j];
     if (diceResult === 6 || totalUnlockedPiece1s.status === 1) {
       const s1 = document.getElementById(localPieces[j].playerId);
-      s1.classList.toggle("active");
+      s1.classList.remove("active");
 
       s1.onclick = function () {};
     }
