@@ -2,76 +2,77 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MindHack.in</title>
-  <link rel="stylesheet" href="./assets/css/slidingPuzzle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindHack.in</title>
+    <link rel="stylesheet" href="..//utility/css/header.css">
+    <link rel="stylesheet" href="..//utility/css/sidenav.css">
+    <link rel="stylesheet" href="slidingpuzzle/slidingpuzzle.css">
+    <link rel="stylesheet" href="..//utility/css/aboutus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-9RC3CF2CZ3');
-</script>
 <body>
-  <div id="header"></div>
+    <div class="headerMain">
+        <header class="header-container">
+            <div class="logo">
+                <img class="logoimg" id="logoimg" src="https://mindhack-in.github.io/mindhack.in.dynamic/logo.png" />
+            </div>
+            <nav class="nav-links" id="navLinks">
+            </nav>
 
-  <div class="gameboard container">
-    <h1></h1>
-    <div id="puzzle"></div>
-    <div id="controls">
-      <button onclick="shuffleTiles()">Shuffle</button>
-      <div>Moves: <span id="moveCount">0</span></div>
-      <div id="message"></div>
+            <div class="user-actions">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <button class="login-btn" id="userDetails">Login</button>
+            </div>
+
+        </header>
     </div>
-        <div class="spacer"></div>
+    <aside class="left-sidebar" id="leftSidebar">
 
-    <button id="openPopupBtn" class="btn">Load history</button>
+    </aside>
+    <div class="content" id="puzzleContent"></div>
 
-    <div class="history popup-overlay " id="popup">
-    <div class="popup-content">
-      <h3>Game History</h3>
-      <button class="close-btn" id="closePopupBtn">Close</button>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Grid Size</th>
-            <th>Date</th>
-            <th>Moves</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="historyBody"></tbody>
-      </table>
-      
-          <div id="pagination" style="margin-top:10px; text-align:center;"></div>
-
-    </div>
-  </div>
-    <!-- <div class="history">
-      <h3>Game History</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Moves</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="historyBody"></tbody>
-      </table>
-                <div id="pagination" style="margin-top:10px; text-align:center;"></div>
-
-    </div> -->
-    
-  </div>
-  <script src="./assets/js/slidingPuzzle.js"></script>
-<script src="../assets/js/header.js"></script>
+    <section class="about-section fade-in" id="about"></section>
 
 </body>
+<footer id="footer"></footer>
+
+
+
+<script type="module" src="..//utility/js/base.js"></script>
+<script type="module" src="..//utility/js/auth.js"></script>
+<script type="module" src="slidingpuzzle/slidingpuzzle.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-9RC3CF2CZ3');
+</script>
+<script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "MindHack.in",
+            "url": "https://mindhack.in/",
+            "logo": "https://mindhack-in.github.io/MindHack.in/dynamic/profile.png"
+            }
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const home_nav = document.getElementById("home_nav");
+        home_nav.classList.toggle("active");
+
+        const games_nav = document.getElementById("games_nav");
+        games_nav.classList.toggle("active");
+    });
+</script>
 
 </html>

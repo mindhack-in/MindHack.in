@@ -1,0 +1,11 @@
+.mainHeading {
+  font-size: clamp(2rem, 5vw, 7vh);
+  text-align: center;
+  margin-bottom: 1rem;
+  color: rgb(254, 253, 253);
+}
+
+.subHeading {
+  text-align: center;
+  color: rgb(252, 247, 247);
+}

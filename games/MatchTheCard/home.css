@@ -1,0 +1,48 @@
+/* Center h2 text */
+.container h2 {
+  text-align: center;  /* horizontal center */
+  color: #fff;         /* optional color */
+  margin-bottom: 20px; /* spacing below */
+  font-size: 2rem;     /* adjust as needed */
+}
+
+.image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      max-width: 800px;
+      margin: 0 auto; /* center horizontally */
+    }
+
+    .image-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+      border: 3px solid #fff;
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* overlay text */
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      font-size: 16px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .image-card:hover .overlay {
+      opacity: 1; /* show text on hover */
+    }

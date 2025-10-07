@@ -1,0 +1,126 @@
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: calc(4 * 220px + 3 * 20px);
+  margin: 0 auto;
+}
+
+
+.tournament-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: calc(4 * 220px + 3 * 20px);
+  margin: 0 auto;
+}
+
+
+.card {
+  width: 90%;
+  /* mobile default */
+  max-width: 400px;
+  /* keep it compact */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px black;
+  background: #111;
+  text-align: center;
+}
+
+.card video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 15px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .card {
+    max-width: 500px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .card {
+    max-width: 600px;
+  }
+}
+
+.card img {
+  width: parent;
+  height: 158px;
+  display: block;
+}
+
+.tag-new {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #27ae60;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.content {
+  padding: 15px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #154d71;
+  margin-bottom: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* ✅ add this */
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #154d71;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e65c00;
+}
+
+@media (max-width: 500px) {
+  .game-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 70vw;
+    margin-left: 10vw;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
