@@ -100,10 +100,12 @@ function checkSudoku() {
     ? "🎉 Correct! Puzzle solved!"
     : "❌ Some entries are incorrect.";
 
+    if(allCorrect){
  loadCongratsScript(() => {
       showCongratsAnimation({
         message: "Sudoku Solved! 🧠"});
     });
+  }
 }
 
 
