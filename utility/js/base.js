@@ -16,7 +16,7 @@ const leftSidebar = document.getElementById("leftSidebar");
 
 const home = document.createElement("a");
 home.id = "home_nav";
-home.href = url + "index.html";
+home.href = url ;
 home.classList.add("sidebar-link", "active");
 
 const home_i = document.createElement("i");
@@ -32,7 +32,7 @@ leftSidebar.appendChild(home);
 
 const games = document.createElement("a");
 games.id = "games_nav";
-games.href = url + "games/home.html";
+games.href = url + "games";
 games.classList.add("sidebar-link");
 
 const games_i = document.createElement("i");

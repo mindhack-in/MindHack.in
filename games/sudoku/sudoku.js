@@ -69,7 +69,12 @@ async function createSudokuGrid(difficulty = "easy") {
 }
 
       // Add thick borders for 3x3 grid boxes
-
+function loadCongratsScript(callback) {
+  const script = document.createElement("script");
+  script.src = "../../../utility/js/congratulation.js";
+  script.onload = callback; // optional
+  document.head.appendChild(script);
+}
 function checkSudoku() {
   let allCorrect = true;
   const inputs = sudokuContainer.querySelectorAll("input");
@@ -94,6 +99,11 @@ function checkSudoku() {
   resultText.textContent = allCorrect
     ? "🎉 Correct! Puzzle solved!"
     : "❌ Some entries are incorrect.";
+
+ loadCongratsScript(() => {
+      showCongratsAnimation({
+        message: "Sudoku Solved! 🧠"});
+    });
 }
 
 

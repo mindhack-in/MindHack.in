@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindHack.in</title>
+  <link rel="stylesheet" href="../../../utility/css/header.css">
+  <link rel="stylesheet" href="../../../utility/css/sidenav.css">
+  <link rel="stylesheet" href="../squaretimer.css">
+  <link rel="stylesheet" href="../../../utility/css/test.css">
+  <link rel="stylesheet" href="../../../utility/css/aboutus.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <div class="headerMain">
+    <header class="header-container">
+      <div class="logo">
+        <img class="logoimg" id="logoimg" src="https://mindhack-in.github.io/mindhack.in.dynamic/logo.png" />
+      </div>
+      <nav class="nav-links" id="navLinks">
+      </nav>
+
+      <div class="user-actions">
+        <button class="menu-toggle" id="menuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <button class="login-btn" id="userDetails">Login</button>
+      </div>
+
+    </header>
+  </div>
+  <aside class="left-sidebar" id="leftSidebar">
+
+  </aside>
+  <div class="content ">
+
+    <div class="timer-click" onclick="startStopTimer()">
+      <div id="timer" class="timer-display">00.00</div>
+      <div class="timer-buttons">
+        <button onclick="startTimer()" class="start">Start</button>
+        <button onclick="stopTimer()" class="stop">Stop</button>
+
+      </div>
+      <div class="options">
+        <label class="hide">Inspection
+          <select id="inspection">
+            <option value="0">0 s</option>
+          </select>
+        </label>
+        <label><input type="checkbox" id="showScramble" checked> Show scramble</label>
+        <label><input type="checkbox" id="hideTime"> Hide time</label>
+      </div>
+
+      <div id="scrambleSection" class="scramble-section">
+        <div class="scramble-header">
+          <p><strong id="scrambleType">Scramble (2x2):</strong></p>
+          <p id="scramble" class="scramble"></p>
+          <button onclick="generateScramble()" class="generate">Generate New Scramble</button>
+        </div>
+        <div class="scene">
+          <button class="cube-btn">
+            <div class="cube-face front"> </div>
+            <div class="cube-face back"> </div>
+            <div class="cube-face left"> </div>
+            <div class="cube-face right"> </div>
+            <div class="cube-face top"> </div>
+            <div class="cube-face bottom"> </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="averages">
+        <p><strong>Avg of 5:</strong> <span id="avg5">-</span></p>
+        <p><strong>Avg of 12:</strong> <span id="avg12">-</span></p>
+      </div>
+    </div>
+    <div class="export-btn">
+      <button onclick="exportToCSV()">⬇️ Export CSV</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Scramble</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="historyTable"></tbody>
+    </table>
+
+    <div id="pagination" class="pagination"></div>
+
+  </div>
+
+  <section class="about-section fade-in" id="about"></section>
+
+</body>
+<footer id="footer"></footer>
+
+
+
+<script>
+  window.pageConfig = { size: "6" };
+</script>
+<script type="module" src="../../../utility/js/base.js"></script>
+<script type="module" src="../../../utility/js/auth.js"></script>
+<script src="../squaretimer.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-9RC3CF2CZ3');
+</script>
+<script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "MindHack.in",
+            "url": "https://mindhack.in/",
+            "logo": "https://mindhack-in.github.io/MindHack.in/dynamic/profile.png"
+            }
+    </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const home_nav = document.getElementById("home_nav");
+    home_nav.classList.toggle("active");
+
+    const games_nav = document.getElementById("games_nav");
+    games_nav.classList.toggle("active");
+  });
+</script>
+
+</html>
