@@ -9,7 +9,7 @@ const types = [
   "transport",
   "sports",
   "faces",
-  "seaCreatures",
+  "sea-creatures",
   "desserts"];
 
 
