@@ -16,7 +16,7 @@ const leftSidebar = document.getElementById("leftSidebar");
 
 const home = document.createElement("a");
 home.id = "home_nav";
-home.href = url ;
+home.href = url;
 home.classList.add("sidebar-link", "active");
 
 const home_i = document.createElement("i");
@@ -142,9 +142,6 @@ gtag("js", new Date());
 
 gtag("config", "G-9RC3CF2CZ3");
 
-
-
-
 const footer = document.getElementById("footer");
 
 // Create footer container
@@ -179,3 +176,9 @@ footer.innerHTML = `
 
 // Set current year
 document.getElementById("year").textContent = new Date().getFullYear();
+
+document.querySelectorAll(".faq-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    item.classList.toggle("active");
+  });
+});
