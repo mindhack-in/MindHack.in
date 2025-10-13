@@ -22,7 +22,7 @@ for(let i=0;i<types.length;i++){
 
    const image=document.createElement("img");
   image.src=dynamicUrl+`games/match-the-card/${types[i]}.jpg`;
-  
+  image.alt=types[i];
   const overlay=document.createElement("div");
   overlay.className="overlay";
   overlay.innerText=types[i].charAt(0).toUpperCase() + types[i].slice(1); 
