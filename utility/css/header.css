@@ -180,6 +180,10 @@ body {
     font-size: 18px;
     padding: 14px;
   }
+
+  .mainContent{
+    margin-top: 80px;
+  }
 }
 
 

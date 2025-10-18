@@ -2,8 +2,9 @@
 .container h2 {
   text-align: center;  /* horizontal center */
   color: #fff;         /* optional color */
-  margin-bottom: 20px; /* spacing below */
+  /* margin-bottom: 20px; spacing below */
   font-size: 2rem;     /* adjust as needed */
+  padding-top: 50px;
 }
 
 .image-grid {

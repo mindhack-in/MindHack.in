@@ -1,11 +1,8 @@
 body {
       font-family: 'Poppins', sans-serif;
       line-height: 1.6;
-      /* background-color: #fafafa; */
       color: #333;
-      margin: 0;
-      padding: 0;
-    }
+ }
 
     .blog-header {
       text-align: center;
