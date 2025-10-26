@@ -1,5 +1,7 @@
 import { dynamicUrl,url } from "../../utility/js/constants.js";
 
+const gridSize = window.pageConfig?.size ? parseInt(window.pageConfig.size) : 1;
+
 
 function createPuzzle(size) {
   const wrapper = document.createElement("div");
@@ -48,25 +50,14 @@ const colors = [
   "#8b0000",
   "#20b2aa",
 ];
-function getTileColor(val) {
-  if (val === "") return "#eee";
-  const colors = [
-    "#ff0000",
-    "#ff7f00",
-    "#ffff00",
-    "#00ff00",
-    "#00ffff",
-    "#0000ff",
-    "#8b00ff",
-  ];
-  return colors[val % colors.length];
-}
 
 const content=document.getElementById("puzzleContent");
 
 
 if(content!==null){
 for(let i=3;i<=10;i++){
+   if(i===gridSize)
+      continue;
     const grid3X3 = createPuzzle(i);
   content.appendChild(grid3X3);
 }

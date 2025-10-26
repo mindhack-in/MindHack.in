@@ -33,7 +33,6 @@ function sendValue(val) {
   init();
 }
 const size = window.pageConfig?.size ? parseInt(window.pageConfig.size) : 1;
-console.log(size);
 sendValue(size);
 function startGame() {
   gridSize = parseInt(document.getElementById("gridSizeSelect").value);

@@ -4,6 +4,9 @@ body {
   padding: 0;
 }
 
+.title{
+  color: white;
+}
 /* ---------------- HEADER + CONTAINERS ---------------- */
 .headcontainer {
   display: flex;
