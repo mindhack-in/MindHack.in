@@ -20,87 +20,94 @@ export class Player {
       new Dead(width, height, gameHight),
     ];
     this.currentState = this.states[0];
-
-    this.touchThreshold = 30;
-
-    
+    this.score=0;
+    this.touchThreshold = 1;
 
     window.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowUp") {
-        this.y -= 10;
-      } else if (e.key === "ArrowDown") {
-        this.y += 10;
-      } else if (e.key === "ArrowRight") {
-        this.x += 10;
-      } else if (e.key === "ArrowLeft") {
-        this.x -= 10;
-      }
-      if (this.y < 0) {
-        this.y = 0;
-      } else if (this.y > this.gameHight - this.height) {
-        this.y = this.gameHight - this.height;
-      } else if (this.x < 0) {
-        this.x = 0;
-      } else if (this.x > this.gameWidth - this.width) {
-        this.x = this.gameWidth - this.width;
+      if (this.dead === false) {
+        if (e.key === "ArrowUp") {
+          this.y -= 10;
+        } else if (e.key === "ArrowDown") {
+          this.y += 10;
+        } else if (e.key === "ArrowRight") {
+          this.x += 10;
+        } else if (e.key === "ArrowLeft") {
+          this.x -= 10;
+        }
+        if (this.y < 0) {
+          this.y = 0;
+        } else if (this.y > this.gameHight - this.height) {
+          this.y = this.gameHight - this.height;
+        } else if (this.x < 0) {
+          this.x = 0;
+        } else if (this.x > this.gameWidth - this.width) {
+          this.x = this.gameWidth - this.width;
+        }
       }
     });
 
     window.addEventListener("touchstart", (e) => {
-      this.touchY = e.changedTouches[0].pageY;
-      this.touchX = e.changedTouches[0].pageX;
+      if (this.dead === false) {
+        this.touchY = e.changedTouches[0].pageY;
+        this.touchX = e.changedTouches[0].pageX;
+      }
     });
 
     window.addEventListener("touchmove", (e) => {
-      const currentY = e.changedTouches[0].pageY;
-      const currentX = e.changedTouches[0].pageX;
-      const swipeY = currentY - this.touchY;
-      const swipeX = currentX - this.touchX;
+      if (this.dead === false) {
+        const currentY = e.changedTouches[0].pageY;
+        const currentX = e.changedTouches[0].pageX;
+        const swipeY = currentY - this.touchY;
+        const swipeX = currentX - this.touchX;
 
-      // Vertical swipes
-      if (swipeY < -this.touchThreshold) {
-        this.y -= 10;
-        this.touchY = currentY; // reset for smoother movement
-      } else if (swipeY > this.touchThreshold) {
-        this.y += 10;
-        this.touchY = currentY;
+        // Vertical swipes
+        if (swipeY < -this.touchThreshold) {
+          this.y -= 10;
+          this.touchY = currentY; // reset for smoother movement
+        } else if (swipeY > this.touchThreshold) {
+          this.y += 10;
+          this.touchY = currentY;
+        }
+
+        // Horizontal swipes
+        if (swipeX < -this.touchThreshold) {
+          this.x -= 10;
+          this.touchX = currentX;
+        } else if (swipeX > this.touchThreshold) {
+          this.x += 10;
+          this.touchX = currentX;
+        }
+
+        // Constrain movement inside bounds
+        if (this.y < 0) this.y = 0;
+        else if (this.y > this.gameHight - this.height)
+          this.y = this.gameHight - this.height;
+
+        if (this.x < 0) this.x = 0;
+        else if (this.x > this.gameWidth - this.width)
+          this.x = this.gameWidth - this.width;
       }
-
-      // Horizontal swipes
-      if (swipeX < -this.touchThreshold) {
-        this.x -= 10;
-        this.touchX = currentX;
-      } else if (swipeX > this.touchThreshold) {
-        this.x += 10;
-        this.touchX = currentX;
-      }
-
-      // Constrain movement inside bounds
-      if (this.y < 0) this.y = 0;
-      else if (this.y > this.gameHight - this.height)
-        this.y = this.gameHight - this.height;
-
-      if (this.x < 0) this.x = 0;
-      else if (this.x > this.gameWidth - this.width)
-        this.x = this.gameWidth - this.width;
     });
 
     // Optionally handle swipe down to restart (if gameOver exists)
     window.addEventListener("touchend", (e) => {
-      const endY = e.changedTouches[0].pageY;
-      const swipeDistance = endY - this.touchY;
-      if (swipeDistance > this.touchThreshold) {
-        console.log("Swipe down detected");
-        if (gameOver) restartGame();
+      if (this.dead === false) {
+        const endY = e.changedTouches[0].pageY;
+        const swipeDistance = endY - this.touchY;
+        if (swipeDistance > this.touchThreshold) {
+          console.log("Swipe down detected");
+          if (gameOver) restartGame();
+        }
       }
     });
   }
 
   draw(frameX, enemies) {
+    // console.log(this.score)
     if (this.currentState.draw(this.ctx, frameX, this.x, this.y))
       this.gameOver = true;
     if (this.dead === false)
-      this.bullet.draw(
+      this.score+=this.bullet.draw(
         this.x + this.width + 2,
         this.y + this.height * 0.5,
         frameX,

@@ -13,17 +13,17 @@ export class Bullet {
     ];
   }
 
-  draw(x, y, frameX, gameWidth, enemies) {
+   draw(x, y, frameX, gameWidth, enemies) {
     let i = 0;
     let j = x;
     while (true) {
       j = j + 10;
 
       if(this.checkCollision(enemies,j,y)){
-        break;
+        return 1;
       }
 
-      this.context.strokeRect(j, y, this.width, this.height);
+      // this.context.strokeRect(j, y, this.width, this.height);
 
       this.context.drawImage(
         this.bullets[frameX],
@@ -35,6 +35,7 @@ export class Bullet {
       i++;
       if (j > gameWidth) break;
     }
+    return 0;
   }
 
   checkCollision(enemies,x,y) {

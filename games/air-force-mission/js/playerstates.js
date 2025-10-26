@@ -18,7 +18,7 @@ export class Dead {
 
   draw(context, frameX, x, y) {
     y-=this.vy;
-    this.vy-=1;
+    this.vy-=10;
   
     context.drawImage(
       this.elements[0].image,
@@ -27,7 +27,7 @@ export class Dead {
       this.width,
       this.height
     );
-      if(y===this.gameHeight-this.height){
+      if(y>=this.gameHeight-this.height){
       return true;
     }
     return false;

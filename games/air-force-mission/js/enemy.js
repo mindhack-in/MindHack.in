@@ -11,7 +11,7 @@ export class Enemy {
 
     this.markForDeletion = false;
 
-    this.speedX = Math.random() * 2;
+    this.speedX = Math.random() * 5;
     this.height = 64;
     this.width = 77;
     this.maxFrame = 3;
@@ -38,8 +38,8 @@ export class Enemy {
 
   draw(context) {
     // if (this.game.debug)
-    context.strokeRect(this.x, this.y, this.width, this.height);
-    context.fillText(this.hit, this.x, this.y);
+    // context.strokeRect(this.x, this.y, this.width, this.height);
+    // context.fillText(this.hit, this.x, this.y);
     context.drawImage(
       this.image,
       this.frameX * this.width,
