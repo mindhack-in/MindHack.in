@@ -8,7 +8,7 @@ var puzzle;
 async function createSudokuGrid(difficulty = "easy") {
   const response = 
 
-      fetch("https://mindhack-in.github.io/mindhack.in.dynamic/games/sudoku/1.json")
+      fetch("https://dynamic.mindhack.in/games/sudoku/1.json")
         .then(response => response.json())
         .then(data => {
             // Get the length of the JSON array
