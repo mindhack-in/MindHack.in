@@ -1,4 +1,5 @@
-import { dynamicUrl, url } from "../../utility/js/constants.js";
+import {  url } from "../../utility/js/constants.js";
+let dynamicUrl = "../../dynamic/";
 
 const types = [
   "fruits",
@@ -17,7 +18,8 @@ const gameBoard = document.getElementById("home-board");
 
 const cardType = window.pageConfig?.cards ? window.pageConfig.cards : 1;;
 
-console.log(cardType)
+if(types.indexOf(cardType)!=-1)
+  dynamicUrl="../"+dynamicUrl;
 for (let i = 0; i < types.length; i++) {
 
   if (types[i] === cardType)
