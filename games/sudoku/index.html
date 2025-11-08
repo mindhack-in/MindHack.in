@@ -2,46 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MindHack.in - Sudoku Board Game with Answers </title>
     <link rel="canonical" href="https://mindhack.in/games/sudoku/" />
-    <meta name="description" content="Play Sudoku Board Game with Answers for free on MindHack.in. Enjoy a fun and challenging Sudoku experience with hints and auto-check features.Click now to play sudoku for free.">
-    <link rel="stylesheet" href="../../utility/css/header.css">
-    <link rel="stylesheet" href="../../utility/css/sidenav.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Play Sudoku Board Game with Answers for free on MindHack.in. Enjoy a fun and challenging Sudoku experience with hints and auto-check features.Click now to play sudoku for free.">
+
+
+    <script>
+        window.pageConfig = {
+            css: {
+                header: true,
+                sidenav: true,
+                card: true,
+                blogs2: true,
+                path: "../../utility/css/",
+
+            },
+            js: {
+                base: true,
+                auth: true,
+                path: "../../utility/js/",
+                gtag: true,
+            }
+
+        };
+    </script>
+    <script type="module" src="../../utility/js/js-loader.js"></script>
+    <script type="module" src="../../utility/js/css-loader.js"></script>
+
     <link rel="stylesheet" href="sudoku.css">
-    <link rel="stylesheet" href="../../utility/css/test.css">
-    <link rel="stylesheet" href="../../utility/css/aboutus.css">
-    <link rel="stylesheet" href="../../utility/css/blogs.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <div class="headerMain">
-        <header class="header-container">
-            <div class="logo">
-                <img class="logoimg" id="logoimg" alt="Mindhac.in"  src="https://mindhack-in.github.io/mindhack.in.dynamic/logo.png" />
-            </div>
-            <nav class="nav-links" id="navLinks">
-            </nav>
+    <div id="head-left"></div>
 
-            <div class="user-actions">
-                <button class="menu-toggle" id="menuToggle">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <button class="login-btn" id="userDetails">Login</button>
-            </div>
-
-        </header>
-    </div>
-    <aside class="left-sidebar" id="leftSidebar"></aside>
-
-    </aside>
     <div class="content">
+
         <div class="canvas-container">
             <div class="sudoku-wrapper container">
-                <button onclick="checkSudoku()">Check Solution</button>
+
+                <div class="buttonsPannel">
+                    <select id="difficultyDropdown" >
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+
+                        <option value="Expert">Expert</option>
+                        <option value="Master">Master</option>
+                        <option value="Extreme">Extreme</option>
+                    </select>
+                    <button id="checkSudoku">Check Solution</button>
+                </div>
                 <div id="sudoku"></div>
+                <p id="mistakes">3 Mistakes left! Play carefully</p>
                 <div class="tracker" id="numberTracker"></div>
                 <p id="result"></p>
 
@@ -49,113 +64,83 @@
         </div>
     </div>
 
-    <header class="blog-header">
-        <h1>Sudoku Board Games with Answers</h1>
-    </header>
-    <main>
-        <p>
-            Sudoku is one of the best and oldest puzzle games, Sudoku board games with answers helps you to boost your
-            brain.</p>
-        <p>Earlier people used to play sudoku in the newspaper, then people started playing it in the newspaper, then
-            people started playing in sudoku game books, now people use the only platforms. Mindhack.in, provides a
-            platform to play sudoku puzzles with answers for free.</p>
+    <h1>Sudoku Board Games with Answers</h1>
 
-        <h2>What is Sudoku?</h2>
-        <p>
-            Sudoku is a board game with 9X9 grid, having 9 internal sub grids of size 3X3 without overlapping each
-            other.
-        </p>
-        <p>
-            In each column and rows and sub grid, the player has to fill no’s from 1 to 9, without any duplicate value.
-        </p>
-        <p>
-            It sounds easy, but in reality it's not that simple, sudoku has different levels starting from easy to
-            extreame.
-        </p>
+    <section id="contentSection">
+        <div id="blog-div">
+            <p>Sudoku is one of the best and oldest puzzle games, Sudoku board games with answers helps you to boost
+                your brain.</p>
+            <p>Earlier people used to play sudoku in the newspaper, then people started playing it in the newspaper,
+                then people started playing in sudoku game books, now people use the only platforms. Mindhack.in,
+                provides a
+                platform to play sudoku puzzles with answers for free.</p>
 
-        <h2>Why do you play sudoku?</h2>
+            <h2>What is Sudoku?</h2>
+            <p>Sudoku is a board game with 9X9 grid, having 9 internal sub grids of size 3X3 without overlapping each
+                other.</p>
+            <p>In each column and rows and sub grid, the player has to fill no’s from 1 to 9, without any duplicate
+                value.</p>
+            <p>It sounds easy, but in reality it's not that simple, sudoku has different levels starting from easy to
+                extreame.</p>
 
-        <ul>
-            <li>Enhance Memory</li>
-            <li>Enhance Focus </li>
-            <li>Decrease Stress level</li>
-            <li>Increase Problem Solving Skill</li>
-            <li>Accessible Anywhere</li>
-        </ul>
+            <h2>Why do you play sudoku?</h2>
 
-        <h2>Feature in mindhack.in for sudoku:</h2>
+            <ul>
+                <li>Enhance Memory</li>
+                <li>Enhance Focus </li>
+                <li>Decrease Stress level</li>
+                <li>Increase Problem Solving Skill</li>
+                <li>Accessible Anywhere</li>
+            </ul>
 
-        <ul>
-            <li>Give option to track the selected no in complete 9X9 grid.</li>
-            <li>Highlight the row and column for the selected cell.</li>
-            <li>Free hints.</li>
-            <li>Free to play, no mandatory sing in or download.</li>
-            <li>Auto checks for mistakes.</li>
-            <li>New puzzle each time.</li>
+            <h2>Feature in mindhack.in for sudoku:</h2>
 
-        </ul>
+            <ul>
+                <li>Give option to track the selected no in complete 9X9 grid.</li>
+                <li>Highlight the row and column for the selected cell.</li>
+                <li>Free hints.</li>
+                <li>Free to play, no mandatory sing in or download.</li>
+                <li>Auto checks for mistakes.</li>
+                <li>New puzzle each time.</li>
 
-        <section class="faq">
+            </ul>
+
             <h2>Frequently Asked Questions (FAQs)</h2>
 
-            <div class="faq-item">
-                <div class="faq-question">How to learn Sudoku?</div>
-                <div class="faq-answer">You just need to know 1 rule: no duplicate value in row, column and sub grid. Yes this is the base and you need to be consistent.</div>
+            <div style="margin-bottom:25px;">
+                <h3>How to learn Sudoku?</h3>
+                <p class="answer">You just need to know 1 rule: no duplicate value
+                    in row, column and sub
+                    grid.
+                    Yes this is the base and you need to be consistent.</p>
             </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Can I play Sudoku on mindhack.in without downloading?</div>
-                <div class="faq-answer">Yes Mindhack.in is dedicated towards all type of free puzzle and logic game, so you can play sudoku on mindhack.in for free, not only free in feature we are coming with multiple competitions that will help you to earn the prizes.</div>
+            <div style="margin-bottom:25px;">
+                <h3>Can I play Sudoku on mindhack.in without downloading?</h3>
+                <p class="answer">Yes Mindhack.in
+                    is dedicated towards all type of free puzzle and logic game,
+                    so
+                    you can play sudoku on mindhack.in for free, not only free in feature we are coming with
+                    multiple
+                    competitions that will help you to earn the prizes.</p>
             </div>
 
-            <div class="faq-item">
-                <div class="faq-question">In how much time, I can solve sudoku?</div>
-                <div class="faq-answer">On average, a person can solve a Sudoku grid in less than 10 minutes.</div>
+            <div style="margin-bottom:25px;">
+                <h3>In how much time, I can solve sudoku?</h3>
+                <p class="answer">On average, a person can solve a Sudoku grid in less than 10 minutes.</p>
             </div>
-            <div class="faq-item">
-                <div class="faq-question">Does sudoku really improve the focus?</div>
-                <div class="faq-answer">Yes</div>
+            <div style="margin-bottom:25px;">
+                <h3>Does sudoku really improve the focus?</h3>
+                <p class="answer">Yes</p>
             </div>
-        </section>
-    </main>
 
-    <section class="about-section fade-in" id="about"></section>
+        </div>
+    </section>
 
 </body>
 <footer id="footer"></footer>
 
+<script type="module" src="sudoku.js"></script>
 
-
-<script type="module" src="../../utility/js/base.js"></script>
-<script type="module" src="../../utility/js/auth.js"></script>
-<script src="sudoku.js"></script>
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-9RC3CF2CZ3');
-</script>
-<script type="application/ld+json">
-            {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "MindHack.in",
-            "url": "https://mindhack.in/",
-            "logo": "https://mindhack-in.github.io/MindHack.in/dynamic/profile.png"
-            }
-    </script>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const home_nav = document.getElementById("home_nav");
-        home_nav.classList.toggle("active");
-
-        const games_nav = document.getElementById("games_nav");
-        games_nav.classList.toggle("active");
-    });
-</script>
 
 </html>

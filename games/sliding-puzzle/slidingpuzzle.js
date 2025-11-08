@@ -1,4 +1,4 @@
-import { dynamicUrl,url } from "../../utility/js/constants.js";
+import {  url } from "../../utility/js/constants.js";
 
 const gridSize = window.pageConfig?.size ? parseInt(window.pageConfig.size) : 1;
 
@@ -25,40 +25,41 @@ function createPuzzle(size) {
     }
     puzzle.appendChild(tile);
   }
-    wrapper.appendChild(puzzle);
+  wrapper.appendChild(puzzle);
 
-      wrapper.onclick = () => {
-              window.location.href =url+"games/sliding-puzzle/"+size+'x'+size;
-            };
+  wrapper.onclick = () => {
+    window.location.href = url + "games/sliding-puzzle/" + size + 'x' + size;
+  };
   return wrapper
 }
 const colors = [
-  "#ff7f00",
-  "#ffff00",
-  "#00ff00",
-  "#00ffff",
-  "#0000ff",
-  "#ff00ff",
-  "#ff0000",
-  "#ffa500",
-  "#9400d3",
-  "#1e90ff",
-  "#32cd32",
-  "#ffd700",
-  "#00ced1",
-  "#ff1493",
-  "#8b0000",
-  "#20b2aa",
+  "#ff6ec7", // bubblegum pink
+  "#8a2be2", // electric violet
+  "#00f5d4", // minty aqua
+  "#ffb3c6", // soft candy pink
+  "#a0c4ff", // pastel blue
+  "#bdb2ff", // lilac haze
+  "#ffc6ff", // dreamy lavender
+  "#ffd6a5", // peachy cream
+  "#fdffb6", // pale lemon
+  "#9bf6ff", // icy cyan
+  "#ffadad", // coral blush
+  "#caffbf", // neon mint
+  "#b5e48c", // light lime
+  "#fcbf49", // golden honey
+  "#ff6392", // flamingo pink
+  "#7bf1a8"  // fresh jade green
 ];
 
-const content=document.getElementById("puzzleContent");
+
+const content = document.getElementById("puzzleContent");
 
 
-if(content!==null){
-for(let i=3;i<=10;i++){
-   if(i===gridSize)
+if (content !== null) {
+  for (let i = 3; i <= 10; i++) {
+    if (i === gridSize)
       continue;
     const grid3X3 = createPuzzle(i);
-  content.appendChild(grid3X3);
-}
+    content.appendChild(grid3X3);
+  }
 }

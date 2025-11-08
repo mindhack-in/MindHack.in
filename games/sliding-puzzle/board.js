@@ -1,20 +1,20 @@
 const colors = [
-  "#ff7f00",
-  "#ffff00",
-  "#00ff00",
-  "#00ffff",
-  "#0000ff",
-  "#ff00ff",
-  "#ff0000",
-  "#ffa500",
-  "#9400d3",
-  "#1e90ff",
-  "#32cd32",
-  "#ffd700",
-  "#00ced1",
-  "#ff1493",
-  "#8b0000",
-  "#20b2aa",
+  "#ff6ec7", // bubblegum pink
+  "#8a2be2", // electric violet
+  "#00f5d4", // minty aqua
+  "#ffb3c6", // soft candy pink
+  "#a0c4ff", // pastel blue
+  "#bdb2ff", // lilac haze
+  "#ffc6ff", // dreamy lavender
+  "#ffd6a5", // peachy cream
+  "#fdffb6", // pale lemon
+  "#9bf6ff", // icy cyan
+  "#ffadad", // coral blush
+  "#caffbf", // neon mint
+  "#b5e48c", // light lime
+  "#fcbf49", // golden honey
+  "#ff6392", // flamingo pink
+  "#7bf1a8"  // fresh jade green
 ];
 
 const gamePage = document.getElementById("gamePage");
@@ -282,14 +282,24 @@ function saveHistory(moves, status) {
 function getTileColor(val) {
   if (val === "") return "#eee";
   const colors = [
-    "#ff0000",
-    "#ff7f00",
-    "#ffff00",
-    "#00ff00",
-    "#00ffff",
-    "#0000ff",
-    "#8b00ff",
-  ];
+  "#ff6ec7", // bubblegum pink
+  "#8a2be2", // electric violet
+  "#00f5d4", // minty aqua
+  "#ffb3c6", // soft candy pink
+  "#a0c4ff", // pastel blue
+  "#bdb2ff", // lilac haze
+  "#ffc6ff", // dreamy lavender
+  "#ffd6a5", // peachy cream
+  "#fdffb6", // pale lemon
+  "#9bf6ff", // icy cyan
+  "#ffadad", // coral blush
+  "#caffbf", // neon mint
+  "#b5e48c", // light lime
+  "#fcbf49", // golden honey
+  "#ff6392", // flamingo pink
+  "#7bf1a8"  // fresh jade green
+];
+;
   return colors[val % colors.length];
 }
 

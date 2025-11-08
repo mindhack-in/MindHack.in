@@ -1,34 +1,32 @@
+const dynamicUrl = "../../dynamic/";
+
 const sudokuContainer = document.getElementById("sudoku");
 const tracker = document.getElementById("numberTracker");
-
+const mistakesP = document.getElementById("mistakes");
 var solution;
 var puzzle;
-
+let mistakes = 3;
 
 async function createSudokuGrid(difficulty = "easy") {
-  const response = 
+  mistakes = 3;
+  const response =
 
-      fetch("https://mindhack-in.github.io/mindhack.in.dynamic/games/sudoku/1.json")
-        .then(response => response.json())
-        .then(data => {
-            // Get the length of the JSON array
-            const length = data.length;
-            console.log('Total number of entities in the list:', length);
-             let index=Math.floor(Math.random() * length) 
-             console.log(data[index])
-            return data[index];
-        })
-        .catch(error => {
-            console.error('Error fetching JSON:', error);
-        });
+    fetch(dynamicUrl + "/games/sudoku/1.json")
+      .then(response => response.json())
+      .then(data => {
+        const length = data.length;
+        let index = Math.floor(Math.random() * length)
+        return data[index];
+      })
+      .catch(error => {
+      });
 
   const apiResponse = await response;
 
-
-  
   solution = apiResponse.solution;
   puzzle = apiResponse.value;
 
+  sudokuContainer.innerHTML = '';
   for (let row = 0; row < 9; row++) {
     for (let col = 0; col < 9; col++) {
       const input = document.createElement("input");
@@ -37,7 +35,6 @@ async function createSudokuGrid(difficulty = "easy") {
       input.dataset.row = row;
       input.dataset.col = col;
 
-      // Add thick borders for 3x3 grid boxes
       if (col % 3 === 0) input.style.borderLeft = "2px solid black";
       if (row % 3 === 0) input.style.borderTop = "2px solid black";
       if (col === 8) input.style.borderRight = "2px solid black";
@@ -49,30 +46,55 @@ async function createSudokuGrid(difficulty = "easy") {
         input.readOnly = true;
       } else {
         input.addEventListener("input", (e) => {
+
           const val = e.target.value;
           if (!/^[1-9]?$/.test(val)) {
             e.target.value = "";
+          } else if (val !== "" && !Number.isNaN(Number(val))) {
+            const expected = solution[row][col];
+            const actual = parseInt(input.value);
+            input.style.backgroundColor = "";
+
+            console.log(actual)
+
+            if (value === 0) {
+              if (actual !== expected) {
+                input.style.backgroundColor = "#ffcccc";
+                mistakes--;
+                mistakesP.innerHTML = mistakes + ' Mistakes left! Play carefully'
+                if (mistakes <= 0) alert("Game Over Play again");
+              }
+            }
+            updateTracker();
           }
-           updateTracker();
         });
         input.addEventListener("focus", () => {
-          selectedInput = input;
-          console.log("hig");
-          highlightRowCol(input); // 🔥 highlight row + column
+          highlightRowCol(input);
         });
       }
 
       sudokuContainer.appendChild(input);
     }
   }
-    updateTracker();
+  updateTracker();
 }
 
-      // Add thick borders for 3x3 grid boxes
+const difficultyDropdown = document.getElementById("difficultyDropdown")
+difficultyDropdown.addEventListener("change", handleDropdownChange);
+function handleDropdownChange(event) {
+  const selectedValue = event.target.value;
+  createSudokuGrid(selectedValue);
+}
+
+const checkSudokuButton = document.getElementById("checkSudoku");
+checkSudokuButton.onclick = () => {
+  checkSudoku();
+}
+
 function loadCongratsScript(callback) {
   const script = document.createElement("script");
   script.src = "../../../utility/js/congratulation.js";
-  script.onload = callback; // optional
+  script.onload = callback;  
   document.head.appendChild(script);
 }
 function checkSudoku() {
@@ -87,10 +109,10 @@ function checkSudoku() {
 
     if (puzzle[row][col] === 0) {
       if (actual !== expected) {
-        input.style.backgroundColor = "#ffcccc"; // incorrect
+        input.style.backgroundColor = "#ffcccc"; 
         allCorrect = false;
       } else {
-        input.style.backgroundColor = "#ccffcc"; // correct
+        input.style.backgroundColor = "#ccffcc"; 
       }
     }
   });
@@ -100,10 +122,11 @@ function checkSudoku() {
     ? "🎉 Correct! Puzzle solved!"
     : "❌ Some entries are incorrect.";
 
-    if(allCorrect){
- loadCongratsScript(() => {
+  if (allCorrect) {
+    loadCongratsScript(() => {
       showCongratsAnimation({
-        message: "Sudoku Solved! 🧠"});
+        message: "Sudoku Solved! 🧠"
+      });
     });
   }
 }
@@ -136,13 +159,11 @@ function highlightGrid(input) {
   sudokuContainer.querySelectorAll("input").forEach((cell) => {
     cell.classList.remove("highlight");
   });
-       console.log(input);
 
   sudokuContainer.querySelectorAll("input").forEach((cell) => {
-      console.log(cell.value);
-    if (parseInt(cell.value) === input ) {
+    if (parseInt(cell.value) === input) {
       // if (!cell.readOnly) {
-        cell.classList.add("highlight");
+      cell.classList.add("highlight");
       // }
     }
   });

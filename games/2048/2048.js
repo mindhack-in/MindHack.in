@@ -1,248 +1,160 @@
-var board;
-var score = 0;
-var rows = 4;
-var columns = 4;
+const boardSize = 4;
+let board = [];
+let score = 0;
 
-let touchStartX = 0;
-let touchStartY = 0;
-let touchEndX = 0;
-let touchEndY = 0;
+const gameContainer = document.getElementById("game-container");
+const scoreDisplay = document.getElementById("score");
 
-document.addEventListener("touchstart", function(e) {
-    touchStartX = e.touches[0].clientX;
-    touchStartY = e.touches[0].clientY;
-}, false);
-
-document.addEventListener("touchend", function(e) {
-    touchEndX = e.changedTouches[0].clientX;
-    touchEndY = e.changedTouches[0].clientY;
-    handleSwipe();
-}, false);
-
-function handleSwipe() {
-    let dx = touchEndX - touchStartX;
-    let dy = touchEndY - touchStartY;
-
-    if (Math.abs(dx) > Math.abs(dy)) {
-        // Horizontal swipe
-        if (dx > 50) {
-            slideRight();
-            setTwo();
-        } else if (dx < -50) {
-            slideLeft();
-            setTwo();
-        }
-    } else {
-        // Vertical swipe
-        if (dy > 50) {
-            slideDown();
-            setTwo();
-        } else if (dy < -50) {
-            slideUp();
-            setTwo();
-        }
-    }
-    document.getElementById("score").innerText = score;
-}
-
-
-window.onload = function() {
-    setGame();
-}
-function updateScore() {
-    document.getElementById("score").innerText = score;
-}
-
-function setGame() {
-    board = [
-        [0, 0, 0, 0],
-        [0, 0, 0, 0],
-        [0, 0, 0, 0],
-        [0, 0, 0, 0]
-    ]
-
-    const gameBoard=  document.getElementById("board");
-    gameBoard.innerHTML = "";
+function initBoard() {
+    board = Array(boardSize).fill().map(() => Array(boardSize).fill(0));
     score = 0;
-    document.getElementById("score").innerText = score;
-    for (let r = 0; r < rows; r++) {
-        for (let c = 0; c < columns; c++) {
-            let tile = document.createElement("div");
-            tile.id = r.toString() + "-" + c.toString();
-            let num = board[r][c];
-            updateTile(tile, num);
-          gameBoard.append(tile);
+    addRandomTile();
+    addRandomTile();
+    updateBoard();
+}
+
+function addRandomTile() {
+    const emptyCells = [];
+    for (let r = 0; r < boardSize; r++) {
+        for (let c = 0; c < boardSize; c++) {
+            if (board[r][c] === 0) emptyCells.push({ r, c });
         }
     }
-    setTwo();
-    setTwo();
-
-}
-
-function updateTile(tile, num) {
-    tile.innerText = "";
-    tile.classList.value = "";
-    tile.classList.add("tile");
-    if (num > 0) {
-        tile.innerText = num.toString();
-        if (num <= 4096) {
-            tile.classList.add("x"+num.toString());
-        } else {
-            tile.classList.add("x8192");
-        }                
+    if (emptyCells.length > 0) {
+        const { r, c } = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+        board[r][c] = Math.random() < 0.9 ? 2 : 4;
     }
 }
 
-document.addEventListener('keyup', (e) => {
-    if (e.code == "ArrowLeft") {
-        slideLeft();
-        setTwo();
+function updateBoard() {
+    gameContainer.innerHTML = "";
+    for (let r = 0; r < boardSize; r++) {
+        for (let c = 0; c < boardSize; c++) {
+            const tile = document.createElement("div");
+            tile.className = "tile";
+            const value = board[r][c];
+            if (value) {
+                tile.textContent = value;
+                tile.dataset.value = value;
+            }
+            gameContainer.appendChild(tile);
+        }
     }
-    else if (e.code == "ArrowRight") {
-        slideRight();
-        setTwo();
-    }
-    else if (e.code == "ArrowUp") {
-        slideUp();
-        setTwo();
-
-    }
-    else if (e.code == "ArrowDown") {
-        slideDown();
-        setTwo();
-    }
-    document.getElementById("score").innerText = score;
-})
-
-function filterZero(row){
-    return row.filter(num => num != 0); 
+    scoreDisplay.textContent = "Score: " + score;
 }
 
 function slide(row) {
-    //[0, 2, 2, 2] 
-    row = filterZero(row); 
-    for (let i = 0; i < row.length-1; i++){
-        if (row[i] == row[i+1]) {
-            row[i] *= 2;
-            row[i+1] = 0;
-            score += row[i];
-        }
-    } //[4, 0, 2]
-    row = filterZero(row); //[4, 2]
-    //add zeroes
-    while (row.length < columns) {
-        row.push(0);
-    } //[4, 2, 0, 0]
-    return row;
-}
-
-function slideLeft() {
-    for (let r = 0; r < rows; r++) {
-        let row = board[r];
-        row = slide(row);
-        board[r] = row;
-        for (let c = 0; c < columns; c++){
-            let tile = document.getElementById(r.toString() + "-" + c.toString());
-            let num = board[r][c];
-            updateTile(tile, num);
+    let arr = row.filter(v => v);
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] === arr[i + 1]) {
+            arr[i] *= 2;
+            score += arr[i];
+            arr[i + 1] = 0;
         }
     }
+    arr = arr.filter(v => v);
+    while (arr.length < boardSize) arr.push(0);
+    return arr;
 }
 
-function slideRight() {
-    for (let r = 0; r < rows; r++) {
-        let row = board[r];       
-        row.reverse();           
-        row = slide(row)          
-        board[r] = row.reverse();  
-        for (let c = 0; c < columns; c++){
-            let tile = document.getElementById(r.toString() + "-" + c.toString());
-            let num = board[r][c];
-            updateTile(tile, num);
+function rotateBoard() {
+    const newBoard = Array(boardSize).fill().map(() => Array(boardSize).fill(0));
+    for (let r = 0; r < boardSize; r++) {
+        for (let c = 0; c < boardSize; c++) {
+            newBoard[c][boardSize - 1 - r] = board[r][c];
         }
     }
+    board = newBoard;
 }
 
-function slideUp() {
-    for (let c = 0; c < columns; c++) {
-        let row = [board[0][c], board[1][c], board[2][c], board[3][c]];
-        row = slide(row);
-
-        for (let r = 0; r < rows; r++){
-            board[r][c] = row[r];
-            let tile = document.getElementById(r.toString() + "-" + c.toString());
-            let num = board[r][c];
-            updateTile(tile, num);
-        }
+function moveLeft() {
+    let oldBoard = JSON.stringify(board);
+    for (let r = 0; r < boardSize; r++) {
+        board[r] = slide(board[r]);
     }
+    if (oldBoard !== JSON.stringify(board)) {
+        addRandomTile();
+    }
+    updateBoard();
 }
 
-function slideDown() {
-    for (let c = 0; c < columns; c++) {
-        let row = [board[0][c], board[1][c], board[2][c], board[3][c]];
-        row.reverse();
-        row = slide(row);
-        row.reverse();
-
-        for (let r = 0; r < rows; r++){
-            board[r][c] = row[r];
-            let tile = document.getElementById(r.toString() + "-" + c.toString());
-            let num = board[r][c];
-            updateTile(tile, num);
-        }
+function moveRight() {
+    let oldBoard = JSON.stringify(board);
+    for (let r = 0; r < boardSize; r++) {
+        board[r] = board[r].reverse();
+        board[r] = slide(board[r]);
+        board[r] = board[r].reverse();
     }
+    if (oldBoard !== JSON.stringify(board)) {
+        addRandomTile();
+    }
+    updateBoard();
 }
 
-function setTwo() {
-    if (!hasEmptyTile()) {
-        return;
-    }
-    let found = false;
-    while (!found) {
-        let r = Math.floor(Math.random() * rows);
-        let c = Math.floor(Math.random() * columns);
-        if (board[r][c] == 0) {
-            board[r][c] = 2;
-            let tile = document.getElementById(r.toString() + "-" + c.toString());
-            tile.innerText = "2";
-            tile.classList.add("x2");
-            found = true;
-        }
-    }
+function moveUp() {
+    let oldBoard = JSON.stringify(board);
+    rotateBoard();
+    moveLeft();
+    rotateBoard();
+    rotateBoard();
+    rotateBoard();
+    if (oldBoard !== JSON.stringify(board)) updateBoard();
 }
 
-function hasEmptyTile() {
-    let count = 0;
-    for (let r = 0; r < rows; r++) {
-        for (let c = 0; c < columns; c++) {
-            if (board[r][c] == 0) { 
-                return true;
-            }
-        }
-    }
-    return false;
+function moveDown() {
+    let oldBoard = JSON.stringify(board);
+    rotateBoard();
+    moveRight();
+    rotateBoard();
+    rotateBoard();
+    rotateBoard();
+    if (oldBoard !== JSON.stringify(board)) updateBoard();
 }
 
-
-
-
-const fullscreenBtn = document.getElementById("fullscreenBtn");
-const exitFullscreenBtn = document.getElementById("exitFullScreen");
-
-
-
-fullscreenBtn.addEventListener("click", () => {
-  toggleViews();
-      setGame();
-
-});
-exitFullscreenBtn.addEventListener("click", () => {
-  toggleViews();
-  
+document.addEventListener("keydown", e => {
+    switch (e.key) {
+        case "ArrowLeft": moveLeft(); break;
+        case "ArrowRight": moveRight(); break;
+        case "ArrowUp": moveUp(); break;
+        case "ArrowDown": moveDown(); break;
+    }
 });
 
-function toggleViews() {
+const restartButton = document.getElementById("restart-btn");
+const exit = document.getElementById("exit");
 
-    document.getElementById("footer").display = "block";
+restartButton.addEventListener("click", e => {
+    initBoard();
+    document.body.style.overflow = 'hidden';
 
-}
+    restartButton.innerHTML = 'Restart Game';
+    exit.style.opacity = 1;
+
+});
+
+exit.addEventListener("click", e => {
+    document.body.style.overflow = 'auto';
+});
+
+let touchX, touchY;
+window.addEventListener("touchstart", (e) => {
+    touchY = e.changedTouches[0].pageY;
+    touchX = e.changedTouches[0].pageX;
+
+});
+
+window.addEventListener("touchmove", (e) => {
+    const currentY = e.changedTouches[0].pageY;
+    const currentX = e.changedTouches[0].pageX;
+    const swipeY = currentY - touchY;
+    const swipeX = currentX - touchX;
+    if (swipeX < 0) {
+        moveLeft();
+    } else if (swipeX > 0) {
+        moveRight();
+    }
+    else if (swipeY > 0)
+        moveUp();
+    else if (swipeY < 0)
+        moveDown();
+});

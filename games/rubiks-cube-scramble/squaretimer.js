@@ -3,7 +3,6 @@ let startTime,
   isRunning = false;
   
 const size = window.pageConfig?.size ? parseInt(window.pageConfig.size) : 2;
-console.log(size);
 let times = JSON.parse(localStorage.getItem(`solves${size}X${size}`)) || [];
 let solves = JSON.parse(localStorage.getItem(`solveData${size}X${size}`)) || [];
 
@@ -61,12 +60,10 @@ const scrambleMovesForAll = {
 };
 
 
-console.log(size);
-console.log(`${size}x${size}`);
+
 const scrambleType = document.getElementById("scrambleType");
 scrambleType.textContent = `${size}x${size} Cube Scramble`;
 const scrambleMoves = scrambleMovesForAll[`${size}x${size}`];
-console.log(scrambleMoves);
 function formatTime(ms) {
   return (ms / 1000).toFixed(2);
 }

@@ -1,7 +1,8 @@
-import { dynamicUrl,url } from "../utility/js/constants.js";
+import { url } from "../utility/js/constants.js";
 
+const dynamicUrl="../dynamic/";
 
-fetch(dynamicUrl+"/games/games.json")
+fetch(dynamicUrl+"games/games.json")
   .then((response) => response.json())
   .then((data) => gamePopulate(data));
 const container = document.getElementById("game-grid");

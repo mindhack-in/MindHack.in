@@ -7,6 +7,10 @@
   padding-top: 50px;
 }
 
+
+#home-board{
+  margin-bottom: 15px;
+}
 .image-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

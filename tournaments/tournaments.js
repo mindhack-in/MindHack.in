@@ -1,4 +1,5 @@
-import { dynamicUrl, url } from "../utility/js/constants.js";
+import {  url } from "../utility/js/constants.js";
+const dynamicUrl="../dynamic/";
 
 fetch(dynamicUrl + "tournaments/tournaments.json")
   .then((response) => response.json())

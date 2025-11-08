@@ -2,38 +2,41 @@
 <html lang="en">
 
 <head>
+  <title>7X7 Rubik's cube timer @ MindHack.in</title>
+  <link rel="canonical" href="https://mindhack.in/games/rubiks-cube-scramble/7X7/" />
+  <meta name="description" content="7x7 Rubiks cube scramble, checkout our scrambles to boost your cubing speed." />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MindHack.in</title>
-  <link rel="stylesheet" href="../../../utility/css/header.css">
-  <link rel="stylesheet" href="../../../utility/css/sidenav.css">
   <link rel="stylesheet" href="../squaretimer.css">
-  <link rel="stylesheet" href="../../../utility/css/test.css">
-  <link rel="stylesheet" href="../../../utility/css/aboutus.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <script>
+    window.pageConfig = {
+      css: {
+        header: true,
+        sidenav: true,
+        blogs2: true,
+        path: "../../../utility/css/",
+
+      },
+      js: {
+        base: true,
+        auth: true,
+        path: "../../../utility/js/",
+        gtag: true,
+      },
+      size: "7"
+    };
+  </script>
+
+  <script type="module" src="../../../utility/js/js-loader.js"></script>
+  <script type="module" src="../../../utility/js/css-loader.js"></script>
+
+
 </head>
 
 <body>
-  <div class="headerMain">
-    <header class="header-container">
-      <div class="logo">
-        <img class="logoimg" id="logoimg" src="https://mindhack-in.github.io/mindhack.in.dynamic/logo.png" />
-      </div>
-      <nav class="nav-links" id="navLinks">
-      </nav>
+  <div id="head-left"></div>
 
-      <div class="user-actions">
-        <button class="menu-toggle" id="menuToggle">
-          <i class="fas fa-bars"></i>
-        </button>
-        <button class="login-btn" id="userDetails">Login</button>
-      </div>
-
-    </header>
-  </div>
-  <aside class="left-sidebar" id="leftSidebar">
-
-  </aside>
   <div class="content ">
 
     <div class="timer-click" onclick="startStopTimer()">
@@ -100,39 +103,6 @@
 </body>
 <footer id="footer"></footer>
 
-
-
-<script>
-  window.pageConfig = { size: "7" };
-</script>
-<script type="module" src="../../../utility/js/base.js"></script>
-<script type="module" src="../../../utility/js/auth.js"></script>
 <script src="../squaretimer.js"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-9RC3CF2CZ3');
-</script>
-<script type="application/ld+json">
-            {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "MindHack.in",
-            "url": "https://mindhack.in/",
-            "logo": "https://mindhack-in.github.io/MindHack.in/dynamic/profile.png"
-            }
-    </script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const home_nav = document.getElementById("home_nav");
-    home_nav.classList.toggle("active");
-
-    const games_nav = document.getElementById("games_nav");
-    games_nav.classList.toggle("active");
-  });
-</script>
 
 </html>

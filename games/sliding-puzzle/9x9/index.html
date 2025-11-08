@@ -1,45 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <title>9X9 Sliding Puzzle - Free Online Sliding Puzzle Game | MindHack.in</title>
+  <link rel="canonical" href="https://mindhack.in/games/sliding-puzzle/7x7/" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>9X9 Sliding Puzzle - Free Online Sliding Puzzle Game | MindHack.in</title>
-  <link rel="stylesheet" href="../../../utility/css/blogs.css">
-  <link rel="canonical" href="https://mindhack.in/games/sliding-puzzle/9x9/" />
-    <link rel="stylesheet" href="../slidingpuzzle.css">
-
   <meta name="description"
-    content="Play the free online 9x9 Sliding Puzzle on MindHack.in! Challenge your brain, improve memory, and boost focus with fun and interactive sliding puzzles. Try now and test your logic!" />
-  <link rel="stylesheet" href="../../../utility/css/header.css">
-  <link rel="stylesheet" href="../../../utility/css/sidenav.css">
+    content="Play the free online 9X9 Sliding Puzzle on MindHack.in! Challenge your brain, improve memory, and boost focus with fun and interactive sliding puzzles. Try now and test your logic!" />
+  <link rel="stylesheet" href="../slidingpuzzle.css">
+  <script>
+    window.pageConfig = {
+      css: {
+        header: true,
+        sidenav: true,
+        blogs2: true,
+        path: "../../../utility/css/",
+
+      },
+      js: {
+        base: true,
+        auth: true,
+        path: "../../../utility/js/",
+        gtag: true,
+      },
+      size: "9"
+    };
+  </script>
+  <script type="module" src="../../../utility/js/js-loader.js"></script>
+  <script type="module" src="../../../utility/js/css-loader.js"></script>
   <link rel="stylesheet" href="../board.css">
-  <link rel="stylesheet" href="../../../utility/css/test.css">
-  <link rel="stylesheet" href="../../../utility/css/aboutus.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-  <div class="headerMain">
-    <header class="header-container">
-      <div class="logo">
-        <img class="logoimg" id="logoimg" alt="Mindhac.in"
-          src="https://mindhack-in.github.io/mindhack.in.dynamic/logo.png" />
-      </div>
-      <nav class="nav-links" id="navLinks">
-      </nav>
-
-      <div class="user-actions">
-        <button class="menu-toggle" id="menuToggle">
-          <i class="fas fa-bars"></i>
-        </button>
-        <button class="login-btn" id="userDetails">Login</button>
-      </div>
-
-    </header>
-  </div>
-  <aside class="left-sidebar" id="leftSidebar"></aside>
-
+  <div id="head-left"></div>
+  <h1>9 X 9 Sliding Puzzle</h1>
   <div class="headcontainer">
     <div class="container1">
       <div class="game" id="gamePage">
@@ -57,11 +51,9 @@
   </div>
 
   <header class="blog-header">
-    <h1>9X9 Sliding Puzzle</h1>
-       <h2>Players also play</h2>
+    <h2>Players also play</h2>
     <div class="content mainContent" id="puzzleContent"></div>
   </header>
-
 
   <div class="history popup-overlay " id="popup">
     <div class="popup-content">
@@ -84,53 +76,14 @@
     </div>
   </div>
   </div>
-
-  <section class="about-section fade-in" id="about">
+  <section id="contentSection">
+    <div id="blog-div">
+      <p>9X9 Sliding puzzle consists of 80 numbered tiles and 1 empty tile. Player has to arrange all numbered tiles in
+        order.</p>
+    </div>
   </section>
-
 </body>
 <footer id="footer"></footer>
-
-
-
-<script type="module" src="../../../utility/js/base.js"></script>
-<script type="module" src="../../../utility/js/auth.js"></script>
 <script type="module" src="../slidingpuzzle.js"></script>
-
-<script>
-  window.pageConfig = { size: "9" };
-</script>
-
 <script src="../board.js"></script>
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'G-9RC3CF2CZ3');
-</script>
-<script type="application/ld+json">
-            {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "MindHack.in",
-            "url": "https://mindhack.in/",
-            "logo": "https://mindhack-in.github.io/MindHack.in/dynamic/profile.png"
-            }
-    </script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const home_nav = document.getElementById("home_nav");
-    home_nav.classList.toggle("active");
-
-    const games_nav = document.getElementById("games_nav");
-    games_nav.classList.toggle("active");
-  });
-</script>
-
-
 </html>

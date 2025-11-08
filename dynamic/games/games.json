@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Sliding Puzzle Beta",
+    "description": "Rearrange shuffled tiles by sliding them into the correct order.",
+    "gameLink": "sliding-puzzle",
+    "video": "games/10X10 Sliding Puzzle.mp4",
+    "new": true
+  },
+  {
+    "name": "Rubik's Cube",
+    "description": "Randomize the cube with a sequence of twists to start a fresh solving challenge.",
+    "gameLink": "rubiks-cube-scramble",
+    "video": "games/2X2RubikCube.mp4",
+    "new": true
+  },
+  {
+    "name": "2048",
+    "description": "Slide and combine numbered tiles to reach the elusive 2048 tile.",
+    "gameLink": "2048/",
+    "video": "./games/2048.mp4",
+    "new": false
+  },
+  {
+    "name": "Sudoku",
+    "description": "A number puzzle where you fill a 9x9 grid so each row, column, and box contains 1–9.",
+    "gameLink": "sudoku",
+    "video": "games/sudoku.mp4",
+    "new": false
+  },
+  {
+    "name": "Match the card",
+    "description": "Flip and match pairs of cards using memory and logic.",
+    "gameLink": "match-the-card",
+    "video": "games/MemoryCard.mp4",
+    "new": false
+  }
+]

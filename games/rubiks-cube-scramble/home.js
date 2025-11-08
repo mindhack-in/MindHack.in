@@ -1,4 +1,5 @@
-import { dynamicUrl,url } from "../../utility/js/constants.js";
+import { url } from "../../utility/js/constants.js";
+const dynamicUrl="../../dynamic/";
 
 function goToScramble(cubeType) {
        window.location.href =url+`games/rubiks-cube-scramble/${cubeType}`
@@ -18,8 +19,6 @@ for (const type of cubeTypes) {
 
   const cubeImg = document.createElement('img');
   cubeImg.src =  dynamicUrl+`games/rubikscube/${type}.jpg`
-  console.log(cubeImg.src);
-    // cubeImg.src =  dynamicUrl+`games/rubikscube/2X2.jpg`
 
   cubeImg.alt = `${type} Cube`;
   cubeImg.className = 'cube-img';

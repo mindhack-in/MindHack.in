@@ -13,9 +13,15 @@ const types = [
   "desserts"];
 
 
-const gameBoard=document.getElementById("game-board");
+const gameBoard=document.getElementById("home-board");
 
+const cardType = window.pageConfig?.cards ? window.pageConfig.cards : 1;;
+
+console.log(cardType)
 for(let i=0;i<types.length;i++){
+
+  if(types[i]===cardType)
+    continue;
 
   const imageCard=document.createElement("div");
   imageCard.classList.add("image-card");

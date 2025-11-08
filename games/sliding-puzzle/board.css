@@ -7,7 +7,6 @@ body {
 .title{
   color: white;
 }
-/* ---------------- HEADER + CONTAINERS ---------------- */
 .headcontainer {
   display: flex;
   justify-content: center;
@@ -15,13 +14,12 @@ body {
 }
 
 .container1 {
-  width: 100%;
+    /* height: 60vh; */
+  /* height: 20%; */
   text-align: center;
   max-width: 800px;
-  padding-top: 10vh;
 }
 
-/* ---------------- PUZZLE LAYOUT ---------------- */
 .puzzle-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -153,6 +151,7 @@ body {
   width: 100%;
   max-width: 600px;
   aspect-ratio: 1/1;
+  max-height: 600px;
 }
 
 .game {
@@ -236,7 +235,7 @@ th {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width< 600px) {
   .puzzle {
     max-width: 90vw;
   }
@@ -244,9 +243,9 @@ th {
     padding: 10px;
   }
   .puzzle-text h3 {
-    font-size: 16px;
+    font-size: 1px;
   }
   .puzzle-text p {
-    font-size: 13px;
+    font-size: 1px;
   }
 }
