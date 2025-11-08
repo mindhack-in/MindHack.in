@@ -14,22 +14,22 @@ h1 {
 
 #game-board {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Responsive column sizing */
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   gap: 10px;
   justify-content: center;
   align-content: center;
   padding: 0 10px;
   width: 100%;
-  max-width: 600px; /* Limit max size for desktop */
+  max-width: 600px; 
 }
 
 .card {
-  aspect-ratio: 1 / 1; /* Keep square shape */
+  aspect-ratio: 1 / 1; 
   background-color: #ccc;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: clamp(14px, 4vw, 28px); /* Responsive font size */
+  font-size: clamp(14px, 4vw, 28px);
   cursor: pointer;
   border-radius: 8px;
   user-select: none;
@@ -76,13 +76,12 @@ h1 {
   font-size: 20px;
 }
 
-/* Mobile adjustments */
 @media (max-width: 500px) {
   #game-board {
-    gap: 6px; /* Reduce spacing */
+    gap: 6px;
   }
   .card {
     width: auto;
-    font-size: clamp(12px, 5vw, 24px); /* Slightly bigger on very small screens */
+    font-size: clamp(12px, 5vw, 24px);
   }
 }

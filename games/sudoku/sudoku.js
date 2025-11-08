@@ -155,14 +155,12 @@ function updateTracker() {
 
 
 function highlightGrid(input) {
-  // Clear old highlights
   sudokuContainer.querySelectorAll("input").forEach((cell) => {
     cell.classList.remove("highlight");
   });
 
   sudokuContainer.querySelectorAll("input").forEach((cell) => {
     if (parseInt(cell.value) === input) {
-      // if (!cell.readOnly) {
       cell.classList.add("highlight");
       // }
     }
@@ -171,7 +169,6 @@ function highlightGrid(input) {
 
 
 function highlightRowCol(input) {
-  // Clear old highlights
   sudokuContainer.querySelectorAll("input").forEach((cell) => {
     cell.classList.remove("highlight");
   });
@@ -185,7 +182,6 @@ function highlightRowCol(input) {
       parseInt(cell.dataset.col) === col
     ) {
       if (!cell.readOnly) {
-        // don't override given cells
         cell.classList.add("highlight");
       }
     }

@@ -1,9 +1,9 @@
 import { url } from "./constants.js";
 
 
-const headLeft= document.getElementById("head-left")
+const headLeft = document.getElementById("head-left")
 
-headLeft.innerHTML =`
+headLeft.innerHTML = `
 <div class="headerMain">
     <header class="header-container">
         <div class="logo">
@@ -90,53 +90,6 @@ tournaments.appendChild(tournaments_i_span);
 
 leftSidebar.appendChild(tournaments);
 
-// const community = document.createElement("a");
-// community.href = url + "#";
-// community.classList.add("sidebar-link");
-
-// const community_i = document.createElement("i");
-// community_i.classList.add("fas", "fa-users");
-
-// const community_i_span = document.createElement("span");
-// community_i_span.classList.add("link-text");
-// community_i_span.innerHTML = "Community";
-// community.appendChild(community_i);
-// community.appendChild(community_i_span);
-
-// leftSidebar.appendChild(community);
-
-// const settings = document.createElement("a");
-// settings.href = "#";
-// settings.classList.add("sidebar-link");
-
-// const settings_i = document.createElement("i");
-// settings_i.classList.add("fas", "fa-user");
-
-// const settings_i_span = document.createElement("span");
-// settings_i_span.classList.add("link-text");
-// settings_i_span.innerHTML = "Profile";
-// settings.appendChild(settings_i);
-// settings.appendChild(settings_i_span);
-
-// leftSidebar.appendChild(settings);
-
-// const about = document.getElementById("about");
-
-// const h2 = document.createElement("h2");
-// h2.innerHTML = "About MindHack.in";
-
-// const p1 = document.createElement("p");
-// p1.innerHTML =
-//   "  Mindhack.in offers the varity of puzzles for sharpen your mind along with keep playing games for free.";
-
-// const p2 = document.createElement("p");
-// p2.innerHTML =
-//   "We have a wide varity of puzzles from sudoku to sliding puzzle, from rubiks cube scramble to Matching of similar card";
-
-// about.appendChild(h2);
-// about.appendChild(p1);
-// about.appendChild(p2);
-
 document.getElementById("menuToggle").addEventListener("click", function () {
   var nav = document.getElementById("leftSidebar");
   nav.classList.toggle("active");
@@ -171,7 +124,6 @@ gtag("config", "G-9RC3CF2CZ3");
 
 const footer = document.getElementById("footer");
 
-// Create footer container
 footer.innerHTML = `
   <div class="footer-bottom"></div>
   <div class="footer-container">
@@ -201,7 +153,6 @@ footer.innerHTML = `
   </div>
 `;
 
-// Set current year
 document.getElementById("year").textContent = new Date().getFullYear();
 
 document.querySelectorAll(".faq-item").forEach((item) => {

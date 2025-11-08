@@ -282,24 +282,23 @@ function saveHistory(moves, status) {
 function getTileColor(val) {
   if (val === "") return "#eee";
   const colors = [
-  "#ff6ec7", // bubblegum pink
-  "#8a2be2", // electric violet
-  "#00f5d4", // minty aqua
-  "#ffb3c6", // soft candy pink
-  "#a0c4ff", // pastel blue
-  "#bdb2ff", // lilac haze
-  "#ffc6ff", // dreamy lavender
-  "#ffd6a5", // peachy cream
-  "#fdffb6", // pale lemon
-  "#9bf6ff", // icy cyan
-  "#ffadad", // coral blush
-  "#caffbf", // neon mint
-  "#b5e48c", // light lime
-  "#fcbf49", // golden honey
-  "#ff6392", // flamingo pink
-  "#7bf1a8"  // fresh jade green
+  "#ff6ec7", 
+  "#8a2be2", 
+  "#00f5d4", 
+  "#ffb3c6", 
+  "#a0c4ff", 
+  "#bdb2ff", 
+  "#ffc6ff", 
+  "#ffd6a5", 
+  "#fdffb6", 
+  "#9bf6ff", 
+  "#ffadad", 
+  "#caffbf", 
+  "#b5e48c", 
+  "#fcbf49", 
+  "#ff6392", 
+  "#7bf1a8"  
 ];
-;
   return colors[val % colors.length];
 }
 

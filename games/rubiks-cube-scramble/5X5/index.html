@@ -34,70 +34,70 @@
 
 </head>
 
-    <div id="head-left"></div>
+<div id="head-left"></div>
 
-  <div class="content ">
+<div class="content ">
 
-    <div class="timer-click" onclick="startStopTimer()">
-      <div id="timer" class="timer-display">00.00</div>
-      <div class="timer-buttons">
-        <button onclick="startTimer()" class="start">Start</button>
-        <button onclick="stopTimer()" class="stop">Stop</button>
+  <div class="timer-click" onclick="startStopTimer()">
+    <div id="timer" class="timer-display">00.00</div>
+    <div class="timer-buttons">
+      <button onclick="startTimer()" class="start">Start</button>
+      <button onclick="stopTimer()" class="stop">Stop</button>
 
-      </div>
-      <div class="options">
-        <label class="hide">Inspection
-          <select id="inspection">
-            <option value="0">0 s</option>
-          </select>
-        </label>
-        <label><input type="checkbox" id="showScramble" checked> Show scramble</label>
-        <label><input type="checkbox" id="hideTime"> Hide time</label>
-      </div>
-
-      <div id="scrambleSection" class="scramble-section">
-        <div class="scramble-header">
-          <p><strong id="scrambleType">Scramble (2x2):</strong></p>
-          <p id="scramble" class="scramble"></p>
-          <button onclick="generateScramble()" class="generate">Generate New Scramble</button>
-        </div>
-        <div class="scene">
-          <button class="cube-btn">
-            <div class="cube-face front"> </div>
-            <div class="cube-face back"> </div>
-            <div class="cube-face left"> </div>
-            <div class="cube-face right"> </div>
-            <div class="cube-face top"> </div>
-            <div class="cube-face bottom"> </div>
-          </button>
-        </div>
-      </div>
-
-      <div class="averages">
-        <p><strong>Avg of 5:</strong> <span id="avg5">-</span></p>
-        <p><strong>Avg of 12:</strong> <span id="avg12">-</span></p>
-      </div>
     </div>
-    <div class="export-btn">
-      <button onclick="exportToCSV()">⬇️ Export CSV</button>
+    <div class="options">
+      <label class="hide">Inspection
+        <select id="inspection">
+          <option value="0">0 s</option>
+        </select>
+      </label>
+      <label><input type="checkbox" id="showScramble" checked> Show scramble</label>
+      <label><input type="checkbox" id="hideTime"> Hide time</label>
     </div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Time</th>
-          <th>Scramble</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <tbody id="historyTable"></tbody>
-    </table>
+    <div id="scrambleSection" class="scramble-section">
+      <div class="scramble-header">
+        <p><strong id="scrambleType">Scramble (2x2):</strong></p>
+        <p id="scramble" class="scramble"></p>
+        <button onclick="generateScramble()" class="generate">Generate New Scramble</button>
+      </div>
+      <div class="scene">
+        <button class="cube-btn">
+          <div class="cube-face front"> </div>
+          <div class="cube-face back"> </div>
+          <div class="cube-face left"> </div>
+          <div class="cube-face right"> </div>
+          <div class="cube-face top"> </div>
+          <div class="cube-face bottom"> </div>
+        </button>
+      </div>
+    </div>
 
-    <div id="pagination" class="pagination"></div>
-
+    <div class="averages">
+      <p><strong>Avg of 5:</strong> <span id="avg5">-</span></p>
+      <p><strong>Avg of 12:</strong> <span id="avg12">-</span></p>
+    </div>
+  </div>
+  <div class="export-btn">
+    <button onclick="exportToCSV()">⬇️ Export CSV</button>
   </div>
 
-  <section class="about-section fade-in" id="about"></section>
+  <table>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Scramble</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody id="historyTable"></tbody>
+  </table>
+
+  <div id="pagination" class="pagination"></div>
+
+</div>
+
+<section class="about-section fade-in" id="about"></section>
 
 </body>
 <footer id="footer"></footer>

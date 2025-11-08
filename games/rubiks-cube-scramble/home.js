@@ -1,12 +1,11 @@
 import { url } from "../../utility/js/constants.js";
-const dynamicUrl="../../dynamic/";
+const dynamicUrl = "../../dynamic/";
 
 function goToScramble(cubeType) {
-       window.location.href =url+`games/rubiks-cube-scramble/${cubeType}`
+  window.location.href = url + `games/rubiks-cube-scramble/${cubeType}`
 }
 
 const cubeTypes = ['2X2', '3X3', '4X4', '5X5', '6X6', '7X7'];
-// ,'pyraminx','skewb','megaminx','mirror,','ghost','clock'
 
 const cubeContainer = document.querySelector('.cube-container');
 
@@ -18,7 +17,7 @@ for (const type of cubeTypes) {
   cubeCard.onclick = () => goToScramble(type);
 
   const cubeImg = document.createElement('img');
-  cubeImg.src =  dynamicUrl+`games/rubikscube/${type}.jpg`
+  cubeImg.src = dynamicUrl + `games/rubikscube/${type}.jpg`
 
   cubeImg.alt = `${type} Cube`;
   cubeImg.className = 'cube-img';

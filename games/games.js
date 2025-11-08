@@ -1,8 +1,8 @@
 import { url } from "../utility/js/constants.js";
 
-const dynamicUrl="../dynamic/";
+const dynamicUrl = "../dynamic/";
 
-fetch(dynamicUrl+"games/games.json")
+fetch(dynamicUrl + "games/games.json")
   .then((response) => response.json())
   .then((data) => gamePopulate(data));
 const container = document.getElementById("game-grid");
@@ -30,15 +30,13 @@ function gamePopulate(data) {
       video.muted = true;
       video.loop = true;
       video.playsInline = true;
-      video.src = dynamicUrl+key.video;
+      video.src = dynamicUrl + key.video;
       video.type = "video/mp4";
       video.onclick = () => {
-        window.location.href =url+"games/"+ key.gameLink;
+        window.location.href = url + "games/" + key.gameLink;
       };
       video.setAttribute("muted", "");
       video.setAttribute("playsinline", "");
-
-      // Load and play explicitly
       video.load();
       video.play().catch(() => {
       });

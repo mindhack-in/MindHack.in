@@ -4,15 +4,13 @@
         return;
     }
 
-    const {path, ...features} = window.pageConfig.js;
+    const { path, ...features } = window.pageConfig.js;
 
     function addScript(fileName) {
         const script = document.createElement("script");
         script.src = `${path}${fileName}.js`;
-        script.async = true; // non-blocking load
+        script.async = true;
         script.type = "module";
-        // script.async = false; // maintain load order
-
         document.head.appendChild(script);
     }
 
@@ -20,10 +18,8 @@
         if (key === 'gtag' && value === true) {
             const script = document.createElement("script");
             script.src = `https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3`;
-            script.async = true; // non-blocking load
-
+            script.async = true;
             window.dataLayer = window.dataLayer || [];
-
             function gtag() {
                 dataLayer.push(arguments);
             }
@@ -38,7 +34,7 @@
     });
 
 
-    const schema =   {
+    const schema = {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "MindHack.in",

@@ -3,29 +3,11 @@ body {
   font-family: Arial, sans-serif;
   padding-top: 60px;
   min-height: 100vh;
-  /* Ensure the body fills the full height */
   display: flex;
   flex-direction: column;
 }
 
-/* html, body {
-      height: 100%;
-      margin: 0;
-    } */
-
-/* body {
-      flex-direction: column;
-      min-height: 100vh;
-    } */
-
-
-
-
-
 .header-container {
-
-  /* margin-top: 10px; */
-
   margin-right: 2vw;
   display: flex;
   justify-content: space-between;
@@ -127,7 +109,6 @@ body {
   }
 
   .user-actions {
-    /* Decrease space */
     gap: 10px;
   }
 }
@@ -154,14 +135,11 @@ body {
 .logoimg {
   margin-left: 3vh;
   height: 5vh;
-  /* max-height: 60px; */
 }
 
 .login-btn {
   background-color: #1e90ff;
-  /* blue shade */
   color: white;
-  /* white text */
   border: none;
   padding: 12px 24px;
   font-size: 16px;
@@ -172,22 +150,17 @@ body {
   display: inline-block;
 }
 
-/* Hover effect */
 .login-btn:hover {
   background-color: #0d6efd;
-  /* darker blue */
   transform: translateY(-2px);
-  /* lift effect */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Active/Click effect */
 .login-btn:active {
   transform: translateY(0);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive */
 @media (max-width: 480px) {
   .login-btn {
     width: 100%;
@@ -202,7 +175,6 @@ body {
 
 main {
   flex: 1;
-  /* Take all available space before the footer */
 }
 
 footer {

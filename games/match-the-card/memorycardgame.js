@@ -57,14 +57,13 @@ const emojis = cardCategories[cardType];
 console.log(emojis);
 
 
-let cards = [...emojis, ...emojis]; // 8 pairs = 16 cards
+let cards = [...emojis, ...emojis]; 
 let flippedCards = [];
 let matchedCount = 0;
 
 const gameBoard = document.getElementById("game-board");
 const status = document.getElementById("status");
 
-// Shuffle array
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -157,15 +156,6 @@ function checkMatch() {
 }
 
 createBoard();
-
-// let module;
-// window.onload = async function () {
-//   module = await import("../../../config.js");
-//   fetch(module.blogJson)
-//     .then((response) => response.json())
-//     .then((data) => showSideBar(data));
-// };
-
 
 async function showSideBar(data) {
   module.renderBlog("blogContainer", data["MatchTheCard"]);

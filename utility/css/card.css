@@ -18,9 +18,7 @@
 
 .card {
   width: 90%;
-  /* mobile default */
   max-width: 400px;
-  /* keep it compact */
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 20px black;
@@ -40,14 +38,12 @@
   font-family: Arial, sans-serif;
 }
 
-/* Tablet */
 @media (min-width: 600px) {
   .card {
     max-width: 500px;
   }
 }
 
-/* Desktop */
 @media (min-width: 1024px) {
   .card {
     max-width: 600px;
@@ -84,7 +80,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* ✅ add this */
 }
 
 .btn {

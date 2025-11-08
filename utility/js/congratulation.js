@@ -6,11 +6,9 @@
     const animation = type[Math.floor(Math.random() * type.length)];
     console.log("Animation Type: ", animation);
 
-    // Remove old overlay if it exists
     const oldOverlay = document.getElementById("mindhack-congrats");
     if (oldOverlay) oldOverlay.remove();
 
-    // Create overlay
     const overlay = document.createElement("div");
     overlay.id = "mindhack-congrats";
     overlay.style.cssText = `
@@ -20,7 +18,6 @@
       opacity: 0; pointer-events: none; transition: opacity 0.5s ease; z-index: 9999;
     `;
 
-    // Create animated text
     const text = document.createElement("div");
     text.textContent = message;
     text.className = `mindhack-${animation}`;
@@ -30,7 +27,6 @@
     overlay.appendChild(text);
     document.body.appendChild(overlay);
 
-    // Append style and keyframes once
     if (!document.getElementById("mindhack-congrats-style")) {
       const style = document.createElement("style");
       style.id = "mindhack-congrats-style";
@@ -79,13 +75,11 @@
       document.head.appendChild(style);
     }
 
-    // Show overlay
     requestAnimationFrame(() => {
       overlay.style.opacity = 1;
       overlay.style.pointerEvents = "auto";
     });
 
-    // Confetti generation
     for (let i = 0; i < 100; i++) {
       const conf = document.createElement("div");
       conf.className = "mindhack-confetti";
@@ -99,7 +93,6 @@
     }
     const audio = new Audio('../../../utility/sounds/winner.mp3');
     audio.play();
-    // Auto-hide overlay
     setTimeout(() => {
       overlay.style.opacity = 0;
       setTimeout(() => overlay.remove(), 600);
