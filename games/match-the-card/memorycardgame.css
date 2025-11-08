@@ -76,7 +76,7 @@ h1 {
   font-size: 20px;
 }
 
-@media (max-width: 500px) {
+@media (max-width< 600px) {
   #game-board {
     gap: 6px;
   }
@@ -84,4 +84,9 @@ h1 {
     width: auto;
     font-size: clamp(12px, 5vw, 24px);
   }
+
+  /* #home-board{
+   grid-template-columns: repeat(1, 50px);
+    grid-gap: 5px 5px;
+  } */
 }
