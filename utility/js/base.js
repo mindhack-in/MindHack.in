@@ -8,7 +8,7 @@ headLeft.innerHTML = `
     <header class="header-container">
         <div class="logo">
             <img class="logoimg" alt="Mindhac.in" id="logoimg"
-                 src="https://mindhack-in.github.io/mindhack.in.dynamic/logo.png"/>
+                 src="https://mindhack.in/dynamic/logo.png"/>
         </div>
         <nav class="nav-links" id="navLinks">
         </nav>
