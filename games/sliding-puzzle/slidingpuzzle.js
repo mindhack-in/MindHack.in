@@ -50,15 +50,3 @@ function createPuzzle(size) {
   "#ff6392", 
   "#7bf1a8"  
 ];
-
-const content = document.getElementById("puzzleContent");
-
-
-if (content !== null) {
-  for (let i = 3; i <= 10; i++) {
-    if (i === gridSize)
-      continue;
-    const grid3X3 = createPuzzle(i);
-    content.appendChild(grid3X3);
-  }
-}

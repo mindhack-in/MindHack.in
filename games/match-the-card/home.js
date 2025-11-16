@@ -1,5 +1,4 @@
-import {  url } from "../../utility/js/constants.js";
-let dynamicUrl = "../../dynamic/";
+import { url } from "../../utility/js/constants.js";
 
 const types = [
   "fruits",
@@ -18,28 +17,25 @@ const gameBoard = document.getElementById("home-board");
 
 const cardType = window.pageConfig?.cards ? window.pageConfig.cards : 1;;
 
-if(types.indexOf(cardType)!=-1)
-  dynamicUrl="../"+dynamicUrl;
-for (let i = 0; i < types.length; i++) {
 
-  if (types[i] === cardType)
-    continue;
 
-  const imageCard = document.createElement("div");
-  imageCard.classList.add("image-card");
+types.forEach(game => {
+  console.log(game)
+  if (game!== cardType) {
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("game-holder", `game-holder-small`);
+    wrapper.id = game + " match the cards";
 
-  const image = document.createElement("img");
-  image.src = dynamicUrl + `games/match-the-card/${types[i]}.jpg`;
-  image.alt = types[i];
-  const overlay = document.createElement("div");
-  overlay.className = "overlay";
-  overlay.innerText = types[i].charAt(0).toUpperCase() + types[i].slice(1);
+    const anchor = document.createElement("a");
+    anchor.href = url + "games/match-the-card/" + game;
 
-  imageCard.appendChild(overlay);
-  imageCard.appendChild(image);
+    const img = document.createElement("img");
+    img.src = `/dynamic/games/match-the-card/${game}.jpg`;
+    img.alt = game.alt;
+    img.loading = "lazy";
 
-  imageCard.onclick = () => {
-    window.location.href = url + "games/match-the-card/" + types[i];
-  };
-  gameBoard.appendChild(imageCard);
-}
+    anchor.appendChild(img);
+    wrapper.appendChild(anchor);
+    gameBoard.appendChild(wrapper);
+  }
+});

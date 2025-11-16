@@ -34,6 +34,7 @@ async function createSudokuGrid(difficulty = "easy") {
       input.maxLength = 1;
       input.dataset.row = row;
       input.dataset.col = col;
+      input.classList.add("sudoku-input")
 
       if (col % 3 === 0) input.style.borderLeft = "2px solid black";
       if (row % 3 === 0) input.style.borderTop = "2px solid black";

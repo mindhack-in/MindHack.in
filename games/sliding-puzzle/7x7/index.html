@@ -9,35 +9,18 @@
   <meta name="description"
     content="Play the free online 7x7 Sliding Puzzle on MindHack.in! Challenge your brain, improve memory, and boost focus with fun and interactive sliding puzzles. Try now and test your logic!" />
   <link rel="stylesheet" href="../slidingpuzzle.css">
+    <link rel="stylesheet" href="../board.css">
 
-
-
+  <link rel="stylesheet" href="../../../utility/main.css">
+  <script type="module" src="../../../utility/js/base.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <script>
     window.pageConfig = {
-      css: {
-        header: true,
-        sidenav: true,
-        blogs2: true,
-        path: "../../../utility/css/",
-
-      },
-      js: {
-        base: true,
-        auth: true,
-        path: "../../../utility/js/",
-        gtag: true,
-      },
       size: "7"
     };
   </script>
-
-  <script type="module" src="../../../utility/js/js-loader.js"></script>
-  <script type="module" src="../../../utility/js/css-loader.js"></script>
-
-
-
-  <link rel="stylesheet" href="../board.css">
+ 
 </head>
 
 <body>
@@ -98,7 +81,11 @@
         order.</p>
     </div>
   </section>
-
+  <div>
+    <h2>Players also play</h2>
+    <div class="game-holder-div" id="gameHolder">
+    </div>
+  </div>
 </body>
 <footer id="footer"></footer>
 

@@ -15,10 +15,11 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
   margin-top: 20px;
-  max-width: 1200px;
+  max-width: 70%;
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px;
+  margin-bottom: 20px;
 }
 
 .cube-card {

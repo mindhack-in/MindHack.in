@@ -11,25 +11,14 @@
     content="Play Vegetables Match the Card game online for free on Mindhack.in. Test your memory skills by matching pairs of cards. Fun, brain-boosting, and perfect for all ages! No downloads required">
 
   <link rel="stylesheet" href="../memorycardgame.css">
+
+  <script type="module" src="../../../utility/js/base.js"></script>
+  <link rel="stylesheet" href="../../../utility/main.css">
   <script>
     window.pageConfig = {
-      css: {
-        header: true,
-        sidenav: true,
-        blogs2: true,
-        path: "../../../utility/css/",
-
-      },
-      js: {
-        base: true,
-        path: "../../../utility/js/",
-        gtag: true,
-      },
       cards: "vegetables"
     };
   </script>
-  <script type="module" src="../../../utility/js/js-loader.js"></script>
-  <script type="module" src="../../../utility/js/css-loader.js"></script>
 </head>
 
 <body>
@@ -40,10 +29,17 @@
     <div id="game-board"></div>
     <div id="status"></div>
   </div>
-  <div class="image-grid" id="home-board"></div>
-
+ 
+  <h2>Other Cards</h2>
+  <div class="game-holder-div" id="home-board"></div>
+  <h2>OTHER GAMES</h2>
+  <div class="game-holder-div" id="gameHolder"></div>
 </body>
 <footer id="footer"></footer>
+
 <script type="module" src="../memorycardgame.js"></script>
+
+<script type="module" src="../home.js"></script>
+
 
 </html>

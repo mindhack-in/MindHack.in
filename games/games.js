@@ -1,48 +1,27 @@
-import { url } from "../utility/js/constants.js";
+// import { url } from "../utility/js/constants.js";
 
-const dynamicUrl = "../dynamic/";
+// const dynamicUrl = "../dynamic/";
 
-fetch(dynamicUrl + "games/games.json")
-  .then((response) => response.json())
-  .then((data) => gamePopulate(data));
-const container = document.getElementById("game-grid");
+// fetch(dynamicUrl + "games/games.json")
+//   .then((response) => response.json())
+//   .then((data) => gamePopulate(data));
 
-function gamePopulate(data) {
-  data.forEach((key) => {
-    const gameCard = document.createElement("div");
-    gameCard.classList = "card";
 
-    if (key.new === true) {
-      const newTag = document.createElement("span");
-      newTag.classList.add("tag-new");
-      newTag.innerHTML = "New";
-      gameCard.appendChild(newTag);
-    }
-    if (key.image != undefined) {
-      const img = document.createElement("img");
-      img.src = key.image;
-      gameCard.appendChild(img);
-    }
+// const container = document.getElementById("gameHolder");
 
-    if (key.video != undefined) {
-      const video = document.createElement("video");
-      video.autoplay = true;
-      video.muted = true;
-      video.loop = true;
-      video.playsInline = true;
-      video.src = dynamicUrl + key.video;
-      video.type = "video/mp4";
-      video.onclick = () => {
-        window.location.href = url + "games/" + key.gameLink;
-      };
-      video.setAttribute("muted", "");
-      video.setAttribute("playsinline", "");
-      video.load();
-      video.play().catch(() => {
-      });
+// function gamePopulate(data) {
+//   data.forEach((key) => {
 
-      gameCard.appendChild(video);
-    }
-    container.appendChild(gameCard);
-  });
-}
+//     const gameCard = document.createElement("div");
+//     gameCard.classList.add("game-holder");
+//     gameCard.classList.add(key.type);
+
+//     const img = document.createElement("img");
+//     img.src = key.image;
+//     img.onclick = () => {
+//       window.location.href = url + "games/" + key.gameLink;
+//     };
+//     gameCard.appendChild(img);
+//     container.appendChild(gameCard);
+//   });
+// }

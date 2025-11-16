@@ -266,3 +266,6 @@ td {
 th {
   background: #eee;
 }
+a {
+    text-decoration: none;
+}
