@@ -207,4 +207,4 @@ function showImagePopup(imageUrl, linkUrl) {
   document.body.appendChild(overlay);
 }
 
-showImagePopup("http://localhost:5501/dynamic/banners/competition.png","https://chat.whatsapp.com/LrVRp3fymPt8GQPC4gkJvL/");
+showImagePopup("https://mindhack.in/dynamic/banners/competition.png","https://chat.whatsapp.com/LrVRp3fymPt8GQPC4gkJvL/");
