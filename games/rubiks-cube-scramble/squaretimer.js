@@ -1,7 +1,7 @@
 let startTime,
   interval,
   isRunning = false;
-  
+
 const size = window.pageConfig?.size ? parseInt(window.pageConfig.size) : 2;
 let times = JSON.parse(localStorage.getItem(`solves${size}X${size}`)) || [];
 let solves = JSON.parse(localStorage.getItem(`solveData${size}X${size}`)) || [];
@@ -111,9 +111,14 @@ function stopTimer() {
   const scramble = document.getElementById("scramble").textContent;
   const date = new Date().toLocaleDateString("en-IN");
   document.getElementById("timer").textContent = time;
+  let email = localStorage.getItem("email");
+  if (email != null) {
+    saveToDB(time, scramble);
+  }
   saveToHistory(time, scramble, date);
   generateScramble();
 }
+
 
 function resetTimer() {
   clearInterval(interval);
@@ -149,10 +154,10 @@ const resultsPerPage = 12;
 function renderHistory() {
   const table = document.getElementById("historyTable");
   table.innerHTML = "";
-  
+
   const start = (currentPage - 1) * resultsPerPage;
   const end = start + resultsPerPage;
-  
+
   const paginatedResults = solves.slice().reverse().slice(start, end);
 
   paginatedResults.forEach((entry) => {
@@ -167,7 +172,7 @@ function renderHistory() {
 function renderPagination() {
   const paginationContainer = document.getElementById("pagination");
   const totalPages = Math.ceil(solves.length / resultsPerPage);
-  
+
   paginationContainer.innerHTML = "";  // Clear previous pagination links
 
   if (currentPage > 1) {
@@ -261,7 +266,7 @@ window.onload = () => {
 function startStopTimer(){
   if(isRunning)
     stopTimer();
-  else 
+  else
     startTimer();
 }
 

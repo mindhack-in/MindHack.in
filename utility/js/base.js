@@ -47,7 +47,7 @@ import { url as e, beurl as t } from "./constants.js"; let headLeft = document.g
 </div>
 <aside class="left-sidebar" id="leftSidebar">
 
-</aside>`; let openModalButton = document.getElementById("openModal"); openModalButton.addEventListener("click", openModal); let closeModalButton = document.getElementById("closeModal"); closeModalButton.addEventListener("click", closeModal); let showLoginButton = document.getElementById("loginTab"); showLoginButton.addEventListener("click", showLogin); let showSignupButton = document.getElementById("signupTab"); showSignupButton.addEventListener("click", showSignup); let loginUserButton = document.getElementById("loginUser"); loginUserButton.onclick = function (e) { loginUser() }; let signupUserButton = document.getElementById("signupUser"); signupUserButton.onclick = function (e) { signupUser() }; let email = localStorage.getItem("email"); null !== email && (openModalButton.innerHTML = email); let navLinks = document.getElementById("navLinks"), dashboard = document.createElement("a"); dashboard.classList.add("nav-button"), dashboard.innerHTML = "Dashboard", navLinks.appendChild(dashboard); let competition = document.createElement("a"); competition.classList.add("nav-button"), competition.innerHTML = "Competition", navLinks.appendChild(competition); let leftSidebar = document.getElementById("leftSidebar"), home = document.createElement("a"); home.id = "home_nav", home.href = e, home.classList.add("sidebar-link", "active"); let home_i = document.createElement("i"); home_i.classList.add("fas", "fa-home"); let home_i_span = document.createElement("span"); home_i_span.classList.add("link-text"), home_i_span.innerHTML = "Home", home.appendChild(home_i), home.appendChild(home_i_span), leftSidebar.appendChild(home); let games = document.createElement("a"); games.id = "games_nav", games.href = e + "games", games.classList.add("sidebar-link"); let games_i = document.createElement("i"); games_i.classList.add("fas", "fa-gamepad"); let game_i_span = document.createElement("span"); game_i_span.classList.add("link-text"), game_i_span.innerHTML = "Games", games.appendChild(games_i), games.appendChild(game_i_span), leftSidebar.appendChild(games); let tournaments = document.createElement("a"); tournaments.id = "tournaments_nav", tournaments.href = e + "tournaments/", tournaments.classList.add("sidebar-link"); let tournaments_i = document.createElement("i"); tournaments_i.classList.add("fas", "fa-trophy"); let tournaments_i_span = document.createElement("span"); tournaments_i_span.classList.add("link-text"), tournaments_i_span.innerHTML = "Tournaments", tournaments.appendChild(tournaments_i), tournaments.appendChild(tournaments_i_span), leftSidebar.appendChild(tournaments), document.getElementById("menuToggle").addEventListener("click", function () { document.getElementById("leftSidebar").classList.toggle("active") }); let faders = document.querySelectorAll(".fade-in"), appearOptions = { threshold: .3, rootMargin: "0px 0px -50px 0px" }, appearOnScroll = new IntersectionObserver(function (e, t) { e.forEach(e => { e.isIntersecting && (e.target.classList.add("visible"), t.unobserve(e.target)) }) }, appearOptions); faders.forEach(e => { appearOnScroll.observe(e) }); let script = document.createElement("script"); function gtag() { dataLayer.push(arguments) } script.src = "https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3", script.async = !0, window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-9RC3CF2CZ3"), document.head.appendChild(script); let footer = document.getElementById("footer"); function openModal() { document.getElementById("authModal").style.display = "flex" } function closeModal() { document.getElementById("authModal").style.display = "none", document.getElementById("login-responseMsg").innerHTML = "" } function showLogin() { document.getElementById("loginForm").style.display = "block", document.getElementById("signupForm").style.display = "none", loginTab.classList.add("active"), signupTab.classList.remove("active") } function showSignup() { document.getElementById("loginForm").style.display = "none", document.getElementById("signupForm").style.display = "block", signupTab.classList.add("active"), loginTab.classList.remove("active") } async function loginUser() { let e, n = await fetch(t + "api/users/login", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: document.getElementById("loginEmail").value, password: document.getElementById("loginPassword").value }) }), a = await n.json(); n.ok ? (console.log(a), openModalButton.innerHTML = a.email, localStorage.setItem("token", a.token), localStorage.setItem("email", a.email), closeModal()) : document.getElementById("login-responseMsg").innerHTML = "Invalid Credentials" } async function signupUser() { let e = document.getElementById("signupName").value, n, a = await fetch(t + "api/users/register", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ username: e, email: document.getElementById("signupEmail").value, password: document.getElementById("signupPassword").value }) }), i = await a.text(); document.getElementById("login-responseMsg").innerHTML = a.ok ? "Signup Successful! Please" : i } footer.innerHTML = `
+</aside>`; let openModalButton = document.getElementById("openModal"); openModalButton.addEventListener("click", openModal); let closeModalButton = document.getElementById("closeModal"); closeModalButton.addEventListener("click", closeModal); let showLoginButton = document.getElementById("loginTab"); showLoginButton.addEventListener("click", showLogin); let showSignupButton = document.getElementById("signupTab"); showSignupButton.addEventListener("click", showSignup); let loginUserButton = document.getElementById("loginUser"); loginUserButton.onclick = function (e) { loginUser() }; let signupUserButton = document.getElementById("signupUser"); signupUserButton.onclick = function (e) { signupUser() }; let email = localStorage.getItem("email"); null !== email && (openModalButton.innerHTML = email); let navLinks = document.getElementById("navLinks"), dashboard = document.createElement("a"); dashboard.classList.add("nav-button"), dashboard.innerHTML = "Dashboard", navLinks.appendChild(dashboard); let competition = document.createElement("a"); competition.classList.add("nav-button"), competition.innerHTML = "Competition", navLinks.appendChild(competition); let leftSidebar = document.getElementById("leftSidebar"), home = document.createElement("a"); home.id = "home_nav", home.href = e, home.classList.add("sidebar-link", "active"); let home_i = document.createElement("i"); home_i.classList.add("fas", "fa-home"); let home_i_span = document.createElement("span"); home_i_span.classList.add("link-text"), home_i_span.innerHTML = "Home", home.appendChild(home_i), home.appendChild(home_i_span), leftSidebar.appendChild(home); let games = document.createElement("a"); games.id = "games_nav", games.href = e + "games", games.classList.add("sidebar-link"); let games_i = document.createElement("i"); games_i.classList.add("fas", "fa-gamepad"); let game_i_span = document.createElement("span"); game_i_span.classList.add("link-text"), game_i_span.innerHTML = "Games", games.appendChild(games_i), games.appendChild(game_i_span), leftSidebar.appendChild(games); let tournaments = document.createElement("a"); tournaments.id = "tournaments_nav", tournaments.href = e + "tournaments/", tournaments.classList.add("sidebar-link"); let tournaments_i = document.createElement("i"); tournaments_i.classList.add("fas", "fa-trophy"); let tournaments_i_span = document.createElement("span"); tournaments_i_span.classList.add("link-text"), tournaments_i_span.innerHTML = "Tournaments", tournaments.appendChild(tournaments_i), tournaments.appendChild(tournaments_i_span), leftSidebar.appendChild(tournaments), document.getElementById("menuToggle").addEventListener("click", function () { document.getElementById("leftSidebar").classList.toggle("active") }); let faders = document.querySelectorAll(".fade-in"), appearOptions = { threshold: .3, rootMargin: "0px 0px -50px 0px" }, appearOnScroll = new IntersectionObserver(function (e, t) { e.forEach(e => { e.isIntersecting && (e.target.classList.add("visible"), t.unobserve(e.target)) }) }, appearOptions); faders.forEach(e => { appearOnScroll.observe(e) }); let script = document.createElement("script"); function gtag() { dataLayer.push(arguments) } script.src = "https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3", script.async = !0, window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-9RC3CF2CZ3"), document.head.appendChild(script); let footer = document.getElementById("footer"); function openModal() { document.getElementById("authModal").style.display = "flex" } function closeModal() { document.getElementById("authModal").style.display = "none", document.getElementById("login-responseMsg").innerHTML = "" } function showLogin() { document.getElementById("loginForm").style.display = "block", document.getElementById("signupForm").style.display = "none", loginTab.classList.add("active"), signupTab.classList.remove("active") } function showSignup() { document.getElementById("loginForm").style.display = "none", document.getElementById("signupForm").style.display = "block", signupTab.classList.add("active"), loginTab.classList.remove("active") } async function loginUser() { let e, n = await fetch(t + "api/users/login", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: document.getElementById("loginEmail").value, password: document.getElementById("loginPassword").value }) }), a = await n.json(); n.ok ? (console.log(a), openModalButton.innerHTML = a.email, localStorage.setItem("token", a.token), localStorage.setItem("email", a.email), openModalButton.removeEventListener("click", openModal), openModalButton.addEventListener("click", logout), closeModal()) : document.getElementById("login-responseMsg").innerHTML = "Invalid Credentials" } async function signupUser() { let e = document.getElementById("signupName").value, n, a = await fetch(t + "api/users/register", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ username: e, email: document.getElementById("signupEmail").value, password: document.getElementById("signupPassword").value }) }), i = await a.text(); document.getElementById("login-responseMsg").innerHTML = a.ok ? "Signup Successful! Please" : i } footer.innerHTML = `
   <div class="footer-bottom"></div>
   <div class="footer-container">
 
@@ -66,7 +66,10 @@ import { url as e, beurl as t } from "./constants.js"; let headLeft = document.g
       <div class="footer-col">
           <h3>Follow Us</h3>
           <div class="social-icons">
-              <a href="https://www.instagram.com/mindhack.in/"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/mindhack.in/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+           <div class="social-icons">
+              <a href="https://chat.whatsapp.com/LrVRp3fymPt8GQPC4gkJvL/" target="_blank"><i class="fab fa-whatsapp"></i></a>
           </div>
       </div>
   </div>
@@ -135,3 +138,73 @@ if (gameHolder) {
     gameHolder.appendChild(wrapper);
   });
 }
+
+function logout() {
+  localStorage.removeItem("token");
+  localStorage.removeItem("email")
+  openModalButton.addEventListener("click", openModal);
+  openModalButton.removeEventListener("click", logout);
+  openModalButton.innerHTML = 'Login / Signup'
+
+}
+
+if (email !== null) {
+  openModalButton.removeEventListener("click", openModal);
+  openModalButton.addEventListener("click", logout);
+}
+
+
+function showImagePopup(imageUrl, linkUrl) {
+  if(localStorage.getItem("showBanner")!== null)
+    return;
+  const overlay = document.createElement("div");
+  overlay.style.position = "fixed";
+  overlay.style.top = "0";
+  overlay.style.left = "0";
+  overlay.style.width = "100%";
+  overlay.style.height = "100%";
+  overlay.style.background = "rgba(0,0,0,0.6)";
+  overlay.style.display = "flex";
+  overlay.style.justifyContent = "center";
+  overlay.style.alignItems = "center";
+  overlay.style.zIndex = "9999";
+
+  const popup = document.createElement("div");
+  popup.style.position = "relative";
+  popup.style.background = "#fff";
+  popup.style.padding = "10px";
+  popup.style.borderRadius = "8px";
+  popup.style.boxShadow = "0 0 20px rgba(0,0,0,0.3)";
+
+  const closeBtn = document.createElement("div");
+  closeBtn.innerHTML = "✖";
+  closeBtn.style.position = "absolute";
+  closeBtn.style.top = "5px";
+  closeBtn.style.right = "8px";
+  closeBtn.style.cursor = "pointer";
+  closeBtn.style.fontSize = "20px";
+
+  closeBtn.onclick = () =>{ document.body.removeChild(overlay); localStorage.setItem("showBanner",true);
+    setTimeout(() => {
+      localStorage.removeItem("token");
+      console.log("token removed!");
+    }, 5000);
+
+
+  }
+
+  const link = document.createElement("a");
+  link.href = linkUrl;
+  link.target = "_blank";
+  const img = document.createElement("img");
+  img.src = imageUrl;
+  img.style.maxWidth = "90vw";
+  img.style.maxHeight = "80vh";
+  link.appendChild(img);
+  popup.appendChild(link);
+  popup.appendChild(closeBtn);
+  overlay.appendChild(popup);
+  document.body.appendChild(overlay);
+}
+
+showImagePopup("http://localhost:5501/dynamic/banners/competition.png","https://chat.whatsapp.com/LrVRp3fymPt8GQPC4gkJvL/");
