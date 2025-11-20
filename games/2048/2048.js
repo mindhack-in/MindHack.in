@@ -1,16 +1,22 @@
 const boardSize = 4;
 let board = [];
 let score = 0;
-
+let gameIsOver = false;
 const gameContainer = document.getElementById("game-container");
 const scoreDisplay = document.getElementById("score");
+const restartButton = document.getElementById("restart-btn");
+const exitButton = document.getElementById("exit"); 
 
 function initBoard() {
     board = Array(boardSize).fill().map(() => Array(boardSize).fill(0));
     score = 0;
+    gameIsOver = false;
     addRandomTile();
     addRandomTile();
     updateBoard();
+    restartButton.innerHTML = 'Restart Game';
+    if (exitButton) exitButton.style.opacity = 1;
+    document.body.style.overflow = 'hidden';
 }
 
 function addRandomTile() {
@@ -42,7 +48,6 @@ function updateBoard() {
     }
     scoreDisplay.textContent = "Score: " + score;
 }
-
 function slide(row) {
     let arr = row.filter(v => v);
     for (let i = 0; i < arr.length - 1; i++) {
@@ -68,93 +73,132 @@ function rotateBoard() {
 }
 
 function moveLeft() {
-    let oldBoard = JSON.stringify(board);
     for (let r = 0; r < boardSize; r++) {
         board[r] = slide(board[r]);
     }
-    if (oldBoard !== JSON.stringify(board)) {
-        addRandomTile();
-    }
-    updateBoard();
 }
 
 function moveRight() {
-    let oldBoard = JSON.stringify(board);
     for (let r = 0; r < boardSize; r++) {
-        board[r] = board[r].reverse();
+        board[r].reverse();
         board[r] = slide(board[r]);
-        board[r] = board[r].reverse();
+        board[r].reverse();
     }
-    if (oldBoard !== JSON.stringify(board)) {
-        addRandomTile();
-    }
-    updateBoard();
 }
 
-function moveUp() {
-    let oldBoard = JSON.stringify(board);
+function moveDown() {
     rotateBoard();
     moveLeft();
     rotateBoard();
     rotateBoard();
     rotateBoard();
-    if (oldBoard !== JSON.stringify(board)) updateBoard();
 }
 
-function moveDown() {
-    let oldBoard = JSON.stringify(board);
+function moveUp() {
     rotateBoard();
     moveRight();
     rotateBoard();
     rotateBoard();
     rotateBoard();
-    if (oldBoard !== JSON.stringify(board)) updateBoard();
 }
 
+function isBoardFull() {
+    for (let r = 0; r < boardSize; r++) {
+        for (let c = 0; c < boardSize; c++) {
+            if (board[r][c] === 0) return false;
+        }
+    }
+    return true;
+}
+
+function hasPossibleMoves() {
+    for (let r = 0; r < boardSize; r++) {
+        for (let c = 0; c < boardSize; c++) {
+            const val = board[r][c];
+            if (c < boardSize - 1 && val === board[r][c + 1]) return true;
+            if (r < boardSize - 1 && val === board[r + 1][c]) return true;
+        }
+    }
+    return false;
+}
+
+function checkGameOver() {
+    if (isBoardFull() && !hasPossibleMoves()) {
+        gameIsOver = true;
+        alert("Game Over! Final Score: " + score);
+    }
+    for (let r = 0; r < boardSize; r++) {
+        for (let c = 0; c < boardSize; c++) {
+            if (board[r][c] === 2048) {
+            }
+        }
+    }
+}
+
+function arraysEqual2D(arr1, arr2) {
+    return JSON.stringify(arr1) === JSON.stringify(arr2);
+}
+
+function handleMove(moveFunction) {
+    if (gameIsOver) return;
+    const oldBoard = JSON.parse(JSON.stringify(board)); 
+    moveFunction();
+    if (!arraysEqual2D(oldBoard, board)) {
+        addRandomTile();
+        checkGameOver();
+    }
+    updateBoard();
+}
 document.addEventListener("keydown", e => {
     switch (e.key) {
-        case "ArrowLeft": moveLeft(); break;
-        case "ArrowRight": moveRight(); break;
-        case "ArrowUp": moveUp(); break;
-        case "ArrowDown": moveDown(); break;
+        case "ArrowLeft": handleMove(moveLeft); break;
+        case "ArrowRight": handleMove(moveRight); break;
+        case "ArrowUp": handleMove(moveUp); break;
+        case "ArrowDown": handleMove(moveDown); break;
+        default: return;
     }
+    e.preventDefault(); 
 });
 
-const restartButton = document.getElementById("restart-btn");
-const exit = document.getElementById("exit");
 
-restartButton.addEventListener("click", e => {
+restartButton.addEventListener("click", () => {
     initBoard();
-    document.body.style.overflow = 'hidden';
-
-    restartButton.innerHTML = 'Restart Game';
-    exit.style.opacity = 1;
-
 });
 
-exit.addEventListener("click", e => {
-    document.body.style.overflow = 'auto';
+exitButton.addEventListener("click", () => {
+    document.body.style.overflow = 'auto'; 
 });
-
 let touchX, touchY;
+let touchMoved = false;
 window.addEventListener("touchstart", (e) => {
+    if (gameIsOver) return;
     touchY = e.changedTouches[0].pageY;
     touchX = e.changedTouches[0].pageX;
-
+    touchMoved = false;
 });
 
 window.addEventListener("touchmove", (e) => {
-    const currentY = e.changedTouches[0].pageY;
-    const currentX = e.changedTouches[0].pageX;
-    const swipeY = currentY - touchY;
-    const swipeX = currentX - touchX;
-    if (swipeX < 0) {
-        moveLeft();
-    } else if (swipeX > 0) {
-        moveRight();
+    touchMoved = true;
+    e.preventDefault(); 
+});
+
+window.addEventListener("touchend", (e) => {
+    if (!touchMoved || gameIsOver) return;
+    const finalY = e.changedTouches[0].pageY;
+    const finalX = e.changedTouches[0].pageX;
+    const swipeY = finalY - touchY;
+    const swipeX = finalX - touchX;
+    const absSwipeY = Math.abs(swipeY);
+    const absSwipeX = Math.abs(swipeX);
+    const SWIPE_THRESHOLD = 30; 
+    if (absSwipeX > SWIPE_THRESHOLD || absSwipeY > SWIPE_THRESHOLD) {
+        if (absSwipeX > absSwipeY) {
+            if (swipeX > 0) handleMove(moveRight);
+            else handleMove(moveLeft);
+        } else {
+            if (swipeY > 0) handleMove(moveDown);
+            else handleMove(moveUp);
+        }
     }
-    else if (swipeY > 0)
-        moveUp();
-    else if (swipeY < 0)
-        moveDown();
+    touchMoved = false; 
 });
