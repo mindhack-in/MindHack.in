@@ -1,89 +1,47 @@
-.competitions {
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.tournament-wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    justify-content: center;   /* Center horizontally */
+    align-items: center;       /* Center vertically (for equal height cards) */
+
+    margin: 40px auto;         /* Center the whole block */
+    max-width: 900px;          /* Optional – keeps it nicely aligned */
 }
 
-.competition-card {
-  display: flex;
-  background: #1e1e1e;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
+
+.tournament-card {
+    background: #2a2a2a;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 2px solid #f2f2f2;
+    max-width: 320px;
+    flex: 1;
+    min-width: 280px;
+    transition: 0.3s ease;
 }
 
-.competition-card:hover {
-  transform: translateY(-5px);
+.tournament-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-.competition-left {
-  width: 200px;
-  background: #2a2a2a;
-  text-align: center;
-  padding: 15px;
+
+.tournament-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: #ff0066;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
 }
 
-.competition-left img {
-  width: 100%;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.competition-left p {
-  font-size: 0.9em;
-  color: #ccc;
-}
-
-.competition-right {
-  flex: 1;
-  padding: 20px;
-}
-
-.competition-right h2 {
-  margin-bottom: 10px;
-  color: #6a11cb;
-}
-
-.competition-right p {
-  margin-bottom: 8px;
-  color: aqua;
-}
-
-.competition-right button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #2575fc;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.competition-right button:hover {
-  background: #6a11cb;
-}
-
-@media(max-width:768px){
-  .competition-card {
-    flex-direction: column;
-  }
-  .competition-left {
-    width: 100%;
-  }
-}
-.mainHeading {
-  font-size: clamp(2rem, 5vw, 7vh);
-  text-align: center;
-  margin-bottom: 1rem;
-  color: rgb(254, 253, 253);
-}
-
-.subHeading {
-  text-align: center;
-  color: rgb(252, 247, 247);
+.tournament-btn:hover {
+    background: #e3005c;
 }
