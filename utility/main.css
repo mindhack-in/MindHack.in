@@ -209,3 +209,4 @@ p,li {color: #ddd;font-size: 1.1rem;line-height: 1.8;text-align: justify;}
 .game-holder:hover img {
   transform: scale(1.08);
 }
+.page-center {display: flex;flex-direction: column;justify-content: center;align-items: center;min-height: 80vh;text-align: center;}

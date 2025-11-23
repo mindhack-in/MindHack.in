@@ -11,7 +11,7 @@ async function createSudokuGrid(difficulty = "easy") {
   mistakes = 3;
   const response =
 
-    fetch(dynamicUrl + "/games/sudoku/1.json")
+    fetch(dynamicUrl + `/games/sudoku/${difficulty}.json`)
       .then(response => response.json())
       .then(data => {
         const length = data.length;

@@ -8,7 +8,7 @@ async function saveToDB(time, scramble) {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
-                authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjUsImVtYWlsIjoidGVzdEB0ZXN0Iiwic3ViIjoidGVzdEB0ZXN0IiwiaWF0IjoxNzYzNDg4NDM2LCJleHAiOjE3NjYwODA0MzZ9.gF3ANeByB39Mf-TJxdBDxbVOeHUh_d_bptNQkjjKb8Q'
+                'authorization': `Bearer +${token}`
             },
             body: '{"scramble":"' + scramble + '","solveTimeMs":"' + time * 1000 + '","cubeType":"' + type + '"}'
         };

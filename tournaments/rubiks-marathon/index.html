@@ -12,25 +12,30 @@
 
     <link rel="stylesheet" href="../../utility/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="marathon.css">
 
 </head>
 
 <body>
     <div id="head-left"></div>
-     <section id="contentSection">
+    <section id="contentSection">
         <div id="blog-div">
 
             <H1>Welcome to Mindhack Rubik's Marathon </H1>
-            <p>Welcome to first competition of Mindhack.in, As we all know cubing is all about fast solving and consistency.</p>
+            <p>Welcome to first competition of Mindhack.in, As we all know cubing is all about fast solving and
+                consistency.</p>
             <p>We just wants you to be consistant during your cubing journey.</p>
             <p>Can you guess the price??</p>
 
             <p><strong>Are you Ready?</strong></p>
 
             <h2>Rules of Marathon:-</h2>
-            <p>1. First and most important rule for this competition is you have to signup and complete your details from user profile.</p>
-            <p>2. You must login, generate new scramble for 3X3 Rubiks cube and solve it. You will be awared 1 point for 1 submission.</p>
-            <p>3. If you will upload video on Youtube or Instagram, and collab with Mindhack.in you will be awared 5 Points per video </p>
+            <p>1. First and most important rule for this competition is you have to signup and complete your details
+                from user profile.</p>
+            <p>2. You must login, generate new scramble for 3X3 Rubiks cube and solve it. You will be awared 1 point for
+                1 submission.</p>
+            <p>3. If you will upload video on Youtube or Instagram, and collab with Mindhack.in you will be awared 5
+                Points per video </p>
             <p>4. You can submit any no of video daily, but its suggested to keep 2 hour break between 2 videos.</p>
             <p>5. Only physical cubes are allowed, No virtual cubes, No cube solving apps, No shortcuts</p>
 
@@ -42,24 +47,80 @@
                 <li>Submitting same video more than once will give only 1 point</li>
                 <li>If 2 users submiting same videos,2nd user will be eliminated.</li>
             </ol>
-            
+
             <h2>Other Informations</h2>
             <ul>
                 <li>Points will be updated daily.</li>
                 <li>It's 1 month competition, so you can start playing any time within the month.</li>
                 <li>Competition will be ends at 31st Dec. 2025, any submission after that will not be counted.</li>
-                <li>If you have submitted a fake solve by mistake, don't worry you can inform us through our social media channels.</li>
-                <li>Its suggested to every user to signup before hand and start solving today, it will help you to becoming comfortable with our plateform.</li>
+                <li>If you have submitted a fake solve by mistake, don't worry you can inform us through our social
+                    media channels.</li>
+                <li>Its suggested to every user to signup before hand and start solving today, it will help you to
+                    becoming comfortable with our plateform.</li>
             </ul>
+            <button id="openSocialPopup" class="mh-btn">Add Social Link</button>
+            <div id="socialPopup" class="mh-popup-overlay">
+                <div class="mh-popup">
+                    <span class="mh-popup-close" id="closeSocialPopup">&times;</span>
+                    <div class="mh-radio-group">
+                        <label>
+                            <input type="radio" name="socialType" value="Instagram" checked>
+                            Instagram
+                        </label>
+                        <label>
+                            <input type="radio" name="socialType" value="Youtube">
+                            YouTube
+                        </label>
+                    </div>
+                    <input type="text" id="socialLink" class="mh-input" placeholder="Enter link here">
+                    <button id="submitSocial" class="mh-btn mh-submit-btn">Submit</button>
+                </div>
+            </div>
+            <button id="openLeaderboard" class="mh-btn">
+                View Leaderboard
+            </button>
+
+            <!-- Popup -->
+            <div id="leaderboardpopupLeaderboard" class="mh-popup-overlay">
+                <div class="mh-popup">
+                    <span class="mh-popup-close" id="closeLeaderboard">&times;</span>
+
+                    <h3>Leaderboard</h3>
+
+                    <table class="mh-table" id="leaderboardTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Total SOlvet</th>
+                                <th>Video Submitted</th>
+                                    <th>Total Score</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+
+                    <!-- Pagination -->
+                    <div class="mh-pagination">
+                        <button id="prevPage" class="mh-btn" disabled>Previous</button>
+                        <span id="pageInfo">Page: 1</span>
+                        <button id="nextPage" class="mh-btn">Next</button>
+                    </div>
+
+                </div>
+            </div>
+
+
+
         </div>
-           <h2>Our GAMES</h2>
-    <div class="game-holder-div" id="gameHolder">
-      
+        <h2>Our GAMES</h2>
+        <div class="game-holder-div" id="gameHolder">
+
     </section>
-    
-<footer id="footer"></footer>
+
+    <footer id="footer"></footer>
 </body>
 
-<script  type="module" src="../../utility/js/base.js"></script>
+<script type="module" src="../../utility/js/base.js"></script>
+<script type="module" src="marathon.js"></script>
 
 </html>
