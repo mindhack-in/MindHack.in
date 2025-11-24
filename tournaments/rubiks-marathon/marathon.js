@@ -40,3 +40,68 @@ submitBtn.addEventListener("click", async () => {
     }
     popup.style.display = "none";
 });
+
+
+const popupLeaderboard = document.getElementById("leaderboardpopupLeaderboard");
+const openBtnLeaderboard = document.getElementById("openLeaderboard");
+const closeBtnLeaderboard = document.getElementById("closeLeaderboard");
+const tableBody = document.querySelector("#leaderboardTable tbody");
+
+let currentPage = 0;
+openBtnLeaderboard.addEventListener("click", () => {
+    currentPage = 0;
+
+    popupLeaderboard.style.display = "flex";
+    loadLeaderboard(); // Fetch data on open
+});
+
+closeBtnLeaderboard.addEventListener("click", () => {
+    popupLeaderboard.style.display = "none";
+});
+
+function loadLeaderboard() {
+
+    const url = beurl+"marathon/leaderboard?startDate=2025-01-01T00:00:00&endDate=2025-12-31T23:59:59&page="+currentPage+"&size=5";
+
+    fetch(url, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        tableBody.innerHTML = ""; // Clear old rows
+
+        data.content.forEach(row => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+                <td>${row.name}</td>
+                <td>${row.solveCount}</td>
+                <td>${row.videoCount}</td>
+                <td>${row.totalScore}</td>
+            `;
+            tableBody.appendChild(tr);
+        });
+    })
+    .catch(err => {
+        console.error("Error loading leaderboard:", err);
+    });
+}
+
+
+const prevBtn = document.getElementById("prevPage");
+const nextBtn = document.getElementById("nextPage");
+// Next Page Button
+nextBtn.addEventListener("click", () => {
+    currentPage++;
+    loadLeaderboard();
+});
+
+// Previous Page Button
+prevBtn.addEventListener("click", () => {
+    if (currentPage > 0) {
+        currentPage--;
+        loadLeaderboard();
+    }
+});

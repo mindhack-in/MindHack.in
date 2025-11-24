@@ -82,14 +82,20 @@ async function createSudokuGrid(difficulty = "easy") {
 
 const difficultyDropdown = document.getElementById("difficultyDropdown")
 difficultyDropdown.addEventListener("change", handleDropdownChange);
+let currentLevel;
 function handleDropdownChange(event) {
   const selectedValue = event.target.value;
+  currentLevel=selectedValue;
   createSudokuGrid(selectedValue);
 }
 
 const checkSudokuButton = document.getElementById("checkSudoku");
 checkSudokuButton.onclick = () => {
   checkSudoku();
+}
+const nextSudokuButton = document.getElementById("nextSudoku");
+nextSudokuButton.onclick = () => {
+  createSudokuGrid(currentLevel);
 }
 
 function loadCongratsScript(callback) {
