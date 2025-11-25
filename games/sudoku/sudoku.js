@@ -7,7 +7,7 @@ var solution;
 var puzzle;
 let mistakes = 3;
 
-async function createSudokuGrid(difficulty = "easy") {
+async function createSudokuGrid(difficulty = "Easy") {
   mistakes = 3;
   const response =
 
