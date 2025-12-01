@@ -117,6 +117,13 @@ const game_data = [
     link: "/games/sliding-puzzle/",
     img: "/dynamic/games/slidingpuzzle.png",
     alt: "slidingpuzzleonline"
+  },
+  {
+    id: "flappyBird",
+    size: "small",
+    link: "/games/flappy-bird/",
+    img: "/dynamic/games/flappy-bird.png",
+    alt: "slidingpuzzleonline"
   }
 ];
 if (gameHolder) {

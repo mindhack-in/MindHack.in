@@ -1,0 +1,50 @@
+/* 
+body {
+  overflow: hidden;
+} */
+#canvas {
+    border: 5px solid black;
+    margin-left: 10%;
+    max-width: 85%;
+    max-height: 90%;
+    height: 10;
+}
+#player {
+    display: none;
+}
+.asset {
+    display: none;
+}
+#startButton {
+    background-color: #6eafe0;
+    color: #5563DE;
+    position: absolute;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transform: translate(-50%, 150%);
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+#startButton:hover {
+    background-color: #5563DE;
+    color: #fff;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+#startButton:active {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 600px) {
+    #canvas {
+        width: 100%;
+        max-width: 70%;
+        min-height: 80vh;
+    }
+    #startButton {
+        transform: translate(-55%, 380%);
+    }
+}
