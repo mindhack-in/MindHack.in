@@ -9,6 +9,7 @@ openBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
     popup.style.display = "none";
 });
+
 submitBtn.addEventListener("click", async () => {
     const socialType = document.querySelector('input[name="socialType"]:checked').value;
     const link = document.getElementById("socialLink").value.trim();
@@ -59,6 +60,12 @@ closeBtnLeaderboard.addEventListener("click", () => {
     popupLeaderboard.style.display = "none";
 });
 
+
+
+const prevBtn = document.getElementById("prevPage");
+            prevBtn.disabled=false;
+
+const nextBtn = document.getElementById("nextPage");
 function loadLeaderboard() {
 
     const url = beurl+"marathon/leaderboard?startDate=2025-01-01T00:00:00&endDate=2025-12-31T23:59:59&page="+currentPage+"&size=5";
@@ -83,15 +90,25 @@ function loadLeaderboard() {
             `;
             tableBody.appendChild(tr);
         });
+
+        console.log(data.last)
+        if(data.last===true){
+            nextBtn.disabled =true;
+        }else{
+            nextBtn.disabled=false;
+        }
+        console.log(currentPage)
+        if(currentPage>0){
+            prevBtn.disabled=false;
+        }else{
+            prevBtn.disabled=true;
+        }
     })
     .catch(err => {
         console.error("Error loading leaderboard:", err);
     });
 }
 
-
-const prevBtn = document.getElementById("prevPage");
-const nextBtn = document.getElementById("nextPage");
 // Next Page Button
 nextBtn.addEventListener("click", () => {
     currentPage++;
