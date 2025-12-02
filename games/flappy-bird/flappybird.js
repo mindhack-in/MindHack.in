@@ -8,13 +8,13 @@ window.addEventListener("load", function () {
   const ratio = window.devicePixelRatio || 1;
 
   const ctx = canvas.getContext("2d");
-          
+
 
   if (this.window.innerWidth < 490) canvas.width = this.window.innerWidth * 2;
   else canvas.width = this.window.innerWidth;
   canvas.height = 500;
-  ctx.drawImage(this.document.getElementById("gameLogo"),0,0,canvas.width,canvas.height);
-  
+  ctx.drawImage(this.document.getElementById("gameLogo"), 0, 0, canvas.width, canvas.height);
+
   class Game {
     constructor(gameWidth, gameHeight, ctx) {
       console.log("klsdjflksf")
@@ -87,25 +87,24 @@ window.addEventListener("load", function () {
   }
 
   let game = new Game(canvas.width, canvas.height, ctx);
-
-  document.getElementById("startButton").addEventListener("click", () => {
-    animate(0);
-    document.getElementById("startButton").style.display = "none"; // Hide the button after start
-    document.body.style.overflow = "hidden";
-
-  });
-
-
-
-
+  let animationId = null;
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-      game.draw(ctx);
-      game.update();
-      checkCollision()
-      requestAnimationFrame(animate);
-    // }
+    game.draw(ctx);
+    game.update();
+    checkCollision()
+    animationId = requestAnimationFrame(animate);
   }
+
+  document.getElementById("startButton").addEventListener("click", () => {
+    cancelAnimationFrame(animationId);
+    game = new Game(canvas.width, canvas.height, ctx); 
+    game.gameOver = false;
+    animate();
+    document.getElementById("startButton").style.display = "none";
+    document.body.style.overflow = "hidden";
+  });
+
   function checkCollision() {
     game.pipes.forEach(pipe => {
       if (pipe.markForDeletion) { game.score++; game.pipes.splice(game.pipes.indexOf(pipe), 1); }
@@ -115,20 +114,11 @@ window.addEventListener("load", function () {
         pipe.y + pipe.height > game.player.y) {
         game.gameOver = true;
         document.getElementById("startButton").innerHTML = "Restart Game";
-        document.getElementById("startButton").style.display = 'block'
-document.body.style.overflow = "";
-
-        document.getElementById("startButton").addEventListener("click", () => {
-          document.getElementById("startButton").style.display = "none";
-document.body.style.overflow = "hidden";
-
-          game = new Game(canvas.width, canvas.height, ctx);
-          game.gameOver = false;
-         
-        });
-      }
-    });
-    return game;
+        document.getElementById("startButton").style.display = 'block';
+        document.body.style.overflow = "";
+  }
+});
+return game;
 
   }
 
