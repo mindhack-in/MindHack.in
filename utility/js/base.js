@@ -123,7 +123,21 @@ const game_data = [
     size: "small",
     link: "/games/flappy-bird/",
     img: "/dynamic/games/flappy-bird.png",
-    alt: "slidingpuzzleonline"
+    alt: "flappyBird"
+  },
+  {
+    id: "pacman",
+    size: "small",
+    link: "/games/pacman/",
+    img: "/dynamic/games/pacman.png",
+    alt: "pacman"
+  },
+    {
+    id: "demon-strikes",
+    size: "mid",
+    link: "/games/shooting/demon-strikes/",
+    img: "/dynamic/games/shooting/demon-strikes.png",
+    alt: "demon-strikes"
   }
 ];
 if (gameHolder) {

@@ -196,6 +196,20 @@ const game_data = [
     link: "/games/flappy-bird/",
     img: "/dynamic/games/flappy-bird.png",
     alt: "slidingpuzzleonline"
+  },
+  {
+    id: "pacman",
+    size: "small",
+    link: "/games/pacman/",
+    img: "/dynamic/games/pacman.png",
+    alt: "pacman"
+  },
+    {
+    id: "demon-strikes",
+    size: "small",
+    link: "/games/shooting/demon-strikes/",
+    img: "/dynamic/games/shooting/demon-strikes.png",
+    alt: "demon-strikes"
   }
 ];
 
@@ -259,7 +273,7 @@ const gameHolder2 = document.getElementById("gameHolder2");
 
 
 
-window.GAME_HOST = "http://127.0.0.1:5500/";
+window.GAME_HOST = "https://mindhack-in.github.io/mindhack.in.frontend/";
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("iframe[data-game]").forEach(iframe => {
         iframe.src = window.GAME_HOST + iframe.dataset.game;
