@@ -9,4 +9,4 @@ export const iframeLink = "https://mindhack-in.github.io/mindhack.in.frontend/if
 export const dynamicResource="http://mindhack-in.github.io/mindhack.in.dynamic/dynamic/";
 
 
-export const logoUrl="https://mindhack.in/dynamic/logo.png"
+export const logoUrl="https://mindhack-in.github.io/mindhack.in.dynamic/logo.png"
