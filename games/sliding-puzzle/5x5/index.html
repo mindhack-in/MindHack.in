@@ -2,91 +2,46 @@
 <html lang="en">
 
 <head>
-
-  <title>5X5 Sliding Puzzle - Free Online Sliding Puzzle Game | MindHack.in</title>
+     <title>5X5 Sliding Puzzle - Free Online Sliding Puzzle Game | MindHack.in</title>
   <link rel="canonical" href="https://mindhack.in/games/sliding-puzzle/5X5/" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Play the free online 5x5 Sliding Puzzle on MindHack.in! Challenge your brain, improve memory, and boost focus with fun and interactive sliding puzzles. Try now and test your logic!" />
+    content="Play the free online 5X5 Sliding Puzzle on MindHack.in! Challenge your brain, improve memory, and boost focus with fun and interactive sliding puzzles. Try now and test your logic!" />
+    <link rel="stylesheet" href="../../../utility/css/font.css" />
+    <link rel="stylesheet" href="../../../utility/css/template.css" />
+    <link rel="stylesheet" href="../../../utility/css/home.css" />
+    <link rel="stylesheet" href="../../../utility/css/games.css" />
+    <link rel="stylesheet" href="../../../utility/css/auth.css" />
 
-  <link rel="stylesheet" href="../../../utility/main.css">
-  <script type="module" src="../../../utility/js/base.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-  <script>
-    window.pageConfig = {
-      size: "5"
-    };
-  </script>
-  <link rel="stylesheet" href="../slidingpuzzle.css">
-
-  <link rel="stylesheet" href="../board.css">
 </head>
 
 <body>
-  <div id="head-left"></div>
-  <h1>5X5 Sliding Puzzle</h1>
-
-  <div class="headcontainer">
-    <div class="container1">
-      <div class="game" id="gamePage">
-        <div id="puzzle"></div>
-        <div class="controls">
-          <span id="moves">Moves: <span id="moveCount">0</span></span>
-          <button onclick="shuffleTiles()">Restart</button>
-          <button onclick="goBack()">Back</button>
-          <button id="openPopupBtn">Load history</button>
-          <p id="message"></p>
-
+    <div class="layout">
+        <div class="sidebar" id="sidebar">
         </div>
-      </div>
+        <div class="page-content iframe-page">
+    <h1>Sliding Tiles Puzzle Game</h1>
+            <section class="iframe-section" style="flex: none; height: calc(100vh - 60px); position: relative;">
+                <button id="exit-game-btn" class="exit-game-btn"><i class="fas fa-times"></i></button>
+                <iframe id="game-link-iframe" title="2048 Game"
+                    class="game-iframe"></iframe>
+            </section>
+
+   
+        </div>
     </div>
-  </div>
-
-
-
-  <header class="blog-header">
-    <h2>Players also play</h2>
-    <div class="content mainContent" id="puzzleContent"></div>
-  </header>
-  <div class="history popup-overlay " id="popup">
-    <div class="popup-content">
-      <h3>Game History</h3>
-      <button class="close-btn" id="closePopupBtn">Close</button>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Grid Size</th>
-            <th>Date</th>
-            <th>Moves</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="historyBody"></tbody>
-      </table>
-      <div id="pagination" style="margin-top:10px; text-align:center;"></div>
-
-    </div>
-  </div>
-  </div>
-  <section id="contentSection">
-
-    <div id="blog-div">
-      <p> 5X5 Sliding puzzle consists of 24 numbered tiles and 1 empty tile. Player has to arrange all numbered tiles in
-        order.</p>
-    </div>
-  </section>
-
-  <div>
-    <h2>Players also play</h2>
-    <div class="game-holder-div" id="gameHolder">
-    </div>
-  </div>
 </body>
-<footer id="footer"></footer>
-<script src="../board.js"></script>
-<script type="module" src="../slidingpuzzle.js"></script>
+
+
+<script>window.pageConfig = {
+        pageType: 'games',
+        gameLink: '/games/sliding-puzzle/index.html?size=5'
+    };</script>
+
+<script type="module" src="../../../utility/js/base.js"></script>
+<script type="module" src="../../../utility/js/iframutility.js"></script>
 
 </html>
