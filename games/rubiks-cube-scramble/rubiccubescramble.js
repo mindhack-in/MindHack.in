@@ -15,33 +15,33 @@ const games = [
         name: "3X3 Cube",
         img: "/games/rubikscube/3X3.jpg",
         link: "games/rubiks-cube-scramble/3X3/",
-        description: "Test your skills in this addictive 2048 game—combine tiles to reach the highest number"
+        description: "Test your skills in this addictive Rubik's Cube game—twist, turn, and solve the puzzle"
     },
     {
         name: "4X4 Cube",
         img: "/games/rubikscube/4X4.jpg",
         link: "games/rubiks-cube-scramble/4X4/",
-        description: "Test your skills in this addictive Sudoku game—fill the grid with numbers while following the rules"
+        description: "Test your skills in this addictive Rubik's Cube game—twist, turn, and solve the puzzle"
     },
     {
         name: "5X5 Cube",
         img: "/games/rubikscube/5X5.jpg",
         link: "games/rubiks-cube-scramble/5X5/",
-        description: "Test your skills in this addictive Sliding Puzzle game—arrange the tiles in the correct order by sliding them around"
+        description: "Test your skills in this addictive Rubik's Cube game—twist, turn, and solve the puzzle"
     },
 
     {
         name: "6X6 Cube",
         img: "/games/rubikscube/6X6.jpg",
         link: "games/rubiks-cube-scramble/6X6/",
-        description: "Test your skills in this addictive Flappy Bird game—navigate through the pipes without hitting them"
+        description: "Test your skills in this addictive Rubik's Cube game—twist, turn, and solve the puzzle"
     }
     ,
     {
         name: "7X7 Cube",
         img: "/games/rubikscube/7X7.jpg",
         link: "games/rubiks-cube-scramble/7X7/",
-        description: "Test your skills in this addictive Pac-Man game—eat all the dots while avoiding the ghosts"
+        description: "Test your skills in this addictive Rubik's Cube game—twist, turn, and solve the puzzle"
     }
 ]
 
