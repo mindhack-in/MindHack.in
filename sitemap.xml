@@ -7,154 +7,182 @@
 
 <url>
   <loc>https://mindhack.in/</loc>
-  <lastmod>2025-10-13T16:34:39+00:00</lastmod>
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>
   <priority>1.0</priority>
 </url>
 
 <url>
+  <loc>https://mindhack.in/games/</loc>
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>
+  <priority>0.9</priority>
+</url>
+
+<url>
   <loc>https://mindhack.in/games/sliding-puzzle/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>
   <priority>0.9</priority>
 </url>
 
 <url>
   <loc>https://mindhack.in/games/sliding-puzzle/3x3/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/sliding-puzzle/4x4/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/sliding-puzzle/5x5/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/sliding-puzzle/6x6/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/sliding-puzzle/7x7/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/sliding-puzzle/8x8/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/sliding-puzzle/9x9/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/sliding-puzzle/10x10/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
+
 <url>
   <loc>https://mindhack.in/games/rubiks-cube-scramble/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/rubiks-cube-scramble/2X2/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/rubiks-cube-scramble/3X3/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/rubiks-cube-scramble/4X4/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/rubiks-cube-scramble/5X5/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/rubiks-cube-scramble/6X6/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/rubiks-cube-scramble/7X7/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
+
 <url>
   <loc>https://mindhack.in/games/2048/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
+
 <url>
   <loc>https://mindhack.in/games/sudoku/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
+
 <url>
-  <loc>http://mindhack.in/games/match-the-card/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <loc>https://mindhack.in/games/flappy-bird/</loc>
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://mindhack.in/games/pacman/</loc>
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://mindhack.in/games/match-the-card/</loc>
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/match-the-card/fruits/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/match-the-card/animals/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/match-the-card/birds/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/match-the-card/vegetables/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/match-the-card/symbols/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/match-the-card/transport/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/match-the-card/sports/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/match-the-card/faces/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/match-the-card/sea-creatures/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://mindhack.in/games/match-the-card/desserts/</loc>
-  <lastmod>2025-10-13T15:15:50+00:00</lastmod>    
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>    
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://mindhack.in/games/air-force-mission/demon-skies.html</loc>
+  <lastmod>2026-06-07T16:20:00+00:00</lastmod>
   <priority>0.9</priority>
 </url>
 

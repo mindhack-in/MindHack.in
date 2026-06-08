@@ -13,13 +13,13 @@ const games = [
     },
     {
         name: "3X3 Cube",
-        img: "/games/rubikscube/3x3.jpg",
+        img: "/games/rubikscube/3X3.jpg",
         link: "games/rubiks-cube-scramble/3X3/",
         description: "Test your skills in this addictive 2048 game—combine tiles to reach the highest number"
     },
     {
         name: "4X4 Cube",
-        img: "/games/rubikscube/4x4.jpg",
+        img: "/games/rubikscube/4X4.jpg",
         link: "games/rubiks-cube-scramble/4X4/",
         description: "Test your skills in this addictive Sudoku game—fill the grid with numbers while following the rules"
     },

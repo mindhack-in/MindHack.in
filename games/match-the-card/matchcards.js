@@ -44,8 +44,7 @@ for (let i = 0; i < types.length; i++) {
 
 
     playBtn.addEventListener("click", () => {
-        const finalUrl = game.link.startsWith("http") ? game.link : url + game.link;
-        window.location.href = finalUrl;
+        window.location.href = url + "games/match-the-card/" + game + "/";
     });
     gamesGrid.appendChild(card);
 }
