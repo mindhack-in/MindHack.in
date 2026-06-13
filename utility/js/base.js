@@ -267,6 +267,30 @@ formSignup.addEventListener("submit", async (e) => {
 });
 
 
+// Dynamic footer injection
+const pageContent = document.querySelector(".page-content");
+if (pageContent) {
+  const footer = document.createElement("footer");
+  footer.className = "site-footer";
+  footer.innerHTML = `
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="${url}about/" class="footer-link">About Us</a>
+        <span class="footer-separator">|</span>
+        <a href="${url}privacy/" class="footer-link">Privacy Policy</a>
+        <span class="footer-separator">|</span>
+        <a href="${url}terms/" class="footer-link">Terms of Service</a>
+        <span class="footer-separator">|</span>
+        <a href="${url}contact/" class="footer-link">Contact Us</a>
+      </div>
+      <div class="footer-copyright">
+        &copy; ${new Date().getFullYear()} MindHack.in. All rights reserved.
+      </div>
+    </div>
+  `;
+  pageContent.appendChild(footer);
+}
+
 let script = document.createElement("script");
  function gtag() { 
   dataLayer.push(arguments) 
