@@ -8,7 +8,7 @@ if (sidebar) {
   sidebar.innerHTML = ` <div>
                 <div class="sidebar-header">
                     <div class="logo">
-                        <img src="${logoUrl}" alt="logo">
+                        <img src="${logoUrl}" alt="MindHack.in Logo">
                     </div>
                     <div class="icon-btn" id="sidebar-toggle">
                         <svg width="40" height="15" viewBox="0 0 40 30" fill="none" stroke="white" stroke-width="3"

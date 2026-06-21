@@ -3,12 +3,26 @@
 
 <head>
 
-    <title>Play Free Flappy Bird Online @ Mindhack.in</title>
+    <title>Play Flappy Bird Game Online Free - Mindhack.in</title>
     <link rel="canonical" href="https://mindhack.in/games/flappy-bird/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Play free Flappy Bird online! Just avoid pipes and keep flying. Score for each pipe passed succesfully.">
+        content="Play the free Flappy Bird game online! Dodge pipes, navigate through narrow gaps, and keep flying to score points. No download or registration needed.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mindhack.in/games/flappy-bird/">
+    <meta property="og:title" content="Play Flappy Bird Game Online Free - Mindhack.in">
+    <meta property="og:description" content="Play the free Flappy Bird game online! Dodge pipes, navigate through narrow gaps, and keep flying to score points. No download or registration needed.">
+    <meta property="og:image" content="https://mindhack-in.github.io/mindhack.in.dynamic/dynamic/games/flappy-bird.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://mindhack.in/games/flappy-bird/">
+    <meta name="twitter:title" content="Play Flappy Bird Game Online Free - Mindhack.in">
+    <meta name="twitter:description" content="Play the free Flappy Bird game online! Dodge pipes, navigate through narrow gaps, and keep flying to score points. No download or registration needed.">
+    <meta name="twitter:image" content="https://mindhack-in.github.io/mindhack.in.dynamic/dynamic/games/flappy-bird.png">
 
     <link rel="stylesheet" href="../../utility/css/font.css" />
     <link rel="stylesheet" href="../../utility/css/template.css" />
@@ -103,6 +117,11 @@
                 </div>
             </section>
 
+            <section class="games">
+                <h2>Other games you will love</h2>
+                <div class="games-grid" id="games-grid"></div>
+            </section>
+
         </div>
     </div>
 </body>
@@ -110,10 +129,12 @@
 
 <script>window.pageConfig = {
         pageType: 'games',
-        gameLink: 'games/flappy-bird/'
+        gameLink: 'games/flappy-bird/',
+        name: 'flappy-bird'
     };</script>
 
 <script type="module" src="../../utility/js/base.js"></script>
 <script type="module" src="../../utility/js/iframutility.js"></script>
+<script type="module" src="../../utility/js/games.js"></script>
 
 </html>

@@ -27,6 +27,7 @@ for (let i = 0; i < types.length; i++) {
     const img = document.createElement("img");
     img.src = imageLink+game+".jpg";
     img.classList.add("game-img");
+    img.alt = `Memory Match the Cards - ${game}`;
     card.appendChild(img);
 
     const title = document.createElement("h3");
