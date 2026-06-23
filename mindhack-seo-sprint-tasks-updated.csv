@@ -1,0 +1,74 @@
+Sprint / Category,Task ID,Task,Effort,Impact,Status
+Sprint 1 - Technical & Crawlability,1,"Fix /games/ hub - enable SSR/SSG so all game links appear in HTML source (highest priority, blocks everything else)",8-16 hrs,High,Complete
+Sprint 1 - Technical & Crawlability,2,"Add title, meta description, H1, and canonical tag to /games/ page",1 hr,High,Complete
+Sprint 1 - Technical & Crawlability,3,"Create/verify robots.txt - allow Googlebot, Bingbot, GPTBot, ClaudeBot, PerplexityBot; reference sitemap",30 min,High,Complete
+Sprint 1 - Technical & Crawlability,4,Request re-indexing of homepage and Rubik's page in Search Console (Google showing stale pre-fix content),30 min,High,Complete
+Sprint 1 - Technical & Crawlability,5,Verify sitemap.xml includes all 7+ game pages and 8 sliding puzzle sub-pages,1 hr,Medium,Complete
+Sprint 1 - Technical & Crawlability,6,Investigate empty 'Other games you will love' sections - likely template bug across 3+ pages,2-4 hrs,Medium,Complete
+Sprint 1 - Technical & Crawlability,7,Add descriptive alt text to all game images,2 hrs,Medium,Complete
+Sprint 2 - Schema & Structured Data,8,Add WebSite JSON-LD schema to homepage,30 min,High,Complete
+Sprint 2 - Schema & Structured Data,9,Add FAQPage schema to homepage (4 Q&A pairs ready),30 min,High,Complete
+Sprint 2 - Schema & Structured Data,10,Add FAQPage schema to Sudoku page,30 min,High,Complete
+Sprint 2 - Schema & Structured Data,11,Add FAQPage schema to Rubik's Cube page,30 min,High,Complete
+Sprint 2 - Schema & Structured Data,12,Add FAQPage schema to 2048 page,30 min,High,Complete
+Sprint 2 - Schema & Structured Data,13,Add FAQPage schema to Sliding Puzzle page,30 min,High,Complete
+Sprint 2 - Schema & Structured Data,14,Add SoftwareApplication schema to Rubik's Cube Timer page,30 min,Medium,Complete
+Sprint 2 - Schema & Structured Data,15,Add BreadcrumbList schema template to all inner pages,1.5 hrs,Medium,Complete
+Sprint 2 - Schema & Structured Data,16,Validate all schema blocks via Google Rich Results Test,1 hr,Medium,Complete
+"Sprint 3 - On-Page Fixes (Tags, Anchors, OG)",17,"Fix 2048 title tag (currently 30 chars, too short) -> 'Play 2048 Game Online Free - No Download | Mindhack.in'",30 min,Medium,Complete
+"Sprint 3 - On-Page Fixes (Tags, Anchors, OG)",18,Fix 2048 meta description capitalization typo ('COmbine') and missing comma,15 min,Medium,Complete
+"Sprint 3 - On-Page Fixes (Tags, Anchors, OG)",19,"Fix Flappy Bird title tag - remove '@' symbol, use standard separator",15 min,Medium,Complete
+"Sprint 3 - On-Page Fixes (Tags, Anchors, OG)",20,Fix Flappy Bird meta description typo ('succesfully'),15 min,Medium,Complete
+"Sprint 3 - On-Page Fixes (Tags, Anchors, OG)",21,"Roll out OG + Twitter Card tags to Sudoku, Rubik's, 2048, Sliding Puzzle, Flappy Bird (homepage already done - use as template)",2 hrs,Medium,Complete
+"Sprint 3 - On-Page Fixes (Tags, Anchors, OG)",22,Differentiate the 8 'Play now' anchors on Sliding Puzzle page by grid size ('Play 3x3 Sliding Puzzle' etc.),1 hr,Medium,Complete
+"Sprint 3 - On-Page Fixes (Tags, Anchors, OG)",23,Add unique title/meta to each of the 8 sliding puzzle sub-pages (3x3-10x10) if not already present,3 hrs,Medium,Complete
+"Sprint 3 - On-Page Fixes (Tags, Anchors, OG)",24,Fix Rubik's H2 sentence fragment: 'Master Your Cubing Skills with MindHack.in's' - add ending,10 min,Low,Complete
+Sprint 4 - E-E-A-T Foundational Pages,25,"Create About Us page (300+ words - team, mission, credentials)",3 hrs,High,Complete
+Sprint 4 - E-E-A-T Foundational Pages,26,Create Privacy Policy page and link in footer,2 hrs,High,Backlog
+Sprint 4 - E-E-A-T Foundational Pages,27,Create Terms of Service page and link in footer,1 hr,High,Backlog
+Sprint 4 - E-E-A-T Foundational Pages,28,Create Contact page (email/form) and link in footer,1 hr,High,Backlog
+Sprint 4 - E-E-A-T Foundational Pages,29,Add author bylines and publication/update dates to content pages,2 hrs,Medium,Backlog
+Sprint 4 - E-E-A-T Foundational Pages,30,Add citations/links for 'studies show' claims on homepage and 2048 page,3 hrs,Medium,Backlog
+"Sprint 5 - UX, Social Proof & Off-Page",31,"Add social proof element to homepage (player count, 'X games played today', testimonials)",2 hrs,Medium,Backlog
+"Sprint 5 - UX, Social Proof & Off-Page",32,Add breadcrumb navigation (visual) to all inner pages,4 hrs,Medium,Backlog
+"Sprint 5 - UX, Social Proof & Off-Page",33,Submit Rubik's timer to SpeedSolving.com forum and r/Cubers,2 hrs,High,Todo
+"Sprint 5 - UX, Social Proof & Off-Page",34,"Submit site to gaming directories (Crazy Games, itch.io, Poki)",4 hrs,Medium,Backlog
+"Sprint 5 - UX, Social Proof & Off-Page",35,Outreach to Indian ed-tech/gaming blogs for mentions/guest posts,Ongoing,High,Backlog
+"Sprint 5 - UX, Social Proof & Off-Page",36,Set up monthly LLM visibility check (ask ChatGPT/Perplexity/Claude 'best free sudoku/rubiks timer site'),1 hr/mo,Medium,Backlog
+Sprint 6 - Content Fixes & New Content,37,"Proofread & fix Rubik's Cube page body - 4 grammar errors ('sharp your evaluate mind', 'You solve time', 'is Connects with', 'sharp your mind')",1 hr,Medium,Complete
+Sprint 6 - Content Fixes & New Content,38,"Proofread & rewrite Flappy Bird page body (5+ errors: 's modern game', 'touching then', 'result to game over', etc.)",2 hrs,Medium,Complete
+Sprint 6 - Content Fixes & New Content,39,Fix/complete Flappy Bird's broken FAQ answer ('Is there any competition? -> No'),30 min,Medium,Complete
+Sprint 6 - Content Fixes & New Content,40,"Proofread & rewrite Sliding Puzzle page body (5+ errors: 'having problem to solve', 'sharpens of short-term memory', etc.)",2 hrs,Medium,Complete
+Sprint 6 - Content Fixes & New Content,41,Fix Sliding Puzzle FAQ heading capitalization ('How do We play' -> 'How do you play'),5 min,Low,Complete
+Sprint 6 - Content Fixes & New Content,42,Establish pre-publish proofreading checklist for future page launches,1 hr,Medium,Todo
+Sprint 6 - Content Fixes & New Content,43,"Write blog post: 'How to Play Sudoku for Beginners' (target: 'how to play sudoku', 10K-100K/mo)",4 hrs,High,Complete
+Sprint 6 - Content Fixes & New Content,44,Write blog post: 'How to Get Faster at Rubik's Cube' - link to timer page,4 hrs,High,Content
+Sprint 6 - Content Fixes & New Content,45,Write blog post: 'Best Free Online Brain Games for Students in India 2026',4 hrs,High,Content
+Sprint 6 - Content Fixes & New Content,46,Write blog post: '10 Benefits of Brain Training Games Backed by Research' (with citations),5 hrs,High,Content
+Sprint 6 - Content Fixes & New Content,47,"Audit template repetition - every game page follows identical 'Intro -> What is X -> Benefits bullets -> Features -> Why X Remains Popular -> FAQ' skeleton, flagged as mass-produced/low-effort pattern",1 hr,Medium,Backlog
+Sprint 6 - Content Fixes & New Content,48,Rewrite homepage body to remove repetitive filler - multiple paragraphs restate 'no download / brain benefits / easy to use' in slightly different words,2 hrs,Medium,Backlog
+Sprint 6 - Content Fixes & New Content,49,Rewrite 2048 FAQ answers - remove generic AI-style hedging ('Yes! when used thoughtfully... moderation is key') to match site's voice,30 min,Low,Complete
+Sprint 6 - Content Fixes & New Content,50,"Vary page structure across game pages so each reads as distinct, original content rather than the same template reworded",4 hrs,Medium,Backlog
+Sprint 7 - Core Web Vitals & Performance,51,"Run Lighthouse on all game pages; target LCP < 2.5s, CLS < 0.1 (ad slots are likely CLS culprits)",4 hrs,High,Backlog
+Sprint 7 - Core Web Vitals & Performance,52,Lazy-load all below-the-fold game thumbnails and section images,2 hrs,High,Backlog
+Sprint 7 - Core Web Vitals & Performance,53,Serve images in WebP/AVIF format; add width+height attributes to prevent layout shift,3 hrs,High,Backlog
+Sprint 7 - Core Web Vitals & Performance,54,"Audit and defer all non-critical third-party scripts (ads, analytics, social widgets)",2 hrs,Medium,Backlog
+Sprint 7 - Core Web Vitals & Performance,55,Add preconnect hints for Google Fonts and ad network domains in <head>,30 min,Medium,Backlog
+Sprint 8 - Ad Monetisation Health,56,Audit current ad placements for CLS impact; fix any units without reserved slot dimensions,2 hrs,High,Backlog
+Sprint 8 - Ad Monetisation Health,57,Add a dedicated 300x250 or 728x90 in-content ad slot to blog post template (higher RPM than sidebar),2 hrs,High,Backlog
+Sprint 8 - Ad Monetisation Health,58,Enable AdSense Auto Ads only on blog pages; turn off on game canvas pages to avoid covering game UI,1 hr,Medium,Backlog
+Sprint 8 - Ad Monetisation Health,59,Track ad viewability and CTR per page in AdSense; pause low-performing units dragging overall score,1 hr,Medium,Backlog
+Sprint 9 - International & Language,60,Add hreflang='en-IN' tag to all pages targeting Indian users to signal locale to Google,1 hr,Medium,Backlog
+Sprint 9 - International & Language,61,Register and verify mindhack.in on Bing Webmaster Tools; submit sitemap,30 min,Medium,Todo
+Sprint 9 - International & Language,62,"Set up Google Analytics 4 (if not already) with custom events for game_start, game_over, share_click",3 hrs,High,Backlog
+Sprint 10 - New Content & Pages,63,Write blog post: 'Top 10 Free Puzzle Games to Play Online in India 2026' (internal links to all game pages),4 hrs,High,Content
+Sprint 10 - New Content & Pages,64,"Write blog post: 'How to Solve a 4x4 Sliding Puzzle - Step by Step' (targets long-tail, links to Sliding Puzzle page)",3 hrs,High,Content
+Sprint 10 - New Content & Pages,65,"Write blog post: 'What is the 2048 Strategy That Always Works?' (target: '2048 strategy', medium competition)",3 hrs,High,Content
+Sprint 10 - New Content & Pages,66,"Create a /blog/ hub page with proper H1, intro copy, pagination, and JSON-LD BlogPosting schema",2 hrs,High,Content
+Sprint 10 - New Content & Pages,67,"Add internal links from each game page to the most relevant blog post (contextual anchor text, not 'click here')",2 hrs,High,Backlog
+Sprint 10 - New Content & Pages,68,Add 'Related Games' section with thumbnail links on each game page (replaces broken 'Other games you will love'),4 hrs,Medium,Backlog
+Sprint 10 - New Content & Pages,69,Create a /games/ category landing page for 'Puzzle Games' and one for 'Arcade Games' with unique 300+ word intros,3 hrs,Medium,Backlog
+Sprint 11 - Link Building & Signals,70,"Build a free tool: 'Brain Age Calculator' quiz (shareable, linkable asset with citation potential)",8 hrs,High,Backlog
+Sprint 11 - Link Building & Signals,71,Create a sharable 'Rubik's Cube Solve Time Leaderboard' feature to encourage return visits and backlinks,6 hrs,Medium,Backlog
+Sprint 11 - Link Building & Signals,72,Submit mindhack.in to Google for inclusion in 'AI-overview' eligible sources via Google News Publisher Center (if eligible),1 hr,Medium,Backlog
+Sprint 11 - Link Building & Signals,73,Claim Google Business Profile for Mindhack.in (brand entity signal for Knowledge Panel),30 min,Medium,Backlog
