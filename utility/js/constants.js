@@ -6,7 +6,7 @@
 
 export const url = "https://mindhack.in/";
 export const iframeLink = "https://mindhack-in.github.io/mindhack.in.frontend/iframes/";
-export const dynamicResource="http://mindhack-in.github.io/mindhack.in.dynamic/dynamic/";
+export const dynamicResource="https://mindhack-in.github.io/mindhack.in.dynamic/dynamic/";
 
 
 export const logoUrl="https://mindhack-in.github.io/mindhack.in.dynamic/logo.png"
