@@ -2,113 +2,258 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MindHack.in</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Free Brain Games & Puzzles Online — No Download | Mindhack.in</title>
+    <link rel="canonical" href="https://mindhack.in/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Play free brain games and puzzles online — no download needed. Mindhack.in offers memory, logic, and brain training challenges for mobile and desktop.">
 
-  <link rel="stylesheet" href="assets/css/home.css" />
-  <link rel="stylesheet" href="assets/css/header.css" />
-  <link rel="stylesheet" href="assets/css/footer.css" />
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mindhack.in/">
+    <meta property="og:title" content="Free Brain Games & Puzzles Online — No Download | Mindhack.in">
+    <meta property="og:description" content="Play free brain games and puzzles online — no download needed. Mindhack.in offers memory, logic, and brain training challenges for mobile and desktop.">
+    <meta property="og:image" content="https://mindhack-in.github.io/mindhack.in.dynamic/logo.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://mindhack.in/">
+    <meta name="twitter:title" content="Free Brain Games & Puzzles Online — No Download | Mindhack.in">
+    <meta name="twitter:description" content="Play free brain games and puzzles online — no download needed. Mindhack.in offers memory, logic, and brain training challenges for mobile and desktop.">
+    <meta name="twitter:image" content="https://mindhack-in.github.io/mindhack.in.dynamic/logo.png">
+
+    <link rel="stylesheet" href="utility/css/font.css" />
+    <link rel="stylesheet" href="utility/css/template.css" />
+    <link rel="stylesheet" href="utility/css/home.css" />
+    <link rel="stylesheet" href="utility/css/games.css" />
+    <link rel="stylesheet" href="../utility/css/auth.css" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Mindhack",
+      "url": "https://mindhack.in/",
+      "description": "Free browser-based brain games and puzzles. Play Sudoku, 2048, Rubik's Cube timer, and more — no download required.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://mindhack.in/games/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Free Brain Games & Puzzles Online — No Download | Mindhack.in",
+      "url": "https://mindhack.in/",
+      "description": "Play free brain games and puzzles online — no download needed. Mindhack.in offers memory, logic, and brain training challenges for mobile and desktop.",
+      "inLanguage": "en"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need to download anything to play on Mindhack.in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, all games are browser-based. You can play free games online without downloading them and enjoy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the games suitable for all age groups?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Mindhack.in offers free online games and puzzles suitable for players of all ages, from kids to adults."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kind of games can I find on Mindhack.in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You'll find online games and puzzles such as Sudoku, memory card challenges, and other brain-boosting activities that help improve your focus and concentration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I play on mobile devices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. MindHack is fully responsive and optimized for smooth performance across all modern smartphones, tablets, and desktops."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RC3CF2CZ3"></script>
-<script>
-
-
-  function toggleNav() {
-    const navMenu = document.getElementById("nav-menu");
-    navMenu.classList.toggle("active");
-  }
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'G-9RC3CF2CZ3');
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "MindHack.in",
-  "url": "https://mindhack.in/",
-  "logo": "https://mindhack-in.github.io/MindHack.in/dynamic/profile.png"
-}
-</script>
 
 <body>
-  <header>
-    <img class="logoimg" src="https://mindhack-in.github.io/MindHack.in/dynamic/logo.png" />
-    <button class="nav-toggle" onclick="toggleNav()">☰</button>
-    <nav>
-      <ul id="nav-menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#games">Games</a></li>
-        <li><a href="#competitions">Competitions</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div class="layout">
+        <div class="sidebar" id="sidebar">
 
-  <div id="image-holder"> <img id="banner-image" src="
-https://mindhack-in.github.io/MindHack.in/dynamic/bn.png" />
-  </div>
-
-  <section class="games" id="games">
-    <!-- <div id="banner"> -->
-    <div class="banner-content">
-    </div>
-    </div>
-
-    <h2>Featured Games</h2>
-    <div class="game-grid" id='game-grid'> </div>
-  </section>
-
-
-
-  <footer id="footer">
-    <div class="footer-bottom">
-    </div>
-    <div class="footer-container">
-
-      <div class="footer-col">
-        <h3>MindHack.in</h3>
-        <p>Unlock your brain’s potential with fun, challenging, and mind-bending games.</p>
-      </div>
-
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <a href="#">Home</a>
-        <a href="#games">Games</a>
-        <a href="#">About Us</a>
-      </div>
-
-      <!-- <div class="footer-col">
-        <h3>Support</h3>
-        <a href="#">FAQs</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Help Center</a>
-      </div> -->
-
-      <div class="footer-col">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="https://www.instagram.com/mindhack.in/"><i class="fab fa-instagram"></i></a>
         </div>
-      </div>
+
+        <div class="page-content">
+            <section class="hero">
+                <div class="home-her">
+
+                    <div class="content">
+                        <div class="subtitle">
+                            <h1>Free Online Games & Brain Puzzles</h1>
+                        </div>
+                        <div class="title">
+                            <span class="white">Play Free Online Games</span>
+                            <span class="blue"> and Puzzles</span>
+                        </div>
+                        <p class="desc">
+                            Relax, Play, and Strengthen Your Mind.
+                        </p>
+                        <button class="cta">
+                            Explore games <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="stats">
+                            <div class="stat">
+                                <div>
+                                    <h3>No Download Brain Games</h3>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <div>
+                                    <h3>Brain Training Puzzles Online</h3>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <div>
+                                    <h3>Play Free on Any Device</h3>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <div>
+                                    <h3>Fast Browser Games</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="right">View all games →</div>
+                        <div class="right">View all Articles →</div>
+                    </div>
+                </div>
+            </section>
+            <section class="games" style="margin-top: 60px;">
+                <div class="games-grid" id="games-grid">
+                    <div class="game-card">
+                        <img src="https://mindhack-in.github.io/mindhack.in.dynamic/dynamic/games/rubikscube/2X2.jpg" class="game-img" alt="Rubik's Cube Scramble Game">
+                        <h3>Cube</h3>
+                        <p>Test your skills in this addictive Rubik's Cube game—twist, turn, and solve the puzzle</p>
+                        <a href="/games/rubiks-cube-scramble/" class="play-btn">Play Cube Free <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://mindhack-in.github.io/mindhack.in.dynamic/dynamic/games/2048.jpg" class="game-img" alt="2048 Number Tile Merge Game">
+                        <h3>2048</h3>
+                        <p>Test your skills in this addictive 2048 game—combine tiles to reach the highest number</p>
+                        <a href="/games/2048/" class="play-btn">Play 2048 Online <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://mindhack-in.github.io/mindhack.in.dynamic/dynamic/games/sudoku.png" class="game-img" alt="Sudoku Classic Logic Puzzle Grid">
+                        <h3>Sudoku</h3>
+                        <p>Test your skills in this addictive Sudoku game—fill the grid with numbers while following the rules</p>
+                        <a href="/games/sudoku/" class="play-btn">Play Sudoku Free <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://mindhack-in.github.io/mindhack.in.dynamic/dynamic/games/slidingpuzzle.png" class="game-img" alt="Sliding Number Puzzle Game Board">
+                        <h3>Slidingpuzzle</h3>
+                        <p>Test your skills in this addictive Sliding Puzzle game—arrange the tiles in the correct order by sliding them around</p>
+                        <a href="/games/sliding-puzzle/" class="play-btn">Play Sliding Puzzle <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://mindhack-in.github.io/mindhack.in.dynamic/dynamic/games/flappy-bird.png" class="game-img" alt="Flappy Bird Arcade Retro Game">
+                        <h3>flappy-bird</h3>
+                        <p>Test your skills in this addictive Flappy Bird game—navigate through the pipes without hitting them</p>
+                        <a href="/games/flappy-bird/" class="play-btn">Play Flappy Bird <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="game-card">
+                        <h3>View All Games</h3>
+                        <p>View our full collection of games and find your next favorite!</p>
+                        <a href="/games/" class="play-btn">Browse All Games <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contentSection">
+                <div id="blog-div">
+                    <p>Mindhack.in is the best place to find free online games that are fun, challenging, and easy to use. This platform is designed for anyone who loves to play engaging games while keeping their mind active.</p>
+                    <p>On the journey of exercising your mind, playing free online games offers unique advantages that go beyond simple entertainment. Scientific studies show that regularly solving puzzles and playing brain games can improve memory, attention span, and problem-solving abilities. These benefits make playing at Mindhack.in not only entertaining but also a smart choice for keeping your mind sharp and active.</p>
+                    
+                    <h2>The best part of Mindhack.in?</h2>
+                    <p>You can play free games without downloading anything! There are no installations and no delays—just pure gaming enjoyment straight from your web browser.</p>
+                    <p>At Mindhack.in, we specialize in online games and puzzles that not only entertain but also train your brain. From Sudoku to memory card matching games, each challenge is designed to test your logical thinking, focus, and memory power. Our site provides the best free online games to keep your mind sharp, active, and healthy, whether you want to exercise your brain or simply relax.</p>
+                    
+                    <h2>Mindhack.in isn't just a regular gaming site</h2>
+                    <p>It's a digital brain gym that helps you stay sharp during your free time. We are constantly improving the platform by adding new features and ensuring that games run smoothly. We will soon introduce more games to help improve your focus, creativity, mental sharpness, and critical thinking skills.</p>
+                    <p>We believe everyone should have free access to brain-boosting entertainment, so all new additions will remain free to play. Mindhack.in is designed to be simple and easy to use. You don't have to worry about storage space or system requirements. Simply open your browser, visit our website, and enter the realm of free browser-based online games. It's quick, easy, and free.</p>
+
+                    <h2>Relax, Play, and Strengthen Your Mind with Free Online PC Games</h2>
+                    <p>Playing free online PC games at Mindhack.in is not only fun but also beneficial for your mental well-being. Studies show that solving puzzles and playing mind games regularly can help improve focus, reduce stress, and enhance memory retention.</p>
+                    <p>Whether you're at home, traveling, or on the go, you can enjoy our online puzzles anytime, anywhere. Many players visit Mindhack.in daily to enjoy these brain-boosting games. It is more than just a pastime—it's a great way to relax your mind, challenge your brain, and experience the satisfaction of solving puzzles. Visit Mindhack.in today to discover a new world of free online games, test your logic, and have fun!</p>
+
+                    <h2>Benefits of Playing Games on Mindhack.in</h2>
+                    <ul>
+                        <li>Boost your brainpower and improve memory.</li>
+                        <li>No downloads required; play instantly in your browser.</li>
+                        <li>Reduce stress and enhance mental focus.</li>
+                        <li>Access a variety of brain-training games anytime, anywhere.</li>
+                    </ul>
+                    <p>Play fun brain-training games to improve your cognitive skills and concentration.</p>
+
+                    <h2>Frequently Asked Questions</h2>
+                    <div style="margin-bottom:25px;">
+                        <h3>Do I need to download anything to play on Mindhack.in?</h3>
+                        <p class="answer">No, all games are fully browser-based. You can play free games online instantly without any downloads.</p>
+                    </div>
+                    <div style="margin-bottom:25px;">
+                        <h3>Are the games suitable for all age groups?</h3>
+                        <p class="answer">Yes, Mindhack.in offers free online games and puzzles suitable for players of all ages, from kids to adults.</p>
+                    </div>
+                    <div style="margin-bottom:25px;">
+                        <h3>What kind of games can I find on Mindhack.in?</h3>
+                        <p class="answer">You'll find online games and puzzles such as Sudoku, memory card challenges, and other brain-boosting activities that help improve your focus and concentration.</p>
+                    </div>
+                    <div style="margin-bottom:25px;">
+                        <h3>Can I play on mobile devices?</h3>
+                        <p class="answer">Absolutely. MindHack is fully responsive and optimized for smooth performance across all modern smartphones, tablets, and desktops.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
     </div>
-
-    <div class="footer-bottom">
-      © <span id="year"></span> MindHack.in | All Rights Reserved
-    </div>
-  </footer>
-
-
-  <script src="assets/js/script.js"></script>
-
-
-
 </body>
+
+<script>window.pageConfig = {
+        pageType: 'home'
+    };</script>
+<script type="module" src="./utility/js/games.js"></script>
+
+
+<script type="module" src="utility/js/base.js"></script>
 
 </html>
