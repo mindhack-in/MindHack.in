@@ -1,0 +1,125 @@
+{
+  "route": "/games/2048/",
+  "title": "Play 2048 Game Online Free - No Download | Mindhack.in",
+  "description": "Play the free 2048 game online at Mindhack.in. Combine numbered tiles to reach the 2048 tile in this fun, online strategy puzzle game. No download required.",
+  "canonical": "{{SITE_URL}}games/2048/",
+  "og": {
+    "type": "website",
+    "url": "{{SITE_URL}}games/2048/",
+    "title": "Play 2048 Game Online Free - No Download | Mindhack.in",
+    "description": "Play the free 2048 game online at Mindhack.in. Combine numbered tiles to reach the 2048 tile in this fun, online strategy puzzle game. No download required.",
+    "image": "{{DYNAMIC_RESOURCE}}games/2048.jpg"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "url": "{{SITE_URL}}games/2048/",
+    "title": "Play 2048 Game Online Free - No Download | Mindhack.in",
+    "description": "Play the free 2048 game online at Mindhack.in. Combine numbered tiles to reach the 2048 tile in this fun, online strategy puzzle game. No download required.",
+    "image": "{{DYNAMIC_RESOURCE}}games/2048.jpg"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{SITE_URL}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Games",
+          "item": "{{SITE_URL}}games/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "2048 Game",
+          "item": "{{SITE_URL}}games/2048/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Mindhack 2048 Game",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "url": "{{SITE_URL}}games/2048/",
+      "description": "Play 2048 game online for free. Combine numbered tiles to reach 2048 — no download required. A fun, addictive brain training game."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the goal of the 2048 game online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The goal is to slide and combine numbered tiles until you reach the tile with value 2048.By merging like-numbers (2+2=4, 4+4=8…), you create higher value tiles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do people keep returning to 2048 game unblocked?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because it's easy to access, doesn't require downloads or heavy graphics, and offers both challenge and reward. The “just one more move” feeling is very strong. Studies on dopamine and prediction show why this game is compelling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does playing the number match game app version of 2048 really improve my brain function?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! when used thoughtfully. Research shows puzzle-games like 2048 sharpen problem-solving, focus, and enhance memory. But as with anything, moderation is key."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What strategies help me win the 2048 game online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some key tips: Keep your highest value tile in a corner. Try to build the next highest around it. Avoid random swipes that scatter your strategy. Reflect on what went wrong when you lose to improve your approach."
+          }
+        }
+      ]
+    }
+  ],
+  "pageType": "games",
+  "gameLink": "games/2048/",
+  "excludeGame": "2048",
+  "pageContentClass": "page-content iframe-page",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Games",
+      "href": "/games/"
+    },
+    {
+      "label": "2048",
+      "href": null
+    }
+  ],
+  "gameFrame": {
+    "title": "2048 Game",
+    "iframeStyle": "flex: none; height: calc(100vh - 60px); position: relative;"
+  },
+  "gameGrid": {
+    "gridClass": "games-grid"
+  },
+  "variantSet": null,
+  "hasContactForm": false
+}

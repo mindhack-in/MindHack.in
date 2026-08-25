@@ -1,0 +1,58 @@
+{
+  "route": "/about/",
+  "title": "About Us - Free Online Brain Games & Puzzles | Mindhack.in",
+  "description": "Learn about Mindhack.in, an independent, free, browser-based brain games and puzzle platform designed to train focus and memory with zero interruptions.",
+  "canonical": "{{SITE_URL}}about/",
+  "og": {
+    "type": "website",
+    "url": "{{SITE_URL}}about/",
+    "title": "About Us - Free Online Brain Games & Puzzles | Mindhack.in",
+    "description": "Learn about Mindhack.in, an independent, free, browser-based brain games and puzzle platform designed to train focus and memory with zero interruptions.",
+    "image": "{{LOGO_URL}}"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "url": "{{SITE_URL}}about/",
+    "title": "About Us - Free Online Brain Games & Puzzles | Mindhack.in",
+    "description": "Learn about Mindhack.in, an independent, free, browser-based brain games and puzzle platform designed to train focus and memory with zero interruptions.",
+    "image": "{{LOGO_URL}}"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{SITE_URL}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Us",
+          "item": "{{SITE_URL}}about/"
+        }
+      ]
+    }
+  ],
+  "pageType": "about",
+  "gameLink": null,
+  "excludeGame": null,
+  "pageContentClass": "page-content",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About Us",
+      "href": null
+    }
+  ],
+  "gameFrame": null,
+  "gameGrid": null,
+  "variantSet": null,
+  "hasContactForm": false
+}

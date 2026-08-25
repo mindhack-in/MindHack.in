@@ -1,0 +1,7 @@
+{
+  "extends": "next/core-web-vitals",
+  "ignorePatterns": ["legacy/**", ".next/**", "node_modules/**", "scripts/migrate-legacy-html.mjs"],
+  "rules": {
+    "@next/next/no-img-element": "off"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "route": "/games/match-the-card/",
+  "title": "Match the Cards - Free Memory Game | MindHack.in",
+  "description": "Play the free online Match the Cards Memory Game on MindHack.in! Challenge your brain, improve memory, and boost focus.",
+  "canonical": "{{SITE_URL}}games/match-the-card/",
+  "og": {
+    "type": "website",
+    "url": "{{SITE_URL}}games/match-the-card/",
+    "title": "Match the Cards - Free Memory Game | MindHack.in",
+    "description": "Play the free online Match the Cards Memory Game on MindHack.in! Challenge your brain, improve memory, and boost focus.",
+    "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/animals.jpg"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "url": "{{SITE_URL}}games/match-the-card/",
+    "title": "Match the Cards - Free Memory Game | MindHack.in",
+    "description": "Play the free online Match the Cards Memory Game on MindHack.in! Challenge your brain, improve memory, and boost focus.",
+    "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/animals.jpg"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{SITE_URL}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Games",
+          "item": "{{SITE_URL}}games/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Match the Cards",
+          "item": "{{SITE_URL}}games/match-the-card/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a memory card game online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A memory card game online is an interactive version of the traditional cards face-down matching game, hosted on the web. Players flip two cards at a time, try to find pairs that match, and use memory to remember card positions. This format is popular because it can be played easily and is extremely flexible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a flip and match game?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A flip and match game is essentially the same concept — you \"flip\" cards to reveal them, then you \"match\" them by finding their pair. The terms are often used interchangeably with pairs game or matching game cards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are pairs game cards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pairs game cards refer to the cards used in a matching game where each card has exactly one matching partner somewhere on the board. The objective is to find all the matching pairs by flipping cards and remembering what you've seen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is card matching good for my mind?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Matching games train memory, visual recognition, concentration and problem-solving skills. For example, they encourage you to remember where a card is after you've seen it once and then flipped it down again. This process strengthens your short-term and working memory."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to pay to play at MindHack.in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — you can play all of our card matching games and all our puzzles for free. Our goal is to provide free brain-training and entertainment through a variety of game formats."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can adults benefit from these matching games, or is it just for kids?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely adults can benefit. While many matching games are pitched for children, the cognitive benefits apply to any age — improved memory, focus, mental agility and reaction time."
+          }
+        }
+      ]
+    }
+  ],
+  "pageType": "games",
+  "gameLink": "games/match-the-card/",
+  "excludeGame": "match-the-cards",
+  "pageContentClass": "page-content iframe-page",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Games",
+      "href": "/games/"
+    },
+    {
+      "label": "Match the Cards",
+      "href": null
+    }
+  ],
+  "gameFrame": null,
+  "gameGrid": {
+    "gridClass": "games-grid"
+  },
+  "variantSet": "matchTheCard",
+  "hasContactForm": false
+}

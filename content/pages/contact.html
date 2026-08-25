@@ -1,0 +1,30 @@
+<section id="contentSection">
+                <div class="contact-header">
+                    <!--@BREADCRUMBS@-->
+                    <h1>Contact Us</h1>
+                    <p class="contact-subtitle">Found a bug, have a game suggestion, or just want to say hello? We'd love to hear from you.</p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-card">
+                        <!--
+                            FORM SETUP (do this once before going live):
+                            1. Create a free account at https://formspree.io
+                            2. Create a new form and set its notification email to {{SUPPORT_EMAIL}}
+                            3. Formspree will give you a form ID that looks like "xySDkabc"
+                            4. Replace YOUR_FORM_ID in the action attribute below with that ID
+                            Until step 4 is done, this form will not actually deliver messages -
+                            visitors can still reach you via the mailto link in the card on the right.
+                        -->
+                        <!--@CONTACTFORM@-->
+                    </div>
+
+                    <div class="contact-card contact-info-card">
+                        <h2><i class="fas fa-envelope"></i> Prefer Email?</h2>
+                        <p>Skip the form and email us directly - we check this inbox regularly.</p>
+                        <a class="contact-email-link" href="mailto:{{SUPPORT_EMAIL}}">
+                            <i class="fas fa-paper-plane"></i> {{SUPPORT_EMAIL}}
+                        </a>
+                    </div>
+                </div>
+            </section>

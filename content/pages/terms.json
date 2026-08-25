@@ -1,0 +1,58 @@
+{
+  "route": "/terms/",
+  "title": "Terms of Service - Free Online Brain Games & Puzzles | Mindhack.in",
+  "description": "The rules for using Mindhack.in's free browser games and optional accounts, in plain language - what we promise, what we don't, and what's off-limits.",
+  "canonical": "{{SITE_URL}}terms/",
+  "og": {
+    "type": "website",
+    "url": "{{SITE_URL}}terms/",
+    "title": "Terms of Service - Free Online Brain Games & Puzzles | Mindhack.in",
+    "description": "The rules for using Mindhack.in's free browser games and optional accounts, in plain language - what we promise, what we don't, and what's off-limits.",
+    "image": "{{LOGO_URL}}"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "url": "{{SITE_URL}}terms/",
+    "title": "Terms of Service - Free Online Brain Games & Puzzles | Mindhack.in",
+    "description": "The rules for using Mindhack.in's free browser games and optional accounts, in plain language - what we promise, what we don't, and what's off-limits.",
+    "image": "{{LOGO_URL}}"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{SITE_URL}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Terms of Service",
+          "item": "{{SITE_URL}}terms/"
+        }
+      ]
+    }
+  ],
+  "pageType": "terms",
+  "gameLink": null,
+  "excludeGame": null,
+  "pageContentClass": "page-content",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Terms of Service",
+      "href": null
+    }
+  ],
+  "gameFrame": null,
+  "gameGrid": null,
+  "variantSet": null,
+  "hasContactForm": false
+}

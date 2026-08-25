@@ -1,0 +1,103 @@
+{
+  "route": "/games/pacman/",
+  "title": "Play Pac-Man Game Online Free - Classic Arcade Game | Mindhack.in",
+  "description": "Play the classic Pac-Man game online for free. Navigate the maze, eat pellets, avoid ghosts, and relive the iconic arcade experience. No age limit, No fees required",
+  "canonical": "{{SITE_URL}}games/pacman/",
+  "og": {
+    "type": "website",
+    "url": "{{SITE_URL}}games/pacman/",
+    "title": "Play Pac-Man Game Online Free - Classic Arcade Game | Mindhack.in",
+    "description": "Play the classic Pac-Man game online for free on Mindhack.in. Navigate the maze, eat pellets, avoid ghosts, and relive the iconic arcade experience.",
+    "image": "{{DYNAMIC_RESOURCE}}games/pacman.png"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "url": "{{SITE_URL}}games/pacman/",
+    "title": "Play Pac-Man Game Online Free - Classic Arcade Game | Mindhack.in",
+    "description": "Play the classic Pac-Man game online for free on Mindhack.in. Navigate the maze, eat pellets, avoid ghosts, and relive the iconic arcade experience.",
+    "image": "{{DYNAMIC_RESOURCE}}games/pacman.png"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{SITE_URL}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Games",
+          "item": "{{SITE_URL}}games/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pacman",
+          "item": "{{SITE_URL}}games/pacman/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Pac-Man free to play on Mindhack.in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, it's completely free and runs directly in your browser - no download or account needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I control Pac-Man?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use your keyboard's arrow keys on desktop, or the on-screen touch controls on mobile, to guide Pac-Man through the maze."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the goal of the game?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eat every dot in the maze while avoiding the four ghosts. Grab a power pellet in a corner and you can turn the tables and eat the ghosts instead, for a short time."
+          }
+        }
+      ]
+    }
+  ],
+  "pageType": "games",
+  "gameLink": "games/pacman/",
+  "excludeGame": "pacman",
+  "pageContentClass": "page-content iframe-page",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Games",
+      "href": "/games/"
+    },
+    {
+      "label": "Pacman",
+      "href": null
+    }
+  ],
+  "gameFrame": {
+    "title": "Pac-Man Game",
+    "iframeStyle": "flex: none; height: calc(100vh - 60px); position: relative;"
+  },
+  "gameGrid": {
+    "gridClass": "games-grid"
+  },
+  "variantSet": null,
+  "hasContactForm": false
+}

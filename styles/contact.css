@@ -1,0 +1,180 @@
+/* CONTACT PAGE — ported from the legacy page's inline <style> block, which
+ * the HTML migration didn't carry over (it only extracts pageConfig, the
+ * game iframe/grid and breadcrumbs, not arbitrary <style> tags). Without
+ * this the contact form rendered as bare unstyled inputs, and — worse —
+ * the anti-spam honeypot field (meant to be invisible to real visitors)
+ * was sitting in plain view between Message and the submit button. */
+
+.contact-header {
+    text-align: center;
+    margin: 40px 0 50px;
+}
+
+.contact-header h1 {
+    font-size: 44px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #22c55e, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.contact-subtitle {
+    color: #94a3b8;
+    font-size: 17px;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+@media (max-width: 860px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 35px;
+    backdrop-filter: blur(10px);
+}
+
+.contact-form label {
+    display: block;
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 12px 14px;
+    color: #e2e8f0;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+.contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0066ff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+}
+
+.contact-submit-btn:hover {
+    background: #0052cc;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 102, 255, 0.5);
+}
+
+.contact-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.contact-form-note {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 14px;
+}
+
+.contact-form-status {
+    margin-top: 14px;
+    font-size: 14px;
+    display: none;
+}
+
+.contact-form-status.success {
+    color: #22c55e;
+    display: block;
+}
+
+.contact-form-status.error {
+    color: #f87171;
+    display: block;
+}
+
+.contact-info-card h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #3b82f6;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.contact-info-card p {
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.contact-email-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #22c55e;
+    text-decoration: none;
+    font-weight: 600;
+    word-break: break-all;
+}
+
+.contact-email-link:hover {
+    text-decoration: underline;
+}
+
+/* Honeypot field — hidden from real visitors, catches simple form-spam bots.
+ * Without this rule the field (and its "Leave this field empty" label) sat
+ * in plain view in the middle of the form. */
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
