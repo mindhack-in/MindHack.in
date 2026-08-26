@@ -1,0 +1,89 @@
+{
+  "route": "/blog/how-to-get-faster-at-rubiks-cube/",
+  "title": "How to Get Faster at Rubik's Cube: A Real Roadmap | Mindhack.in",
+  "description": "Why beginner method solvers plateau around 2 minutes, what CFOP actually changes, and the order to learn it in so you don't get slower before you get faster.",
+  "canonical": "{{SITE_URL}}blog/how-to-get-faster-at-rubiks-cube/",
+  "og": {
+    "type": "article",
+    "url": "{{SITE_URL}}blog/how-to-get-faster-at-rubiks-cube/",
+    "title": "How to Get Faster at Rubik's Cube: A Real Roadmap | Mindhack.in",
+    "description": "Why beginner method solvers plateau around 2 minutes, what CFOP actually changes, and the order to learn it in so you don't get slower before you get faster.",
+    "image": "{{LOGO_URL}}"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "url": "{{SITE_URL}}blog/how-to-get-faster-at-rubiks-cube/",
+    "title": "How to Get Faster at Rubik's Cube: A Real Roadmap | Mindhack.in",
+    "description": "Why beginner method solvers plateau around 2 minutes, what CFOP actually changes, and the order to learn it in so you don't get slower before you get faster.",
+    "image": "{{LOGO_URL}}"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{SITE_URL}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "{{SITE_URL}}blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Get Faster at Rubik's Cube",
+          "item": "{{SITE_URL}}blog/how-to-get-faster-at-rubiks-cube/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "How to Get Faster at Rubik's Cube",
+      "description": "Why beginner method solvers plateau around 2 minutes, what CFOP actually changes, and the order to learn it in so you don't get slower before you get faster.",
+      "datePublished": "2026-08-03",
+      "dateModified": "2026-08-03",
+      "author": {
+        "@type": "Organization",
+        "name": "Mindhack.in"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mindhack.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{LOGO_URL}}"
+        }
+      },
+      "mainEntityOfPage": "{{SITE_URL}}blog/how-to-get-faster-at-rubiks-cube/"
+    }
+  ],
+  "pageType": "blog",
+  "gameLink": null,
+  "excludeGame": null,
+  "pageContentClass": "page-content",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog/"
+    },
+    {
+      "label": "How to Get Faster at Rubik's Cube",
+      "href": null
+    }
+  ],
+  "gameFrame": null,
+  "gameGrid": null,
+  "variantSet": null,
+  "hasContactForm": false
+}

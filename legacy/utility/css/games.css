@@ -1,0 +1,229 @@
+ .games {
+     padding: 40px 60px;
+ }
+
+ /* HEADER */
+ .games-header {
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 30px;
+ }
+
+ .games-header .left {
+     color: #22c55e;
+     font-weight: 500;
+ }
+
+ .games-header .right {
+     color: #3b82f6;
+     cursor: pointer;
+ }
+
+ /* GRID */
+ .games-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 25px;
+ }
+
+ /* CARD */
+ .game-card {
+     position: relative;
+     padding: 30px;
+     background: rgba(3, 15, 30, 0.8);
+     color: white;
+
+     /* CUT CORNERS */
+     clip-path: polygon(8% 0%,
+             92% 0%,
+             100% 10%,
+             100% 90%,
+             92% 100%,
+             8% 100%,
+             0% 90%,
+             0% 10%);
+
+     border: 1px solid rgba(255, 255, 255, 0.08);
+     transition: 0.3s;
+ }
+
+ /* HOVER */
+ .game-card:hover {
+     transform: translateY(-5px);
+     border-color: rgba(59, 130, 246, 0.5);
+     box-shadow: 0 0 25px rgba(59, 130, 246, 0.2);
+ }
+
+ /* IMAGE */
+ .game-img {
+     width: 80px;
+     margin-bottom: 20px;
+ }
+
+ /* TITLE */
+ .game-card h3 {
+     font-size: 16px;
+     margin-bottom: 10px;
+     letter-spacing: 1px;
+ }
+
+ /* DESC */
+ .game-card p {
+     font-size: 13px;
+     color: #94a3b8;
+     margin-bottom: 20px;
+     line-height: 1.5;
+ }
+
+ /* BUTTON */
+ .play-btn {
+     position: relative;
+     padding: 10px 20px;
+     font-size: 13px;
+     color: white;
+     border: none;
+     cursor: pointer;
+     background: transparent;
+
+     clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+ }
+
+ /* button layers */
+ .play-btn::before {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background: linear-gradient(135deg, #2563eb, #1d4ed8);
+     z-index: -2;
+     clip-path: inherit;
+ }
+
+ .play-btn::after {
+     content: "";
+     position: absolute;
+     inset: -1px;
+     background: linear-gradient(135deg, #3b82f6, #60a5fa);
+     z-index: -3;
+     clip-path: inherit;
+     filter: blur(2px);
+ }
+
+
+
+
+ @media (max-width: 1024px) {
+    .games {
+        padding: 30px 40px;
+    }
+
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* TABLETS */
+@media (max-width: 768px) {
+    .games {
+        padding: 25px 20px;
+    }
+
+    .games-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-card {
+        padding: 25px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .games {
+        padding: 20px 15px;
+    }
+
+    .game-card {
+        padding: 20px;
+    }
+
+    .game-img {
+        width: 60px;
+    }
+
+    .game-card h3 {
+        font-size: 14px;
+    }
+
+    .game-card p {
+        font-size: 12px;
+    }
+
+    .play-btn {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+    
+}
+
+/* GAME IFRAME STYLES */
+.page-content.iframe-page {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.iframe-section {
+    flex: 1;
+    width: 100%;
+        height: 70%;
+
+    padding: 0;
+    display: flex;
+}
+
+.game-iframe {
+    width: 100%;
+    border: none;
+    display: block;
+    flex: 1;
+}
+
+/* GAME MODE */
+.scroll-locked {
+    overflow: hidden !important;
+}
+
+.exit-game-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(3, 15, 30, 0.9);
+    color: #fff;
+    border: 1px solid rgba(59, 130, 246, 0.5);
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    line-height: 36px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5), inset 0 0 10px rgba(59,130,246,0.2);
+    z-index: 100;
+    display: none;
+    transition: 0.3s ease;
+}
+
+.exit-game-btn:hover {
+    background: rgba(3, 15, 30, 1);
+    border-color: #ef4444;
+    color: #ef4444;
+    box-shadow: 0 4px 20px rgba(239, 68, 68, 0.4), inset 0 0 15px rgba(239, 68, 68, 0.3);
+    transform: translateX(-50%) translateY(-2px);
+}

@@ -1,0 +1,89 @@
+{
+  "route": "/blog/how-to-play-sudoku-for-beginners/",
+  "title": "How to Play Sudoku for Beginners: Rules, Strategy, Mistakes | Mindhack.in",
+  "description": "A real beginner's guide to Sudoku: the one rule that matters, two techniques that solve most easy puzzles, and the guessing habit that wrecks new players.",
+  "canonical": "{{SITE_URL}}blog/how-to-play-sudoku-for-beginners/",
+  "og": {
+    "type": "article",
+    "url": "{{SITE_URL}}blog/how-to-play-sudoku-for-beginners/",
+    "title": "How to Play Sudoku for Beginners: Rules, Strategy, Mistakes | Mindhack.in",
+    "description": "A real beginner's guide to Sudoku: the one rule that matters, two techniques that solve most easy puzzles, and the guessing habit that wrecks new players.",
+    "image": "{{LOGO_URL}}"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "url": "{{SITE_URL}}blog/how-to-play-sudoku-for-beginners/",
+    "title": "How to Play Sudoku for Beginners: Rules, Strategy, Mistakes | Mindhack.in",
+    "description": "A real beginner's guide to Sudoku: the one rule that matters, two techniques that solve most easy puzzles, and the guessing habit that wrecks new players.",
+    "image": "{{LOGO_URL}}"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{SITE_URL}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "{{SITE_URL}}blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Play Sudoku for Beginners",
+          "item": "{{SITE_URL}}blog/how-to-play-sudoku-for-beginners/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "How to Play Sudoku for Beginners",
+      "description": "A real beginner's guide to Sudoku: the one rule that matters, two techniques that solve most easy puzzles, and the guessing habit that wrecks new players.",
+      "datePublished": "2026-08-03",
+      "dateModified": "2026-08-03",
+      "author": {
+        "@type": "Organization",
+        "name": "Mindhack.in"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mindhack.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{LOGO_URL}}"
+        }
+      },
+      "mainEntityOfPage": "{{SITE_URL}}blog/how-to-play-sudoku-for-beginners/"
+    }
+  ],
+  "pageType": "blog",
+  "gameLink": null,
+  "excludeGame": null,
+  "pageContentClass": "page-content",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog/"
+    },
+    {
+      "label": "How to Play Sudoku for Beginners",
+      "href": null
+    }
+  ],
+  "gameFrame": null,
+  "gameGrid": null,
+  "variantSet": null,
+  "hasContactForm": false
+}

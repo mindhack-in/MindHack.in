@@ -1,0 +1,61 @@
+{
+  "route": "/games/air-force-mission/demon-skies/",
+  "title": "Demon Strikes - Free Online Space Shooter Game | Mindhack.in",
+  "description": "Play Demon Strikes free on Mindhack.in. Dodge enemy fire, blast through waves of demons, and see how far you can get - no download, runs right in your browser.",
+  "canonical": "{{SITE_URL}}games/air-force-mission/demon-skies/",
+  "og": {},
+  "twitter": {},
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{SITE_URL}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Games",
+          "item": "{{SITE_URL}}games/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Demon Skies",
+          "item": "{{SITE_URL}}games/air-force-mission/demon-skies/"
+        }
+      ]
+    }
+  ],
+  "pageType": "games",
+  "gameLink": "games/demon-strikes/",
+  "excludeGame": "demon-strikes",
+  "pageContentClass": "page-content iframe-page",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Games",
+      "href": "/games/"
+    },
+    {
+      "label": "Demon Strikes",
+      "href": null
+    }
+  ],
+  "gameFrame": {
+    "title": "2048 Game",
+    "iframeStyle": "flex: none; height: calc(100vh - 60px); position: relative;"
+  },
+  "gameGrid": {
+    "gridClass": "games-grid"
+  },
+  "variantSet": null,
+  "hasContactForm": false
+}

@@ -1,0 +1,103 @@
+{
+  "route": "/games/rubiks-cube-scramble/2X2/",
+  "title": "Play 2X2 Rubik's Cube Timer Online - Free Speedcubing Timer | Mindhack.in",
+  "description": "Track your 2X2 Rubik's Cube solving time with MindHack's free online cube timer. Get random scrambles, Ao5 & Ao12 averages. Perfect for speedcubers.",
+  "canonical": "{{SITE_URL}}games/rubiks-cube-scramble/2X2/",
+  "og": {
+    "type": "website",
+    "url": "{{SITE_URL}}games/rubiks-cube-scramble/2X2/",
+    "title": "Play 2X2 Rubik's Cube Timer Online - Free Speedcubing Timer | Mindhack.in",
+    "description": "Track your 2X2 Rubik's Cube solving time with MindHack's free online cube timer. Get random scrambles, Ao5 & Ao12 averages. Perfect for speedcubers.",
+    "image": "{{DYNAMIC_RESOURCE}}games/rubikscube/2X2.jpg"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "url": "{{SITE_URL}}games/rubiks-cube-scramble/2X2/",
+    "title": "Play 2X2 Rubik's Cube Timer Online - Free Speedcubing Timer | Mindhack.in",
+    "description": "Track your 2X2 Rubik's Cube solving time with MindHack's free online cube timer. Get random scrambles, Ao5 & Ao12 averages. Perfect for speedcubers.",
+    "image": "{{DYNAMIC_RESOURCE}}games/rubikscube/2X2.jpg"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "2X2 Rubik's Cube Timer",
+      "operatingSystem": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "browserRequirements": "Requires HTML5 compatible browser",
+      "url": "{{SITE_URL}}games/rubiks-cube-scramble/2X2/",
+      "description": "Track your 2X2 Rubik's Cube solving time with MindHack's free online cube timer. Get random scrambles, Ao5 & Ao12 averages. Perfect for beginners and speedcubers.",
+      "featureList": "2X2 random scrambles, Averages calculation (Ao5, Ao12), WCA penalties (+2, DNF), Responsive mobile-friendly design",
+      "publisher": {
+        "@type": "Organization",
+        "name": "MindHack",
+        "url": "{{SITE_URL}}"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{SITE_URL}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Games",
+          "item": "{{SITE_URL}}games/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rubik's Cube Scramble",
+          "item": "{{SITE_URL}}games/rubiks-cube-scramble/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "2X2 Rubik's Cube Timer",
+          "item": "{{SITE_URL}}games/rubiks-cube-scramble/2X2/"
+        }
+      ]
+    }
+  ],
+  "pageType": "games",
+  "gameLink": "/games/rubiks-cube-scramble/2X2/index.html",
+  "size": 2,
+  "excludeGame": null,
+  "pageContentClass": "page-content iframe-page",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Games",
+      "href": "/games/"
+    },
+    {
+      "label": "Rubik's Cube Scramble",
+      "href": "/games/rubiks-cube-scramble/"
+    },
+    {
+      "label": "2X2",
+      "href": null
+    }
+  ],
+  "gameFrame": {
+    "title": null,
+    "iframeStyle": "flex: none; overflow-y: hidden; position: relative;"
+  },
+  "gameGrid": null,
+  "variantSet": null,
+  "hasContactForm": false
+}

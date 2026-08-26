@@ -1,0 +1,58 @@
+{
+  "route": "/privacy/",
+  "title": "Privacy Policy - Free Online Brain Games & Puzzles | Mindhack.in",
+  "description": "What Mindhack.in collects (analytics, contact form, optional account info), why, and how to ask us to delete it. Plain-language privacy policy.",
+  "canonical": "{{SITE_URL}}privacy/",
+  "og": {
+    "type": "website",
+    "url": "{{SITE_URL}}privacy/",
+    "title": "Privacy Policy - Free Online Brain Games & Puzzles | Mindhack.in",
+    "description": "What Mindhack.in collects (analytics, contact form, optional account info), why, and how to ask us to delete it. Plain-language privacy policy.",
+    "image": "{{LOGO_URL}}"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "url": "{{SITE_URL}}privacy/",
+    "title": "Privacy Policy - Free Online Brain Games & Puzzles | Mindhack.in",
+    "description": "What Mindhack.in collects (analytics, contact form, optional account info), why, and how to ask us to delete it. Plain-language privacy policy.",
+    "image": "{{LOGO_URL}}"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{SITE_URL}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Privacy Policy",
+          "item": "{{SITE_URL}}privacy/"
+        }
+      ]
+    }
+  ],
+  "pageType": "privacy",
+  "gameLink": null,
+  "excludeGame": null,
+  "pageContentClass": "page-content",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Privacy Policy",
+      "href": null
+    }
+  ],
+  "gameFrame": null,
+  "gameGrid": null,
+  "variantSet": null,
+  "hasContactForm": false
+}

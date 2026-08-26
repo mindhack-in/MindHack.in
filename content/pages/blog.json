@@ -1,0 +1,90 @@
+{
+  "route": "/blog/",
+  "title": "Blog - Game Guides & Brain Training Research | Mindhack.in",
+  "description": "Guides for Mindhack.in's games and a straight look at what brain-training research actually shows - no hype, real sources.",
+  "canonical": "{{SITE_URL}}blog/",
+  "og": {
+    "type": "website",
+    "url": "{{SITE_URL}}blog/",
+    "title": "Blog - Game Guides & Brain Training Research | Mindhack.in",
+    "description": "Guides for Mindhack.in's games and a straight look at what brain-training research actually shows - no hype, real sources.",
+    "image": "{{LOGO_URL}}"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "url": "{{SITE_URL}}blog/",
+    "title": "Blog - Game Guides & Brain Training Research | Mindhack.in",
+    "description": "Guides for Mindhack.in's games and a straight look at what brain-training research actually shows - no hype, real sources.",
+    "image": "{{LOGO_URL}}"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{SITE_URL}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "{{SITE_URL}}blog/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Mindhack.in Blog",
+      "url": "{{SITE_URL}}blog/",
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "How to Play Sudoku for Beginners",
+          "url": "{{SITE_URL}}blog/how-to-play-sudoku-for-beginners/",
+          "datePublished": "2026-08-03"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "How to Get Faster at Rubik's Cube",
+          "url": "{{SITE_URL}}blog/how-to-get-faster-at-rubiks-cube/",
+          "datePublished": "2026-08-03"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Free Online Brain Games for Students in India (2026)",
+          "url": "{{SITE_URL}}blog/best-free-brain-games-for-students-in-india/",
+          "datePublished": "2026-08-03"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "What Brain Training Games Actually Do, According to Research",
+          "url": "{{SITE_URL}}blog/benefits-of-brain-training-games/",
+          "datePublished": "2026-08-03"
+        }
+      ]
+    }
+  ],
+  "pageType": "blog",
+  "gameLink": null,
+  "excludeGame": null,
+  "pageContentClass": "page-content",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Blog",
+      "href": null
+    }
+  ],
+  "gameFrame": null,
+  "gameGrid": null,
+  "variantSet": null,
+  "hasContactForm": false
+}

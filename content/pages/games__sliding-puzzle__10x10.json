@@ -1,0 +1,81 @@
+{
+  "route": "/games/sliding-puzzle/10x10/",
+  "title": "Play 10x10 Sliding Puzzle Online - Free Tile Game | Mindhack.in",
+  "description": "Play the free online 10x10 Sliding Puzzle on Mindhack.in! Slide numbered tiles to solve the 10x10 grid. Improve logic, memory, and spatial reasoning now.",
+  "canonical": "{{SITE_URL}}games/sliding-puzzle/10x10/",
+  "og": {
+    "type": "website",
+    "url": "{{SITE_URL}}games/sliding-puzzle/10x10/",
+    "title": "Play 10x10 Sliding Puzzle Online - Free Tile Game | Mindhack.in",
+    "description": "Play the free online 10x10 Sliding Puzzle on Mindhack.in! Slide numbered tiles to solve the 10x10 grid. Improve logic, memory, and spatial reasoning now.",
+    "image": "{{DYNAMIC_RESOURCE}}games/slidingpuzzle.png"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "url": "{{SITE_URL}}games/sliding-puzzle/10x10/",
+    "title": "Play 10x10 Sliding Puzzle Online - Free Tile Game | Mindhack.in",
+    "description": "Play the free online 10x10 Sliding Puzzle on Mindhack.in! Slide numbered tiles to solve the 10x10 grid. Improve logic, memory, and spatial reasoning now.",
+    "image": "{{DYNAMIC_RESOURCE}}games/slidingpuzzle.png"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{SITE_URL}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Games",
+          "item": "{{SITE_URL}}games/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sliding Puzzle",
+          "item": "{{SITE_URL}}games/sliding-puzzle/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "10X10 Sliding Puzzle",
+          "item": "{{SITE_URL}}games/sliding-puzzle/10x10/"
+        }
+      ]
+    }
+  ],
+  "pageType": "games",
+  "gameLink": "/games/sliding-puzzle/index.html?size=10",
+  "excludeGame": null,
+  "pageContentClass": "page-content iframe-page",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Games",
+      "href": "/games/"
+    },
+    {
+      "label": "Sliding Puzzle",
+      "href": "/games/sliding-puzzle/"
+    },
+    {
+      "label": "10x10",
+      "href": null
+    }
+  ],
+  "gameFrame": {
+    "title": "Sliding Puzzle Game",
+    "iframeStyle": "flex: none; height: calc(100vh - 60px); position: relative;"
+  },
+  "gameGrid": null,
+  "variantSet": null,
+  "hasContactForm": false
+}

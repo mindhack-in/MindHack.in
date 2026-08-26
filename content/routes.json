@@ -1,0 +1,362 @@
+[
+  {
+    "route": "/about/",
+    "slug": "about",
+    "segments": [
+      "about"
+    ]
+  },
+  {
+    "route": "/blog/benefits-of-brain-training-games/",
+    "slug": "blog__benefits-of-brain-training-games",
+    "segments": [
+      "blog",
+      "benefits-of-brain-training-games"
+    ]
+  },
+  {
+    "route": "/blog/best-free-brain-games-for-students-in-india/",
+    "slug": "blog__best-free-brain-games-for-students-in-india",
+    "segments": [
+      "blog",
+      "best-free-brain-games-for-students-in-india"
+    ]
+  },
+  {
+    "route": "/blog/how-to-get-faster-at-rubiks-cube/",
+    "slug": "blog__how-to-get-faster-at-rubiks-cube",
+    "segments": [
+      "blog",
+      "how-to-get-faster-at-rubiks-cube"
+    ]
+  },
+  {
+    "route": "/blog/how-to-play-sudoku-for-beginners/",
+    "slug": "blog__how-to-play-sudoku-for-beginners",
+    "segments": [
+      "blog",
+      "how-to-play-sudoku-for-beginners"
+    ]
+  },
+  {
+    "route": "/blog/",
+    "slug": "blog",
+    "segments": [
+      "blog"
+    ]
+  },
+  {
+    "route": "/contact/",
+    "slug": "contact",
+    "segments": [
+      "contact"
+    ]
+  },
+  {
+    "route": "/games/2048/",
+    "slug": "games__2048",
+    "segments": [
+      "games",
+      "2048"
+    ]
+  },
+  {
+    "route": "/games/air-force-mission/demon-skies/",
+    "slug": "games__air-force-mission__demon-skies",
+    "segments": [
+      "games",
+      "air-force-mission",
+      "demon-skies"
+    ]
+  },
+  {
+    "route": "/games/flappy-bird/",
+    "slug": "games__flappy-bird",
+    "segments": [
+      "games",
+      "flappy-bird"
+    ]
+  },
+  {
+    "route": "/games/",
+    "slug": "games",
+    "segments": [
+      "games"
+    ]
+  },
+  {
+    "route": "/games/match-the-card/animals/",
+    "slug": "games__match-the-card__animals",
+    "segments": [
+      "games",
+      "match-the-card",
+      "animals"
+    ]
+  },
+  {
+    "route": "/games/match-the-card/birds/",
+    "slug": "games__match-the-card__birds",
+    "segments": [
+      "games",
+      "match-the-card",
+      "birds"
+    ]
+  },
+  {
+    "route": "/games/match-the-card/desserts/",
+    "slug": "games__match-the-card__desserts",
+    "segments": [
+      "games",
+      "match-the-card",
+      "desserts"
+    ]
+  },
+  {
+    "route": "/games/match-the-card/faces/",
+    "slug": "games__match-the-card__faces",
+    "segments": [
+      "games",
+      "match-the-card",
+      "faces"
+    ]
+  },
+  {
+    "route": "/games/match-the-card/fruits/",
+    "slug": "games__match-the-card__fruits",
+    "segments": [
+      "games",
+      "match-the-card",
+      "fruits"
+    ]
+  },
+  {
+    "route": "/games/match-the-card/",
+    "slug": "games__match-the-card",
+    "segments": [
+      "games",
+      "match-the-card"
+    ]
+  },
+  {
+    "route": "/games/match-the-card/sea-creatures/",
+    "slug": "games__match-the-card__sea-creatures",
+    "segments": [
+      "games",
+      "match-the-card",
+      "sea-creatures"
+    ]
+  },
+  {
+    "route": "/games/match-the-card/sports/",
+    "slug": "games__match-the-card__sports",
+    "segments": [
+      "games",
+      "match-the-card",
+      "sports"
+    ]
+  },
+  {
+    "route": "/games/match-the-card/symbols/",
+    "slug": "games__match-the-card__symbols",
+    "segments": [
+      "games",
+      "match-the-card",
+      "symbols"
+    ]
+  },
+  {
+    "route": "/games/match-the-card/transport/",
+    "slug": "games__match-the-card__transport",
+    "segments": [
+      "games",
+      "match-the-card",
+      "transport"
+    ]
+  },
+  {
+    "route": "/games/match-the-card/vegetables/",
+    "slug": "games__match-the-card__vegetables",
+    "segments": [
+      "games",
+      "match-the-card",
+      "vegetables"
+    ]
+  },
+  {
+    "route": "/games/pacman/",
+    "slug": "games__pacman",
+    "segments": [
+      "games",
+      "pacman"
+    ]
+  },
+  {
+    "route": "/games/rubiks-cube-scramble/2X2/",
+    "slug": "games__rubiks-cube-scramble__2X2",
+    "segments": [
+      "games",
+      "rubiks-cube-scramble",
+      "2X2"
+    ]
+  },
+  {
+    "route": "/games/rubiks-cube-scramble/3X3/",
+    "slug": "games__rubiks-cube-scramble__3X3",
+    "segments": [
+      "games",
+      "rubiks-cube-scramble",
+      "3X3"
+    ]
+  },
+  {
+    "route": "/games/rubiks-cube-scramble/4X4/",
+    "slug": "games__rubiks-cube-scramble__4X4",
+    "segments": [
+      "games",
+      "rubiks-cube-scramble",
+      "4X4"
+    ]
+  },
+  {
+    "route": "/games/rubiks-cube-scramble/5X5/",
+    "slug": "games__rubiks-cube-scramble__5X5",
+    "segments": [
+      "games",
+      "rubiks-cube-scramble",
+      "5X5"
+    ]
+  },
+  {
+    "route": "/games/rubiks-cube-scramble/6X6/",
+    "slug": "games__rubiks-cube-scramble__6X6",
+    "segments": [
+      "games",
+      "rubiks-cube-scramble",
+      "6X6"
+    ]
+  },
+  {
+    "route": "/games/rubiks-cube-scramble/7X7/",
+    "slug": "games__rubiks-cube-scramble__7X7",
+    "segments": [
+      "games",
+      "rubiks-cube-scramble",
+      "7X7"
+    ]
+  },
+  {
+    "route": "/games/rubiks-cube-scramble/",
+    "slug": "games__rubiks-cube-scramble",
+    "segments": [
+      "games",
+      "rubiks-cube-scramble"
+    ]
+  },
+  {
+    "route": "/games/sliding-puzzle/10x10/",
+    "slug": "games__sliding-puzzle__10x10",
+    "segments": [
+      "games",
+      "sliding-puzzle",
+      "10x10"
+    ]
+  },
+  {
+    "route": "/games/sliding-puzzle/3x3/",
+    "slug": "games__sliding-puzzle__3x3",
+    "segments": [
+      "games",
+      "sliding-puzzle",
+      "3x3"
+    ]
+  },
+  {
+    "route": "/games/sliding-puzzle/4x4/",
+    "slug": "games__sliding-puzzle__4x4",
+    "segments": [
+      "games",
+      "sliding-puzzle",
+      "4x4"
+    ]
+  },
+  {
+    "route": "/games/sliding-puzzle/5x5/",
+    "slug": "games__sliding-puzzle__5x5",
+    "segments": [
+      "games",
+      "sliding-puzzle",
+      "5x5"
+    ]
+  },
+  {
+    "route": "/games/sliding-puzzle/6x6/",
+    "slug": "games__sliding-puzzle__6x6",
+    "segments": [
+      "games",
+      "sliding-puzzle",
+      "6x6"
+    ]
+  },
+  {
+    "route": "/games/sliding-puzzle/7x7/",
+    "slug": "games__sliding-puzzle__7x7",
+    "segments": [
+      "games",
+      "sliding-puzzle",
+      "7x7"
+    ]
+  },
+  {
+    "route": "/games/sliding-puzzle/8x8/",
+    "slug": "games__sliding-puzzle__8x8",
+    "segments": [
+      "games",
+      "sliding-puzzle",
+      "8x8"
+    ]
+  },
+  {
+    "route": "/games/sliding-puzzle/9x9/",
+    "slug": "games__sliding-puzzle__9x9",
+    "segments": [
+      "games",
+      "sliding-puzzle",
+      "9x9"
+    ]
+  },
+  {
+    "route": "/games/sliding-puzzle/",
+    "slug": "games__sliding-puzzle",
+    "segments": [
+      "games",
+      "sliding-puzzle"
+    ]
+  },
+  {
+    "route": "/games/sudoku/",
+    "slug": "games__sudoku",
+    "segments": [
+      "games",
+      "sudoku"
+    ]
+  },
+  {
+    "route": "/",
+    "slug": "index",
+    "segments": []
+  },
+  {
+    "route": "/privacy/",
+    "slug": "privacy",
+    "segments": [
+      "privacy"
+    ]
+  },
+  {
+    "route": "/terms/",
+    "slug": "terms",
+    "segments": [
+      "terms"
+    ]
+  }
+]

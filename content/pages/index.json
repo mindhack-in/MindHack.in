@@ -1,0 +1,103 @@
+{
+  "route": "/",
+  "title": "Free Brain Games & Puzzles Online — No Download | Mindhack.in",
+  "description": "Play free brain games and puzzles online — no download needed. Mindhack.in offers memory, logic, and brain training challenges for mobile and desktop.",
+  "canonical": "{{SITE_URL}}",
+  "og": {
+    "type": "website",
+    "url": "{{SITE_URL}}",
+    "title": "Free Brain Games & Puzzles Online — No Download | Mindhack.in",
+    "description": "Play free brain games and puzzles online — no download needed. Mindhack.in offers memory, logic, and brain training challenges for mobile and desktop.",
+    "image": "{{LOGO_URL}}"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "url": "{{SITE_URL}}",
+    "title": "Free Brain Games & Puzzles Online — No Download | Mindhack.in",
+    "description": "Play free brain games and puzzles online — no download needed. Mindhack.in offers memory, logic, and brain training challenges for mobile and desktop.",
+    "image": "{{LOGO_URL}}"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Mindhack",
+      "url": "{{SITE_URL}}",
+      "description": "Free browser-based brain games and puzzles. Play Sudoku, 2048, Rubik's Cube timer, and more — no download required.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "MindHack",
+        "url": "{{SITE_URL}}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{LOGO_URL}}"
+        }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "{{SITE_URL}}games/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Free Brain Games & Puzzles Online — No Download | Mindhack.in",
+      "url": "{{SITE_URL}}",
+      "description": "Play free brain games and puzzles online — no download needed. Mindhack.in offers memory, logic, and brain training challenges for mobile and desktop.",
+      "inLanguage": "en"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need to download anything to play on Mindhack.in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, all games are fully browser-based. You can play free games online instantly without any downloads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the games suitable for all age groups?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Mindhack.in offers free online games and puzzles suitable for players of all ages, from kids to adults."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kind of games can I find on Mindhack.in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You'll find online games and puzzles such as Sudoku, memory card challenges, and other brain-boosting activities that help improve your focus and concentration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I play on mobile devices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. MindHack is fully responsive and optimized for smooth performance across all modern smartphones, tablets, and desktops."
+          }
+        }
+      ]
+    }
+  ],
+  "pageType": "home",
+  "gameLink": null,
+  "excludeGame": null,
+  "pageContentClass": "page-content",
+  "breadcrumbs": null,
+  "gameFrame": null,
+  "gameGrid": {
+    "gridClass": "games-grid"
+  },
+  "variantSet": null,
+  "hasContactForm": false
+}

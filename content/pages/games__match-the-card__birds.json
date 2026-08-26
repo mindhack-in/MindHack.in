@@ -1,0 +1,111 @@
+{
+  "route": "/games/match-the-card/birds/",
+  "title": "Match the Cards (Birds) - Free Online Memory Game | MindHack.in",
+  "description": "Play free birds card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
+  "canonical": "{{SITE_URL}}games/match-the-card/birds/",
+  "og": {
+    "type": "website",
+    "url": "{{SITE_URL}}games/match-the-card/birds/",
+    "title": "Match the Cards (Birds) - Free Online Memory Game | MindHack.in",
+    "description": "Play free birds card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
+    "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/birds.jpg"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "url": "{{SITE_URL}}games/match-the-card/birds/",
+    "title": "Match the Cards (Birds) - Free Online Memory Game | MindHack.in",
+    "description": "Play free birds card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
+    "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/birds.jpg"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{SITE_URL}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Games",
+          "item": "{{SITE_URL}}games/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Match the Cards",
+          "item": "{{SITE_URL}}games/match-the-card/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Birds Match the Cards",
+          "item": "{{SITE_URL}}games/match-the-card/birds/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the Birds matching game free to play?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, this bird-themed memory game is completely free on Mindhack.in, with no download or account required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I play the Birds match the cards game?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Flip two cards at a time and try to find the two that show the same bird. Remembering where each card is as you go is the whole game."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this game good for kids and beginners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - it's a simple, low-pressure recall game that works well for kids and older adults alike, with no time pressure forcing you to rush."
+          }
+        }
+      ]
+    }
+  ],
+  "pageType": "games",
+  "gameLink": "games/match-the-card/?type=birds",
+  "excludeGame": null,
+  "pageContentClass": "page-content iframe-page",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Games",
+      "href": "/games/"
+    },
+    {
+      "label": "Match the Cards",
+      "href": "/games/match-the-card/"
+    },
+    {
+      "label": "Birds",
+      "href": null
+    }
+  ],
+  "gameFrame": {
+    "title": "Match the Cards - Birds",
+    "iframeStyle": "flex: none; height: calc(100vh - 60px); position: relative;"
+  },
+  "gameGrid": null,
+  "variantSet": null,
+  "hasContactForm": false
+}

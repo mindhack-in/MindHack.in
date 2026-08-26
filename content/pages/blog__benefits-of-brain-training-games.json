@@ -1,0 +1,89 @@
+{
+  "route": "/blog/benefits-of-brain-training-games/",
+  "title": "What Brain Training Games Actually Do, According to Research | Mindhack.in",
+  "description": "What studies on brain-training games actually show - real, cited findings on memory and attention, and the limits researchers keep finding too.",
+  "canonical": "{{SITE_URL}}blog/benefits-of-brain-training-games/",
+  "og": {
+    "type": "article",
+    "url": "{{SITE_URL}}blog/benefits-of-brain-training-games/",
+    "title": "What Brain Training Games Actually Do, According to Research | Mindhack.in",
+    "description": "What studies on brain-training games actually show - real, cited findings on memory and attention, and the limits researchers keep finding too.",
+    "image": "{{LOGO_URL}}"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "url": "{{SITE_URL}}blog/benefits-of-brain-training-games/",
+    "title": "What Brain Training Games Actually Do, According to Research | Mindhack.in",
+    "description": "What studies on brain-training games actually show - real, cited findings on memory and attention, and the limits researchers keep finding too.",
+    "image": "{{LOGO_URL}}"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{SITE_URL}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "{{SITE_URL}}blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What Brain Training Games Actually Do",
+          "item": "{{SITE_URL}}blog/benefits-of-brain-training-games/"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "What Brain Training Games Actually Do, According to Research",
+      "description": "What studies on brain-training games actually show - real, cited findings on memory and attention, and the limits researchers keep finding too.",
+      "datePublished": "2026-08-03",
+      "dateModified": "2026-08-03",
+      "author": {
+        "@type": "Organization",
+        "name": "Mindhack.in"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mindhack.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{LOGO_URL}}"
+        }
+      },
+      "mainEntityOfPage": "{{SITE_URL}}blog/benefits-of-brain-training-games/"
+    }
+  ],
+  "pageType": "blog",
+  "gameLink": null,
+  "excludeGame": null,
+  "pageContentClass": "page-content",
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog/"
+    },
+    {
+      "label": "What Brain Training Games Actually Do",
+      "href": null
+    }
+  ],
+  "gameFrame": null,
+  "gameGrid": null,
+  "variantSet": null,
+  "hasContactForm": false
+}
