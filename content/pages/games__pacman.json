@@ -1,19 +1,19 @@
 {
   "route": "/games/pacman/",
-  "title": "Play Pac-Man Game Online Free - Classic Arcade Game | Mindhack.in",
+  "title": "Free Pac-Man Game Online - Classic Arcade | Mindhack.in",
   "description": "Play the classic Pac-Man game online for free. Navigate the maze, eat pellets, avoid ghosts, and relive the iconic arcade experience. No age limit, No fees required",
   "canonical": "{{SITE_URL}}games/pacman/",
   "og": {
     "type": "website",
     "url": "{{SITE_URL}}games/pacman/",
-    "title": "Play Pac-Man Game Online Free - Classic Arcade Game | Mindhack.in",
+    "title": "Free Pac-Man Game Online - Classic Arcade | Mindhack.in",
     "description": "Play the classic Pac-Man game online for free on Mindhack.in. Navigate the maze, eat pellets, avoid ghosts, and relive the iconic arcade experience.",
     "image": "{{DYNAMIC_RESOURCE}}games/pacman.png"
   },
   "twitter": {
     "card": "summary_large_image",
     "url": "{{SITE_URL}}games/pacman/",
-    "title": "Play Pac-Man Game Online Free - Classic Arcade Game | Mindhack.in",
+    "title": "Free Pac-Man Game Online - Classic Arcade | Mindhack.in",
     "description": "Play the classic Pac-Man game online for free on Mindhack.in. Navigate the maze, eat pellets, avoid ghosts, and relive the iconic arcade experience.",
     "image": "{{DYNAMIC_RESOURCE}}games/pacman.png"
   },
@@ -41,6 +41,22 @@
           "item": "{{SITE_URL}}games/pacman/"
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Game",
+      "name": "Pacman",
+      "genre": "Arcade Game",
+      "url": "{{SITE_URL}}games/pacman/",
+      "image": "{{DYNAMIC_RESOURCE}}games/pacman.png",
+      "description": "Play the classic Pac-Man game online for free on Mindhack.in. Navigate the maze, eat pellets, avoid ghosts, and relive the iconic arcade experience.",
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "publisher": {
+        "@type": "Organization",
+        "name": "MindHack",
+        "url": "{{SITE_URL}}"
+      }
     },
     {
       "@context": "https://schema.org",

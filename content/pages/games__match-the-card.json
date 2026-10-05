@@ -44,6 +44,22 @@
     },
     {
       "@context": "https://schema.org",
+      "@type": "Game",
+      "name": "Match the Cards",
+      "genre": "Memory Game",
+      "url": "{{SITE_URL}}games/match-the-card/",
+      "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/animals.jpg",
+      "description": "Play the free online Match the Cards Memory Game on MindHack.in! Challenge your brain, improve memory, and boost focus.",
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "publisher": {
+        "@type": "Organization",
+        "name": "MindHack",
+        "url": "{{SITE_URL}}"
+      }
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
         {

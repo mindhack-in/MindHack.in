@@ -56,7 +56,9 @@
 
  /* IMAGE */
  .game-img {
+     position: relative;
      width: 80px;
+     height: 80px;
      margin-bottom: 20px;
  }
 
@@ -163,6 +165,7 @@
 
     .game-img {
         width: 60px;
+        height: 60px;
     }
 
     .game-card h3 {

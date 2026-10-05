@@ -1,0 +1,28 @@
+name: Post-deploy smoke test
+
+# Runs the live-site smoke test (scripts/smoke-test.mjs) against production
+# after every push to main (a proxy for "after Vercel finishes deploying"),
+# and can be run on demand from the Actions tab. It checks status 200 *and*
+# a non-empty <h1>/<meta name="description"> on bare URLs — see the script
+# itself for why a status-only or cache-busted check wouldn't have caught
+# the outage this exists to guard against.
+#
+# To wire this to the actual moment a deploy finishes instead of push, add
+# a Vercel Deploy Hook that triggers this workflow's `workflow_dispatch`
+# via the GitHub API once your Vercel project is connected.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/smoke-test.mjs
+        env:
+          SITE_URL: https://mindhack.in/

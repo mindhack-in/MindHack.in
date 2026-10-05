@@ -1,19 +1,19 @@
 {
   "route": "/blog/how-to-get-faster-at-rubiks-cube/",
-  "title": "How to Get Faster at Rubik's Cube: A Real Roadmap | Mindhack.in",
+  "title": "How to Get Faster at Rubik's Cube | Mindhack.in",
   "description": "Why beginner method solvers plateau around 2 minutes, what CFOP actually changes, and the order to learn it in so you don't get slower before you get faster.",
   "canonical": "{{SITE_URL}}blog/how-to-get-faster-at-rubiks-cube/",
   "og": {
     "type": "article",
     "url": "{{SITE_URL}}blog/how-to-get-faster-at-rubiks-cube/",
-    "title": "How to Get Faster at Rubik's Cube: A Real Roadmap | Mindhack.in",
+    "title": "How to Get Faster at Rubik's Cube | Mindhack.in",
     "description": "Why beginner method solvers plateau around 2 minutes, what CFOP actually changes, and the order to learn it in so you don't get slower before you get faster.",
     "image": "{{LOGO_URL}}"
   },
   "twitter": {
     "card": "summary_large_image",
     "url": "{{SITE_URL}}blog/how-to-get-faster-at-rubiks-cube/",
-    "title": "How to Get Faster at Rubik's Cube: A Real Roadmap | Mindhack.in",
+    "title": "How to Get Faster at Rubik's Cube | Mindhack.in",
     "description": "Why beginner method solvers plateau around 2 minutes, what CFOP actually changes, and the order to learn it in so you don't get slower before you get faster.",
     "image": "{{LOGO_URL}}"
   },

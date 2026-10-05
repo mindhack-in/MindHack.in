@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "check:env": "node scripts/check-env.mjs",
-    "verify": "node scripts/verify-structure.mjs"
+    "verify": "node scripts/verify-structure.mjs",
+    "smoke-test": "node scripts/smoke-test.mjs"
   },
   "dependencies": {
     "html-react-parser": "^6.1.7",

@@ -1,19 +1,19 @@
 {
   "route": "/privacy/",
-  "title": "Privacy Policy - Free Online Brain Games & Puzzles | Mindhack.in",
+  "title": "Privacy Policy | Mindhack.in",
   "description": "What Mindhack.in collects (analytics, contact form, optional account info), why, and how to ask us to delete it. Plain-language privacy policy.",
   "canonical": "{{SITE_URL}}privacy/",
   "og": {
     "type": "website",
     "url": "{{SITE_URL}}privacy/",
-    "title": "Privacy Policy - Free Online Brain Games & Puzzles | Mindhack.in",
+    "title": "Privacy Policy | Mindhack.in",
     "description": "What Mindhack.in collects (analytics, contact form, optional account info), why, and how to ask us to delete it. Plain-language privacy policy.",
     "image": "{{LOGO_URL}}"
   },
   "twitter": {
     "card": "summary_large_image",
     "url": "{{SITE_URL}}privacy/",
-    "title": "Privacy Policy - Free Online Brain Games & Puzzles | Mindhack.in",
+    "title": "Privacy Policy | Mindhack.in",
     "description": "What Mindhack.in collects (analytics, contact form, optional account info), why, and how to ask us to delete it. Plain-language privacy policy.",
     "image": "{{LOGO_URL}}"
   },

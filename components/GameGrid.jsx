@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { env } from "@/lib/env";
 import { games, HOME_GAME_COUNT } from "@/data/games";
@@ -19,12 +20,16 @@ export function GameGrid({ variant = "all", exclude = null }) {
     <div className="games-grid" id="games-grid">
       {visible.map((game) => (
         <div className="game-card" key={game.name}>
-          <img
-            src={env.DYNAMIC_RESOURCE + game.img}
-            className="game-img"
-            alt={game.alt || game.anchorText || game.name}
-            loading="lazy"
-          />
+          <div className="game-img">
+            <Image
+              src={env.DYNAMIC_RESOURCE + game.img}
+              alt={game.alt || game.anchorText || game.name}
+              fill
+              sizes="80px"
+              style={{ objectFit: "contain" }}
+              loading="lazy"
+            />
+          </div>
           <h3>{game.name}</h3>
           <p>{game.description}</p>
           <Link className="play-btn" href={"/" + game.link}>

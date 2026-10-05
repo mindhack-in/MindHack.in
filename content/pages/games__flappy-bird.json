@@ -44,6 +44,22 @@
     },
     {
       "@context": "https://schema.org",
+      "@type": "Game",
+      "name": "Flappy Bird",
+      "genre": "Arcade Game",
+      "url": "{{SITE_URL}}games/flappy-bird/",
+      "image": "{{DYNAMIC_RESOURCE}}games/flappy-bird.png",
+      "description": "Play the free Flappy Bird game online! Dodge pipes, navigate through narrow gaps, and keep flying to score points. No download or registration needed.",
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "publisher": {
+        "@type": "Organization",
+        "name": "MindHack",
+        "url": "{{SITE_URL}}"
+      }
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
         {

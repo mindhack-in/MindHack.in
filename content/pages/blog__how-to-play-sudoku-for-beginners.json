@@ -1,19 +1,19 @@
 {
   "route": "/blog/how-to-play-sudoku-for-beginners/",
-  "title": "How to Play Sudoku for Beginners: Rules, Strategy, Mistakes | Mindhack.in",
+  "title": "How to Play Sudoku for Beginners | Mindhack.in",
   "description": "A real beginner's guide to Sudoku: the one rule that matters, two techniques that solve most easy puzzles, and the guessing habit that wrecks new players.",
   "canonical": "{{SITE_URL}}blog/how-to-play-sudoku-for-beginners/",
   "og": {
     "type": "article",
     "url": "{{SITE_URL}}blog/how-to-play-sudoku-for-beginners/",
-    "title": "How to Play Sudoku for Beginners: Rules, Strategy, Mistakes | Mindhack.in",
+    "title": "How to Play Sudoku for Beginners | Mindhack.in",
     "description": "A real beginner's guide to Sudoku: the one rule that matters, two techniques that solve most easy puzzles, and the guessing habit that wrecks new players.",
     "image": "{{LOGO_URL}}"
   },
   "twitter": {
     "card": "summary_large_image",
     "url": "{{SITE_URL}}blog/how-to-play-sudoku-for-beginners/",
-    "title": "How to Play Sudoku for Beginners: Rules, Strategy, Mistakes | Mindhack.in",
+    "title": "How to Play Sudoku for Beginners | Mindhack.in",
     "description": "A real beginner's guide to Sudoku: the one rule that matters, two techniques that solve most easy puzzles, and the guessing habit that wrecks new players.",
     "image": "{{LOGO_URL}}"
   },
