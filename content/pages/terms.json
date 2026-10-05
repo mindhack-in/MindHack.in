@@ -1,19 +1,19 @@
 {
   "route": "/terms/",
-  "title": "Terms of Service - Free Online Brain Games & Puzzles | Mindhack.in",
+  "title": "Terms of Service | Mindhack.in",
   "description": "The rules for using Mindhack.in's free browser games and optional accounts, in plain language - what we promise, what we don't, and what's off-limits.",
   "canonical": "{{SITE_URL}}terms/",
   "og": {
     "type": "website",
     "url": "{{SITE_URL}}terms/",
-    "title": "Terms of Service - Free Online Brain Games & Puzzles | Mindhack.in",
+    "title": "Terms of Service | Mindhack.in",
     "description": "The rules for using Mindhack.in's free browser games and optional accounts, in plain language - what we promise, what we don't, and what's off-limits.",
     "image": "{{LOGO_URL}}"
   },
   "twitter": {
     "card": "summary_large_image",
     "url": "{{SITE_URL}}terms/",
-    "title": "Terms of Service - Free Online Brain Games & Puzzles | Mindhack.in",
+    "title": "Terms of Service | Mindhack.in",
     "description": "The rules for using Mindhack.in's free browser games and optional accounts, in plain language - what we promise, what we don't, and what's off-limits.",
     "image": "{{LOGO_URL}}"
   },

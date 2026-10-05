@@ -1,42 +1,44 @@
 {
   "route": "/games/rubiks-cube-scramble/2X2/",
-  "title": "Play 2X2 Rubik's Cube Timer Online - Free Speedcubing Timer | Mindhack.in",
+  "title": "2X2 Rubik's Cube Timer - Free Speedcubing | Mindhack.in",
   "description": "Track your 2X2 Rubik's Cube solving time with MindHack's free online cube timer. Get random scrambles, Ao5 & Ao12 averages. Perfect for speedcubers.",
   "canonical": "{{SITE_URL}}games/rubiks-cube-scramble/2X2/",
   "og": {
     "type": "website",
     "url": "{{SITE_URL}}games/rubiks-cube-scramble/2X2/",
-    "title": "Play 2X2 Rubik's Cube Timer Online - Free Speedcubing Timer | Mindhack.in",
+    "title": "2X2 Rubik's Cube Timer - Free Speedcubing | Mindhack.in",
     "description": "Track your 2X2 Rubik's Cube solving time with MindHack's free online cube timer. Get random scrambles, Ao5 & Ao12 averages. Perfect for speedcubers.",
     "image": "{{DYNAMIC_RESOURCE}}games/rubikscube/2X2.jpg"
   },
   "twitter": {
     "card": "summary_large_image",
     "url": "{{SITE_URL}}games/rubiks-cube-scramble/2X2/",
-    "title": "Play 2X2 Rubik's Cube Timer Online - Free Speedcubing Timer | Mindhack.in",
+    "title": "2X2 Rubik's Cube Timer - Free Speedcubing | Mindhack.in",
     "description": "Track your 2X2 Rubik's Cube solving time with MindHack's free online cube timer. Get random scrambles, Ao5 & Ao12 averages. Perfect for speedcubers.",
     "image": "{{DYNAMIC_RESOURCE}}games/rubikscube/2X2.jpg"
   },
   "jsonLd": [
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
+      "@type": "Game",
       "name": "2X2 Rubik's Cube Timer",
-      "operatingSystem": "Web Browser",
-      "applicationCategory": "GameApplication",
-      "browserRequirements": "Requires HTML5 compatible browser",
+      "genre": "Puzzle Game",
       "url": "{{SITE_URL}}games/rubiks-cube-scramble/2X2/",
+      "image": "{{DYNAMIC_RESOURCE}}games/rubikscube/2X2.jpg",
       "description": "Track your 2X2 Rubik's Cube solving time with MindHack's free online cube timer. Get random scrambles, Ao5 & Ao12 averages. Perfect for beginners and speedcubers.",
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
       "featureList": "2X2 random scrambles, Averages calculation (Ao5, Ao12), WCA penalties (+2, DNF), Responsive mobile-friendly design",
-      "publisher": {
-        "@type": "Organization",
-        "name": "MindHack",
-        "url": "{{SITE_URL}}"
-      },
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
+      },
+      "browserRequirements": "Requires HTML5 compatible browser",
+      "publisher": {
+        "@type": "Organization",
+        "name": "MindHack",
+        "url": "{{SITE_URL}}"
       }
     },
     {

@@ -1,19 +1,19 @@
 {
   "route": "/games/",
-  "title": "Free Online Games — Sudoku, 2048, Rubik's Timer, Sliding Puzzle & More | Mindhack.in",
+  "title": "Free Online Brain Games & Puzzles | Mindhack.in",
   "description": "Browse Mindhack.in's full library of free browser games. Play Sudoku, 2048, Rubik's Cube timer, Sliding Puzzle, Flappy Bird and more — no download, no login.",
   "canonical": "{{SITE_URL}}games/",
   "og": {
     "type": "website",
     "url": "{{SITE_URL}}games/",
-    "title": "Free Online Games — Sudoku, 2048, Rubik's Timer, Sliding Puzzle & More | Mindhack.in",
+    "title": "Free Online Brain Games & Puzzles | Mindhack.in",
     "description": "Browse Mindhack.in's full library of free browser games. Play Sudoku, 2048, Rubik's Cube timer, Sliding Puzzle, Flappy Bird and more — no download, no login.",
     "image": "{{LOGO_URL}}"
   },
   "twitter": {
     "card": "summary_large_image",
     "url": "{{SITE_URL}}games/",
-    "title": "Free Online Games — Sudoku, 2048, Rubik's Timer, Sliding Puzzle & More | Mindhack.in",
+    "title": "Free Online Brain Games & Puzzles | Mindhack.in",
     "description": "Browse Mindhack.in's full library of free browser games. Play Sudoku, 2048, Rubik's Cube timer, Sliding Puzzle, Flappy Bird and more — no download, no login.",
     "image": "{{LOGO_URL}}"
   },

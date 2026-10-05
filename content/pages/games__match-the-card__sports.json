@@ -1,19 +1,19 @@
 {
   "route": "/games/match-the-card/sports/",
-  "title": "Match the Cards (Sports) - Free Online Memory Game | MindHack.in",
+  "title": "Match the Cards: Sports - Memory Game | MindHack.in",
   "description": "Play free sports card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
   "canonical": "{{SITE_URL}}games/match-the-card/sports/",
   "og": {
     "type": "website",
     "url": "{{SITE_URL}}games/match-the-card/sports/",
-    "title": "Match the Cards (Sports) - Free Online Memory Game | MindHack.in",
+    "title": "Match the Cards: Sports - Memory Game | MindHack.in",
     "description": "Play free sports card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
     "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/sports.jpg"
   },
   "twitter": {
     "card": "summary_large_image",
     "url": "{{SITE_URL}}games/match-the-card/sports/",
-    "title": "Match the Cards (Sports) - Free Online Memory Game | MindHack.in",
+    "title": "Match the Cards: Sports - Memory Game | MindHack.in",
     "description": "Play free sports card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
     "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/sports.jpg"
   },
@@ -47,6 +47,22 @@
           "item": "{{SITE_URL}}games/match-the-card/sports/"
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Game",
+      "name": "Sports Match the Cards",
+      "genre": "Memory Game",
+      "url": "{{SITE_URL}}games/match-the-card/sports/",
+      "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/sports.jpg",
+      "description": "Play free sports card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "publisher": {
+        "@type": "Organization",
+        "name": "MindHack",
+        "url": "{{SITE_URL}}"
+      }
     },
     {
       "@context": "https://schema.org",

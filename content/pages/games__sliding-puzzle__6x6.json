@@ -1,19 +1,19 @@
 {
   "route": "/games/sliding-puzzle/6x6/",
-  "title": "Play 6x6 Sliding Puzzle Online - Free Tile Game | Mindhack.in",
+  "title": "6x6 Sliding Puzzle Online - Free Tile Game | Mindhack.in",
   "description": "Play the free online 6x6 Sliding Puzzle on Mindhack.in! Slide numbered tiles to solve the 6x6 grid. Improve logic, memory, and spatial reasoning now.",
   "canonical": "{{SITE_URL}}games/sliding-puzzle/6x6/",
   "og": {
     "type": "website",
     "url": "{{SITE_URL}}games/sliding-puzzle/6x6/",
-    "title": "Play 6x6 Sliding Puzzle Online - Free Tile Game | Mindhack.in",
+    "title": "6x6 Sliding Puzzle Online - Free Tile Game | Mindhack.in",
     "description": "Play the free online 6x6 Sliding Puzzle on Mindhack.in! Slide numbered tiles to solve the 6x6 grid. Improve logic, memory, and spatial reasoning now.",
     "image": "{{DYNAMIC_RESOURCE}}games/slidingpuzzle.png"
   },
   "twitter": {
     "card": "summary_large_image",
     "url": "{{SITE_URL}}games/sliding-puzzle/6x6/",
-    "title": "Play 6x6 Sliding Puzzle Online - Free Tile Game | Mindhack.in",
+    "title": "6x6 Sliding Puzzle Online - Free Tile Game | Mindhack.in",
     "description": "Play the free online 6x6 Sliding Puzzle on Mindhack.in! Slide numbered tiles to solve the 6x6 grid. Improve logic, memory, and spatial reasoning now.",
     "image": "{{DYNAMIC_RESOURCE}}games/slidingpuzzle.png"
   },
@@ -47,6 +47,22 @@
           "item": "{{SITE_URL}}games/sliding-puzzle/6x6/"
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Game",
+      "name": "6X6 Sliding Puzzle",
+      "genre": "Puzzle Game",
+      "url": "{{SITE_URL}}games/sliding-puzzle/6x6/",
+      "image": "{{DYNAMIC_RESOURCE}}games/slidingpuzzle.png",
+      "description": "Play the free online 6x6 Sliding Puzzle on Mindhack.in! Slide numbered tiles to solve the 6x6 grid. Improve logic, memory, and spatial reasoning now.",
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "publisher": {
+        "@type": "Organization",
+        "name": "MindHack",
+        "url": "{{SITE_URL}}"
+      }
     }
   ],
   "pageType": "games",

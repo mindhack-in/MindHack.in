@@ -1,19 +1,19 @@
 {
   "route": "/games/match-the-card/sea-creatures/",
-  "title": "Match the Cards (Sea-creatures) - Free Online Memory Game | MindHack.in",
+  "title": "Match the Cards: Sea Creatures - Memory Game | MindHack.in",
   "description": "Play free sea-creatures card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
   "canonical": "{{SITE_URL}}games/match-the-card/sea-creatures/",
   "og": {
     "type": "website",
     "url": "{{SITE_URL}}games/match-the-card/sea-creatures/",
-    "title": "Match the Cards (Sea creatures) - Free Online Memory Game | MindHack.in",
+    "title": "Match the Cards: Sea Creatures - Memory Game | MindHack.in",
     "description": "Play free sea creatures card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
     "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/sea-creatures.jpg"
   },
   "twitter": {
     "card": "summary_large_image",
     "url": "{{SITE_URL}}games/match-the-card/sea-creatures/",
-    "title": "Match the Cards (Sea creatures) - Free Online Memory Game | MindHack.in",
+    "title": "Match the Cards: Sea Creatures - Memory Game | MindHack.in",
     "description": "Play free sea creatures card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
     "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/sea-creatures.jpg"
   },
@@ -47,6 +47,22 @@
           "item": "{{SITE_URL}}games/match-the-card/sea-creatures/"
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Game",
+      "name": "Sea-creatures Match the Cards",
+      "genre": "Memory Game",
+      "url": "{{SITE_URL}}games/match-the-card/sea-creatures/",
+      "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/sea-creatures.jpg",
+      "description": "Play free sea creatures card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "publisher": {
+        "@type": "Organization",
+        "name": "MindHack",
+        "url": "{{SITE_URL}}"
+      }
     },
     {
       "@context": "https://schema.org",

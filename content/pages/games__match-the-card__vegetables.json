@@ -1,19 +1,19 @@
 {
   "route": "/games/match-the-card/vegetables/",
-  "title": "Match the Cards (Vegetables) - Free Online Memory Game | MindHack.in",
+  "title": "Match the Cards: Vegetables - Memory Game | MindHack.in",
   "description": "Play free vegetables card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
   "canonical": "{{SITE_URL}}games/match-the-card/vegetables/",
   "og": {
     "type": "website",
     "url": "{{SITE_URL}}games/match-the-card/vegetables/",
-    "title": "Match the Cards (Vegetables) - Free Online Memory Game | MindHack.in",
+    "title": "Match the Cards: Vegetables - Memory Game | MindHack.in",
     "description": "Play free vegetables card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
     "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/vegetables.jpg"
   },
   "twitter": {
     "card": "summary_large_image",
     "url": "{{SITE_URL}}games/match-the-card/vegetables/",
-    "title": "Match the Cards (Vegetables) - Free Online Memory Game | MindHack.in",
+    "title": "Match the Cards: Vegetables - Memory Game | MindHack.in",
     "description": "Play free vegetables card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
     "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/vegetables.jpg"
   },
@@ -47,6 +47,22 @@
           "item": "{{SITE_URL}}games/match-the-card/vegetables/"
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Game",
+      "name": "Vegetables Match the Cards",
+      "genre": "Memory Game",
+      "url": "{{SITE_URL}}games/match-the-card/vegetables/",
+      "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/vegetables.jpg",
+      "description": "Play free vegetables card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "publisher": {
+        "@type": "Organization",
+        "name": "MindHack",
+        "url": "{{SITE_URL}}"
+      }
     },
     {
       "@context": "https://schema.org",

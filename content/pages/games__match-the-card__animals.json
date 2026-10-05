@@ -1,19 +1,19 @@
 {
   "route": "/games/match-the-card/animals/",
-  "title": "Match the Cards (Animals) - Free Online Memory Game | MindHack.in",
+  "title": "Match the Cards: Animals - Memory Game | MindHack.in",
   "description": "Play free animals card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
   "canonical": "{{SITE_URL}}games/match-the-card/animals/",
   "og": {
     "type": "website",
     "url": "{{SITE_URL}}games/match-the-card/animals/",
-    "title": "Match the Cards (Animals) - Free Online Memory Game | MindHack.in",
+    "title": "Match the Cards: Animals - Memory Game | MindHack.in",
     "description": "Play free animals card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
     "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/animals.jpg"
   },
   "twitter": {
     "card": "summary_large_image",
     "url": "{{SITE_URL}}games/match-the-card/animals/",
-    "title": "Match the Cards (Animals) - Free Online Memory Game | MindHack.in",
+    "title": "Match the Cards: Animals - Memory Game | MindHack.in",
     "description": "Play free animals card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
     "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/animals.jpg"
   },
@@ -47,6 +47,22 @@
           "item": "{{SITE_URL}}games/match-the-card/animals/"
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Game",
+      "name": "Animals Match the Cards",
+      "genre": "Memory Game",
+      "url": "{{SITE_URL}}games/match-the-card/animals/",
+      "image": "{{DYNAMIC_RESOURCE}}games/match-the-card/animals.jpg",
+      "description": "Play free animals card matching memory game on MindHack.in. Flip, match, and train your brain with beautiful card sets.",
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "publisher": {
+        "@type": "Organization",
+        "name": "MindHack",
+        "url": "{{SITE_URL}}"
+      }
     },
     {
       "@context": "https://schema.org",

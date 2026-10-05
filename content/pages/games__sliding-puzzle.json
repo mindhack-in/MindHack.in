@@ -1,19 +1,19 @@
 {
   "route": "/games/sliding-puzzle/",
-  "title": "Sliding Puzzle - Free Online Sliding Puzzle Game | MindHack.in",
+  "title": "Sliding Puzzle - Free Online Tile Game | MindHack.in",
   "description": "Play the free online Sliding Puzzle on MindHack.in! Challenge your brain, improve memory, and boost focus with fun and interactive sliding puzzles. Try now and test your logic!",
   "canonical": "{{SITE_URL}}games/sliding-puzzle/",
   "og": {
     "type": "website",
     "url": "{{SITE_URL}}games/sliding-puzzle/",
-    "title": "Sliding Puzzle - Free Online Sliding Puzzle Game | MindHack.in",
+    "title": "Sliding Puzzle - Free Online Tile Game | MindHack.in",
     "description": "Play the free online Sliding Puzzle on MindHack.in! Challenge your brain, improve memory, and boost focus with fun and interactive sliding puzzles. Try now and test your logic!",
     "image": "{{DYNAMIC_RESOURCE}}games/slidingpuzzle.png"
   },
   "twitter": {
     "card": "summary_large_image",
     "url": "{{SITE_URL}}games/sliding-puzzle/",
-    "title": "Sliding Puzzle - Free Online Sliding Puzzle Game | MindHack.in",
+    "title": "Sliding Puzzle - Free Online Tile Game | MindHack.in",
     "description": "Play the free online Sliding Puzzle on MindHack.in! Challenge your brain, improve memory, and boost focus with fun and interactive sliding puzzles. Try now and test your logic!",
     "image": "{{DYNAMIC_RESOURCE}}games/slidingpuzzle.png"
   },
@@ -41,6 +41,22 @@
           "item": "{{SITE_URL}}games/sliding-puzzle/"
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Game",
+      "name": "Sliding Puzzle",
+      "genre": "Puzzle Game",
+      "url": "{{SITE_URL}}games/sliding-puzzle/",
+      "image": "{{DYNAMIC_RESOURCE}}games/slidingpuzzle.png",
+      "description": "Play the free online Sliding Puzzle on MindHack.in! Challenge your brain, improve memory, and boost focus with fun and interactive sliding puzzles. Try now and test your logic!",
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "publisher": {
+        "@type": "Organization",
+        "name": "MindHack",
+        "url": "{{SITE_URL}}"
+      }
     },
     {
       "@context": "https://schema.org",

@@ -1,19 +1,19 @@
 {
   "route": "/blog/best-free-brain-games-for-students-in-india/",
-  "title": "Best Free Online Brain Games for Students in India (2026) | Mindhack.in",
+  "title": "Best Free Brain Games for Students in India | Mindhack.in",
   "description": "What actually makes a brain game worth playing between study sessions, and which free, browser-based options fit a student's data plan and attention span.",
   "canonical": "{{SITE_URL}}blog/best-free-brain-games-for-students-in-india/",
   "og": {
     "type": "article",
     "url": "{{SITE_URL}}blog/best-free-brain-games-for-students-in-india/",
-    "title": "Best Free Online Brain Games for Students in India (2026) | Mindhack.in",
+    "title": "Best Free Brain Games for Students in India | Mindhack.in",
     "description": "What actually makes a brain game worth playing between study sessions, and which free, browser-based options fit a student's data plan and attention span.",
     "image": "{{LOGO_URL}}"
   },
   "twitter": {
     "card": "summary_large_image",
     "url": "{{SITE_URL}}blog/best-free-brain-games-for-students-in-india/",
-    "title": "Best Free Online Brain Games for Students in India (2026) | Mindhack.in",
+    "title": "Best Free Brain Games for Students in India | Mindhack.in",
     "description": "What actually makes a brain game worth playing between study sessions, and which free, browser-based options fit a student's data plan and attention span.",
     "image": "{{LOGO_URL}}"
   },

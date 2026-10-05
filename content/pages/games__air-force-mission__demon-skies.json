@@ -29,6 +29,22 @@
           "item": "{{SITE_URL}}games/air-force-mission/demon-skies/"
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Game",
+      "name": "Demon Skies",
+      "genre": "Arcade Game",
+      "url": "{{SITE_URL}}games/air-force-mission/demon-skies/",
+      "image": "",
+      "description": "Play Demon Strikes free on Mindhack.in. Dodge enemy fire, blast through waves of demons, and see how far you can get - no download, runs right in your browser.",
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "publisher": {
+        "@type": "Organization",
+        "name": "MindHack",
+        "url": "{{SITE_URL}}"
+      }
     }
   ],
   "pageType": "games",
