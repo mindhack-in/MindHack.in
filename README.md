@@ -25,6 +25,7 @@ npm run dev              # http://localhost:3000
 | `npm run lint` | ESLint with the Next.js rule set |
 | `npm run check:env` | Prints each env key and fails if a required one is missing |
 | `npm run verify` | Release gate: diffs the build against the pre-migration site (see below) |
+| `npm run smoke-test` | Post-deploy check against a live `SITE_URL`: status 200 + non-empty `<h1>`/description on the pages that matter |
 
 ---
 
@@ -170,6 +171,37 @@ Netlify works the same way (`npm run build`, publish directory `.next`, with
 
 > The old `CNAME` file has moved to `legacy/` — it is a GitHub Pages mechanism and
 > has no effect on Vercel or Netlify.
+
+### Redeploying and purging the cache
+
+Every push to `main` triggers an automatic Vercel deploy — nothing extra to run.
+Reach for a **manual redeploy** when the source hasn't changed but the served
+output looks stale (env var updated in the dashboard, a suspected bad edge
+cache, or you just want a clean rebuild to rule out a caching issue):
+
+1. Vercel dashboard → the project → **Deployments**.
+2. Open the three-dot menu on the deployment you want to redeploy (usually the
+   latest) → **Redeploy**.
+3. In the dialog, **uncheck "Use existing Build Cache"**. This is the actual
+   cache purge — it forces Next.js to rebuild every page from source instead of
+   reusing cached build output. Leaving it checked will redeploy the same
+   bytes you already have.
+4. After it finishes, run the post-deploy smoke test against production to
+   confirm the pages that matter are actually serving correctly — not just
+   returning 200, but returning real content:
+
+   ```bash
+   SITE_URL=https://mindhack.in/ npm run smoke-test
+   ```
+
+   This also runs automatically on every push to `main` via
+   `.github/workflows/smoke-test.yml`, and can be triggered on demand from the
+   Actions tab.
+
+If you change an environment variable in **Settings → Environment Variables**,
+that alone does not redeploy anything — Vercel bakes env vars in at build
+time. Follow the steps above (build cache unchecked) after any env var change,
+or the site will keep serving values from the previous build.
 
 ---
 
